@@ -34,7 +34,7 @@ i:hover {
       -ms-flex-align: center;
           align-items: center;
   background: black;
-  position: absolute;
+  position: fixed;
   z-index: 9;
   width: 100%;
   top: 0;
@@ -59,7 +59,7 @@ i:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 50px;
+  margin-right: 30px;
 }
 .menu .reseau-sociaux a {
   font-size: 2vw;
@@ -73,6 +73,10 @@ i:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   color: white;
+  margin-right: 30px;
+}
+.menu ul li {
+  font-size: calc(8px + 0.5vw);
 }
 
 .video16by9 {

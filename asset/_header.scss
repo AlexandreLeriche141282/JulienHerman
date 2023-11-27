@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background: black;
-    position: absolute;
+    position: fixed;
     z-index: 9;
     width: 100%;
     top:0;
@@ -26,7 +26,7 @@
         width: 100px;
         display: flex;
         justify-content: space-between;
-        margin-right: 50px;
+        margin-right: 30px;
 
         a {
             font-size:2vw;
@@ -39,6 +39,10 @@
         width: 800px;
         justify-content: space-between;
         color: white;
+        margin-right: 30px;
+        li{
+            font-size:calc(8px + 0.5vw);
+        }
     }
 }
 
