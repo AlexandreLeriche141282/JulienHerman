@@ -3,18 +3,25 @@
     padding: 0;
     box-sizing: border-box;
     font-family:"barlow-italic", sans-serif;
+    color: white;
+
+}
+body{
+    background: white;
+  
 }
 li{
     cursor: pointer;
     list-style: none;
-    letter-spacing: 1px;
-    color: white;
+    letter-spacing: 2px;
+    color: rgb(0, 0, 0);
     &:hover{
-        color: rgb(46,104,128);
+        color: rgb(113, 184, 215);
+
     }
 }
 i{
-    color: white;
+    color: rgb(0, 0, 0);
 &:hover{
   color: rgb(46,104,128);  
 }
