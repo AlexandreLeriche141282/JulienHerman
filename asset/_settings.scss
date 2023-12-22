@@ -4,10 +4,26 @@
     box-sizing: border-box;
     font-family:"barlow-italic", sans-serif;
     color: white;
+    
 
 }
 body{
     background: white;
+    .titre1, .titre2, .titre3, .titre4{
+        text-transform: uppercase;
+        font-size: calc(10px + 1.5vw);
+        top:0%;  
+        position:relative;
+        transition: 1s;
+        z-index: 1;
+        opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        
+    }
   
 }
 li{

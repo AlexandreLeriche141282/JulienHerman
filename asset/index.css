@@ -11,6 +11,30 @@
 body {
   background: white;
 }
+body .titre1, body .titre2, body .titre3, body .titre4 {
+  text-transform: uppercase;
+  font-size: calc(10px + 1.5vw);
+  top: 0%;
+  position: relative;
+  -webkit-transition: 1s;
+  transition: 1s;
+  z-index: 1;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
 
 li {
   cursor: pointer;
@@ -124,15 +148,17 @@ main .sectionPhotos1 {
   padding-top: 20px;
   margin: auto;
   margin-top: 70px;
-  gap: 20px;
+  gap: 30px;
 }
 main .sectionPhotos1 .choux {
   width: 100%;
   position: relative;
+  z-index: 2;
   height: 400px;
-  border-radius: 25px;
+  border-radius: 5px;
   cursor: pointer;
-  background: url(./img/choux\ fraises\ vanille.jpg) center/cover;
+  background: rgba(0, 0, 0, 0.3) url(./img/choux\ fraises\ vanille.jpg) center/cover;
+  background-blend-mode: darken;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
@@ -143,36 +169,18 @@ main .sectionPhotos1 .choux .hover-choux {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 25px;
+  border-radius: 5px;
   /* Effets de transition */
   opacity: 0;
   /* On cache l'élément via son opacité */
-  -webkit-transition: opacity 0.55s ease-in-out;
-  transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.85s ease-in-out;
+  transition: opacity 0.85s ease-in-out;
   /* Effet de transition sur le hover */
   /* Style du contenu hover */
-  background-color: rgba(50, 47, 47, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
-  color: white;
   padding: 30px;
   /* Centrer le contenu */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-main .sectionPhotos1 .choux .hover-choux h3 {
-  font-size: calc(1vw + 1vh + 0.5vmin);
 }
 main .sectionPhotos1 .choux:hover .hover-choux {
   opacity: 1;
@@ -182,9 +190,10 @@ main .sectionPhotos1 .finger {
   width: 100%;
   position: relative;
   height: 400px;
-  border-radius: 25px;
+  border-radius: 5px;
   cursor: pointer;
-  background: url(./img/finger\ caramel\ cachuete.jpg) center/cover;
+  background: rgba(0, 0, 0, 0.3) url(./img/finger\ caramel\ cachuete.jpg) center/cover;
+  background-blend-mode: darken;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
@@ -195,36 +204,18 @@ main .sectionPhotos1 .finger .hover-finger {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 25px;
+  border-radius: 5px;
   /* Effets de transition */
   opacity: 0;
   /* On cache l'élément via son opacité */
-  -webkit-transition: opacity 0.55s ease-in-out;
-  transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.85s ease-in-out;
+  transition: opacity 0.85s ease-in-out;
   /* Effet de transition sur le hover */
   /* Style du contenu hover */
-  background-color: rgba(50, 47, 47, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
   color: white;
   padding: 30px;
-  /* Centrer le contenu */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-main .sectionPhotos1 .finger .hover-finger h3 {
-  font-size: calc(1vw + 1vh + 0.5vmin);
 }
 main .finger:hover .hover-finger {
   opacity: 1;
@@ -235,18 +226,19 @@ main .sectionPhotos2 {
   display: grid;
   grid-template-columns: 60% 40%;
   justify-items: center;
-  padding-top: 20px;
+  padding-top: 10px;
   margin: auto;
   margin-top: 20px;
-  gap: 20px;
+  gap: 30px;
 }
 main .sectionPhotos2 .presentation {
   width: 100%;
   position: relative;
   height: 400px;
-  border-radius: 25px;
+  border-radius: 5px;
   cursor: pointer;
-  background: url(./img/sphere\ myrtilles\ cassis.jpg) center/cover;
+  background: rgba(0, 0, 0, 0.3) url(./img/sphere\ myrtilles\ cassis.jpg) center/cover;
+  background-blend-mode: darken;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
@@ -257,36 +249,18 @@ main .sectionPhotos2 .presentation .hover-presentation {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 25px;
+  border-radius: 5px;
   /* Effets de transition */
   opacity: 0;
   /* On cache l'élément via son opacité */
-  -webkit-transition: opacity 0.55s ease-in-out;
-  transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.85s ease-in-out;
+  transition: opacity 0.85s ease-in-out;
   /* Effet de transition sur le hover */
   /* Style du contenu hover */
-  background-color: rgba(50, 47, 47, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
   color: white;
   padding: 30px;
-  /* Centrer le contenu */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-main .sectionPhotos2 .presentation .hover-presentation h3 {
-  font-size: calc(1vw + 1vh + 0.5vmin);
 }
 main .sectionPhotos2 .presentation:hover .hover-presentation {
   opacity: 1;
@@ -296,9 +270,10 @@ main .sectionPhotos2 .realisation {
   width: 100%;
   position: relative;
   height: 400px;
-  border-radius: 25px;
+  border-radius: 5px;
   cursor: pointer;
-  background: url(./img/comme\ un\ burger\,\ sucré.jpg) center/cover;
+  background: rgba(0, 0, 0, 0.3) url(./img/comme\ un\ burger\,\ sucré.jpg) center/cover;
+  background-blend-mode: darken;
   -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
           box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 24px;
 }
@@ -309,36 +284,18 @@ main .sectionPhotos2 .realisation .hover-realisation {
   bottom: 0;
   left: 0;
   right: 0;
-  border-radius: 25px;
+  border-radius: 5px;
   /* Effets de transition */
   opacity: 0;
   /* On cache l'élément via son opacité */
-  -webkit-transition: opacity 0.55s ease-in-out;
-  transition: opacity 0.55s ease-in-out;
+  -webkit-transition: opacity 0.85s ease-in-out;
+  transition: opacity 0.85s ease-in-out;
   /* Effet de transition sur le hover */
   /* Style du contenu hover */
-  background-color: rgba(50, 47, 47, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
   color: white;
   padding: 30px;
-  /* Centrer le contenu */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
-main .sectionPhotos2 .realisation .hover-realisation h3 {
-  font-size: calc(1vw + 1vh + 0.5vmin);
 }
 main .sectionPhotos2 .realisation:hover .hover-realisation {
   opacity: 1;
