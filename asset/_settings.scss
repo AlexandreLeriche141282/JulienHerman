@@ -9,10 +9,10 @@
 }
 body{
     background: white;
-    .titre1, .titre2, .titre3, .titre4{
+    .titre1, .titre2, .titre3, .titre4, .titre5, .titre6{
         text-transform: uppercase;
         font-size: calc(10px + 1.5vw);
-        top:0%;  
+        top:75%;  
         position:relative;
         transition: 1s;
         z-index: 1;
