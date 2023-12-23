@@ -4,7 +4,7 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "barlow-italic", sans-serif;
+  font-family: "Montserrat-VariableFont_wght", sans-serif;
   color: white;
 }
 
@@ -14,6 +14,7 @@ body {
 body .titre1, body .titre2, body .titre3, body .titre4, body .titre5, body .titre6 {
   text-transform: uppercase;
   font-size: calc(10px + 1.5vw);
+  font-weight: 600;
   top: 75%;
   position: relative;
   -webkit-transition: 1s;
@@ -64,9 +65,8 @@ i:hover {
       -ms-flex-align: center;
           align-items: center;
   background: rgb(255, 255, 255);
-  z-index: 9;
   width: 100%;
-  height: 12%;
+  height: 15%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: fixed;
@@ -76,8 +76,8 @@ i:hover {
   right: 0;
 }
 .menu img {
-  margin: 10px 0 0px 100px;
-  width: 150px;
+  margin: 10px 0 0px 210px;
+  width: 160px;
 }
 .menu .reseau-sociaux {
   width: 100px;
@@ -87,7 +87,7 @@ i:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 100px;
+  margin-right: 220px;
 }
 .menu .reseau-sociaux a {
   font-size: 2vw;
@@ -122,12 +122,19 @@ video.videoResponsive {
   right: 0;
   bottom: 0;
   margin: auto;
-  height: 70%;
-  width: 70%;
+  height: 77%;
+  width: 77%;
   border: 0;
   z-index: 1;
 }
 
+main h2 {
+  color: black;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
 main .sectionPhotos1 {
   width: 70%;
   display: grid;
@@ -140,11 +147,10 @@ main .sectionPhotos1 {
 main .sectionPhotos1 .choux {
   width: 100%;
   position: relative;
-  z-index: 2;
   height: 400px;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/choux\ fraises\ vanille.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/desserts.jpg) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -179,7 +185,7 @@ main .sectionPhotos1 .finger {
   height: 400px;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/finger\ caramel\ cachuete.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/gourmandises.jpg) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);

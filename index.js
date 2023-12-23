@@ -11,7 +11,7 @@ window.addEventListener("scroll", () => {
     if (window.scrollY < lastScroll) {
         menu.style.top=0;
     } else {
-    menu.style.top="-116px"
+    menu.style.top="-140px"
     }
     lastScroll = window.scrollY;
 
@@ -26,6 +26,9 @@ window.addEventListener("scroll", () => {
         textVisible1.style.opacity = "1"
         textVisible1.style.top = "45%"
         
+    } else {
+        textVisible1.style.opacity = "0"
+        textVisible1.style.top = "75%" 
     }
     
 });
@@ -37,6 +40,9 @@ window.addEventListener("scroll", () => {
         textVisible2.style.opacity = "1"
         textVisible2.style.top = "45%"
         
+    } else {
+        textVisible2.style.opacity = "0"
+        textVisible2.style.top = "75%"
     }
     
 });
@@ -47,6 +53,9 @@ window.addEventListener("scroll", () => {
         textVisible3.style.opacity = "1"
         textVisible3.style.top = "45%"
         
+    } else {
+        textVisible3.style.opacity = "0"
+        textVisible3.style.top = "75%"
     }
     
 });
@@ -57,6 +66,9 @@ window.addEventListener("scroll", () => {
         textVisible4.style.opacity = "1"
         textVisible4.style.top = "45%"
         
+    } else {
+        textVisible4.style.opacity = "0"
+        textVisible4.style.top = "75%"
     }
     
 });
@@ -67,6 +79,9 @@ window.addEventListener("scroll", () => {
         textVisible5.style.opacity = "1"
         textVisible5.style.top = "45%"
         
+    } else {
+        textVisible5.style.opacity = "0"
+        textVisible5.style.top = "75%"
     }
     
 });
@@ -77,6 +92,9 @@ window.addEventListener("scroll", () => {
         textVisible6.style.opacity = "1"
         textVisible6.style.top = "45%"
         
+    } else {
+        textVisible6.style.opacity = "0"
+        textVisible6.style.top = "75%"
     }
     
 });

@@ -1,5 +1,11 @@
 main {
-    
+    h2{
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+    }
 
     .sectionPhotos1 {
         width: 70%;
@@ -14,11 +20,10 @@ main {
         .choux {
             width: 100%;
             position: relative;
-            z-index: 2;
             height: 400px;
             border-radius:5px;
             cursor: pointer;
-            background:rgba(93, 91, 91, 0.3) url(./img/choux\ fraises\ vanille.jpg)center/cover;
+            background:rgba(93, 91, 91, 0.3) url(./img/desserts.jpg)center/cover;
             background-blend-mode: darken;
             box-shadow:0 1rem 3rem -1rem rgba(0,0,0,.7);
         
@@ -62,7 +67,7 @@ main {
             height: 400px;
             border-radius:5px;
             cursor: pointer;
-            background:rgba(93, 91, 91, 0.3) url(./img/finger\ caramel\ cachuete.jpg)center/cover;
+            background:rgba(93, 91, 91, 0.3) url(./img/gourmandises.jpg)center/cover;
             background-blend-mode: darken;
             box-shadow: 0 1rem 3rem -1rem rgba(0,0,0,.7);
             .hover-finger {

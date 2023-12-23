@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:"barlow-italic", sans-serif;
+    font-family:"Montserrat-VariableFont_wght", sans-serif;
     color: white;
     
 
@@ -12,6 +12,7 @@ body{
     .titre1, .titre2, .titre3, .titre4, .titre5, .titre6{
         text-transform: uppercase;
         font-size: calc(10px + 1.5vw);
+        font-weight: 600;
         top:75%;  
         position:relative;
         transition: 1s;
