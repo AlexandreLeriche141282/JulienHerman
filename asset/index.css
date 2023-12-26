@@ -36,6 +36,9 @@ body .titre1, body .titre2, body .titre3, body .titre4, body .titre5, body .titr
           flex-direction: column;
   text-align: center;
 }
+body button {
+  cursor: pointer;
+}
 
 li {
   cursor: pointer;
@@ -80,7 +83,7 @@ i:hover {
   width: 160px;
 }
 .menu .reseau-sociaux {
-  width: 100px;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -90,7 +93,7 @@ i:hover {
   margin-right: 220px;
 }
 .menu .reseau-sociaux a {
-  font-size: 2vw;
+  font-size: 1.5vw;
 }
 .menu ul {
   display: -webkit-box;
@@ -373,4 +376,171 @@ main .sectionPhotos3 .viennoiserie .hover-viennoiserie {
 main .sectionPhotos3 .viennoiserie:hover .hover-viennoiserie {
   opacity: 1;
   /* Lors du hover, on remet l'opacité à 1 */
+}
+
+footer {
+  height: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 50px 0 50px 0;
+  background: rgba(245, 242, 242, 0.385);
+}
+footer .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-top: 100px;
+  width: 100%;
+}
+footer .info .contactBlock {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 350px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .info .contactBlock p {
+  color: rgb(109, 100, 100);
+  line-height: 1.5em;
+}
+footer .logo img {
+  width: 200px;
+  margin-left: 100px;
+  border-radius: 5px;
+}
+footer h2 {
+  color: rgb(46, 104, 128);
+  font-size: 2rem;
+  line-height: 2em;
+}
+footer button {
+  width: 180px;
+  color: rgb(109, 100, 100);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  height: 50px;
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+footer button:hover {
+  background: black;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#popup-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 110;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.active {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+input[type=text],
+textarea,
+input[type=email],
+input[type=tel] {
+  width: 100%;
+  padding: 12px;
+  border: 0.1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 0px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border-color: rgb(115, 108, 108);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(46, 104, 128);
+  color: white;
+}
+
+.popup-content {
+  /* Ajouter box-sizing */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background: white;
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  /* redéfinition 400 + 2*20 */
+  max-width: 500px;
+  margin: 100px auto 50px;
+  text-align: left;
+}
+.popup-content input, .popup-content textarea, .popup-content label {
+  color: black;
+}
+.popup-content small {
+  color: red;
+}
+.popup-content .popup-exit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-decoration: none;
+  background: black;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+.popup-content h1 {
+  color: rgb(46, 104, 128);
+  width: 100%;
+  text-align: center;
+  font-size: calc(0.5rem + 2vw);
+  text-transform: uppercase;
+  margin: 60px 0;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+.popup-content label {
+  margin: 0 0 15px 0;
+  width: 100%;
+}
+.popup-content textarea {
+  resize: none;
+}
+.popup-content input,
+.popup-content textarea:focus {
+  outline-color: rgb(46, 104, 128);
 }/*# sourceMappingURL=index.css.map */

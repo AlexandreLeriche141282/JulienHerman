@@ -1,0 +1,49 @@
+
+footer{
+   height: 350px;
+   display: flex;
+  margin: 50px 0 50px 0;
+background: rgba(245, 242, 242, 0.385);
+  .info{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+     width: 100%;
+     .contactBlock{
+      flex-direction: column;
+      width: 350px;
+      display: flex;
+      p{
+        color: rgb(109, 100, 100);
+        line-height: 1.5em;
+      }
+     }
+     
+  }  
+.logo{
+    img{
+        width: 200px;
+        margin-left: 100px;
+        border-radius: 5px;
+    }
+}
+h2{
+  color: rgb(46,104,128);  
+  font-size: 2rem;
+  line-height: 2em;
+}
+button{
+  width: 180px;
+  color: rgb(109, 100, 100);
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  height: 50px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  &:hover{
+    background: black;
+    color: white;
+    transition: 0.5s;
+  }
+}
+}

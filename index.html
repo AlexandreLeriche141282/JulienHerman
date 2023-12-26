@@ -38,6 +38,30 @@
 </head>
 
 <body>
+  <div id="popup-overlay">
+    <div class="popup-content">
+      <h1>contactez-nous</h1>
+            <form action="/action_page.php">
+              <label for="fname">Nom & prénom <small>*</small></label>
+              <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom" required>
+          
+              <label for="sujet">Sujet <small>*</small></label>
+              <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
+          
+              <label for="emailAddress">Email <small>*</small></label>
+              <input id="emailAddress" type="email" name="email" placeholder="Votre email" required>
+              
+              <label for="tel">Téléphone <small>*</small></label>
+              <input type="tel" id="telephone" name="Téléphone" placeholder="Téléphone" required>
+          
+              <label for="subject">Message <small>*</small></label>
+              <textarea id="subject" name="subject" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"required ></textarea>
+          
+              <input type="submit" value="Envoyer">
+            </form>
+            <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">X</a>
+    </div>
+  </div>
   <header>
     <div class="menu">
       <div class="logo">
@@ -52,9 +76,10 @@
         <li>Gourmandises</li>
         <li>Viennoiseries</li>
         <li>Galerie</li>
-        <li>Contact</li>
+        <li onclick="togglePopup()">Contact</li>
       </ul>
       <div class="reseau-sociaux">
+        <a href="dessertsparjulienherman@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
         <a href="https://www.instagram.com/dessertsparjulienherman?igshid=YmMyMTA2M2Y%3D" target="_blank"><i
             class="fa-brands fa-instagram"></i></a>
         <a href="https://www.facebook.com/profile.php?id=100090156510675" target="_blank"><i
@@ -146,11 +171,40 @@ Bienvenue.
       </div>
     </div>
 
+</main>
 
+  <footer>
 
+<div class="info">
+  <div class="logo">
+    <img src="./asset/img/logoJulien.png" alt="Logo">
+  </div>
+  <div class="contact">
+    <div class="contactBlock">
+      <p>4 rue du vert galant</p>
+      <p>72100 le mans</p>
+      <p>Tel : 06 10 60 14 42</p>
+      <p>Lundi : Fermé</p>
+      <p>Mardi : 08H30 - 14H00 / 15H00 - 18H00</p>
+      <p>Mercredi : 08H30 - 12H00 / 15H00 - 18H00</p>
+      <p>Jeudi/Vendredi : 08H30 - 14H00 / 15H00 - 18H00 </p>
+      <p>Samedi : 10H00 - 14H00 / 15H00 - 17H30</p>
+      <p>Dimanche : Fermé</p>
 
+    </div>
+    
+  </div>
+  <div class="horaires">
 
-  </main>
+  </div>
+  <div class="question">
+    <h2>Une envie, un évenement ?</h2>
+    <button onclick="togglePopup()">Contactez-nous</button>
+  </div>
+  
+
+</div>
+  </footer>
 
   <script src="./index.js"></script>
 </body>
