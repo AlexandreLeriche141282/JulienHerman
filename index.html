@@ -35,31 +35,44 @@
   <link rel="shortcut icon" href="./asset/img/logo.jpg">
   <link rel="stylesheet" href="./asset/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("SPeSZLBDJLWstqlcr");
+   })();
+</script>
 </head>
 
 <body>
   <div id="popup-overlay">
     <div class="popup-content">
       <h1>contactez-nous</h1>
-            <form action="/action_page.php">
-              <label for="fname">Nom & prénom <small>*</small></label>
-              <input type="text" id="fname" name="firstname" placeholder="Votre nom et prénom" required>
-          
+            <form id="validation" method="post" onsubmit="return false">
+              <label for="name">Nom & prénom <small>*</small></label>
+              <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
+              
               <label for="sujet">Sujet <small>*</small></label>
               <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
           
               <label for="emailAddress">Email <small>*</small></label>
-              <input id="emailAddress" type="email" name="email" placeholder="Votre email" required>
+              <input id="email" type="email" name="email" placeholder="Votre email" required>
               
               <label for="tel">Téléphone <small>*</small></label>
-              <input type="tel" id="telephone" name="Téléphone" placeholder="Téléphone" required>
+              <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
+              
           
-              <label for="subject">Message <small>*</small></label>
-              <textarea id="subject" name="subject" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"required ></textarea>
+              <label for="message">Message <small>*</small></label>
+              <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"required></textarea>
           
-              <input type="submit" value="Envoyer">
-            </form>
+              <input onclick="sendMail()" type="submit" value="Envoyer">
+              
+              <input type="checkbox" name="o107_Consentement" value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations." required> <small>J'ai lu et j'accepte la Politique de confidentialité.</small>
+              
+            
             <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">X</a>
+</form>
     </div>
   </div>
   <header>
@@ -75,14 +88,14 @@
         <li>Desserts</li>
         <li>Gourmandises</li>
         <li>Viennoiseries</li>
-        <li>Galerie</li>
+        <li>Salon de thé</li>
         <li onclick="togglePopup()">Contact</li>
       </ul>
       <div class="reseau-sociaux">
-        <a href="dessertsparjulienherman@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
-        <a href="https://www.instagram.com/dessertsparjulienherman?igshid=YmMyMTA2M2Y%3D" target="_blank"><i
+        <a href="mailto:dessertsparjulienherman@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
+        <a title="Suivez-nous sur instagram"href="https://www.instagram.com/dessertsparjulienherman?igshid=YmMyMTA2M2Y%3D" target="_blank"><i
             class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.facebook.com/profile.php?id=100090156510675" target="_blank"><i
+        <a title="Partager sur Facebook"href="https://www.facebook.com/profile.php?id=100090156510675" target="_blank"><i
             class="fa-brands fa-facebook"></i></a>
       </div>
 
