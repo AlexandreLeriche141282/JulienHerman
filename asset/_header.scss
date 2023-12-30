@@ -11,9 +11,9 @@
     position: fixed;
     z-index: 2;
     margin: auto;
-    
     left: 0;
     right: 0;
+    
 
     img {
         margin: 10px 0 0px 210px;
@@ -30,19 +30,19 @@
         margin-right: 220px;
 
         a {
-            font-size:1.5vw;
+            font-size:1vw;
         }
        
     }
 
     ul {
         display: flex;
-        width: 800px;
+        width: 900px;
         justify-content: space-between;
         
         margin-right: 30px;
         li{
-            font-size:calc(8px + 0.5vw);
+            font-size:calc(6px + 0.4vw);
         }
     }
 }
@@ -54,8 +54,9 @@
     overflow: hidden;
     position: relative;
     background: rgb(255, 255, 255);
+    
+    
    
-
 }
 video.videoResponsive{
         position: absolute;
@@ -68,5 +69,6 @@ video.videoResponsive{
         width: 77%;
         border: 0;
         z-index: 1;
+        
         
     }

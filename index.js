@@ -1,3 +1,4 @@
+// ------------------------Apparition textePhoto scroll--------------------------------//
 let lastScroll = 0;
 const menu = document.querySelector(".menu");
 const textVisible1 = document.querySelector(".titre1");
@@ -21,7 +22,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.60) {
+    if (scrollValue > 0.50) {
 
         textVisible1.style.opacity = "1"
         textVisible1.style.top = "45%"
@@ -35,7 +36,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.60) {
+    if (scrollValue > 0.50) {
 
         textVisible2.style.opacity = "1"
         textVisible2.style.top = "45%"
@@ -48,7 +49,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.75) {
+    if (scrollValue > 0.70) {
 
         textVisible3.style.opacity = "1"
         textVisible3.style.top = "45%"
@@ -61,7 +62,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.75) {
+    if (scrollValue > 0.70) {
 
         textVisible4.style.opacity = "1"
         textVisible4.style.top = "45%"
@@ -74,7 +75,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.95) {
+    if (scrollValue > 0.85) {
 
         textVisible5.style.opacity = "1"
         textVisible5.style.top = "45%"
@@ -87,7 +88,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.95) {
+    if (scrollValue > 0.85) {
 
         textVisible6.style.opacity = "1"
         textVisible6.style.top = "45%"
@@ -98,12 +99,15 @@ window.addEventListener("scroll", () => {
     }
 
 });
-
+// --------------------------------------------------------------------------------
+// -----------------Effet toggle sur formulaire Popup----------------------------//
 function togglePopup() {
     let popup = document.querySelector("#popup-overlay")
     popup.classList.toggle("active");
 }
 
+// --------------------------------------------------------------------------------
+// -----------------Fonction pour envoi de formulaire via EmailJs-----------------//
 function sendMail() {
     let params = {
         name: document.getElementById("name").value,
@@ -116,4 +120,4 @@ function sendMail() {
 
     emailjs.send("service_86vpx3l", "template_2nhdv2u", params).then(alert("Votre message nous a bien été transmis"))
 }
-
+// ------------------------------------------------------------------------------------
