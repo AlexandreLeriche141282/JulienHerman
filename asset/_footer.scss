@@ -16,7 +16,11 @@ background: rgba(245, 242, 242, 0.385);
       .logo{
         display: flex;
         margin-bottom: 10px;
+        img{
+        width: 150px;
       }
+      }
+      
       }
      .contactBlock{
       flex-direction: column;
@@ -58,9 +62,6 @@ button{
 }
 
 }
-@media (max-width: 850px){
-footer{
-  
-}
-}
+
+
   
