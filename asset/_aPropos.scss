@@ -1,0 +1,54 @@
+main{
+    .containerAbout{
+        display: grid;
+        grid-template-columns:50% 50%;
+        gap: 25px;
+     .back{
+        background: url(./img/aPropos.jpg)no-repeat;
+        height: 700px;
+        position: relative;
+        top: 100px;
+        margin-left: 50px;
+        filter: grayscale(100%);
+        transition: 1.6s;
+        &:hover {
+            filter: grayscale(10%);
+          }
+    }
+    
+    .textAbout{
+        height: 650px;
+        position: relative;
+        top: 100px;
+        margin-right: 50px;
+        p{
+            margin: 20px;
+            color: black;
+            line-height: 25px;
+            span{
+                color:rgb(46,104,128);
+                font-weight: 700;
+            }
+        }
+    }   
+    }
+    
+    .afterHeader{
+        height: 160px;
+        background:rgb(46,104,128);
+        position: relative;
+        top: 50px;
+        display: flex;
+        span{
+            color: rgb(128, 173, 193);
+        }
+        
+        h1{
+        position: absolute;
+        bottom: 16px;
+        margin-left: 200px;
+
+        
+        }
+    }
+}

@@ -1,7 +1,7 @@
 
 .menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     background: rgb(255, 255, 255);
     width: 100%;
@@ -13,31 +13,38 @@
     margin: auto;
     left: 0;
     right: 0;
+
+    @media(max-width:900px){
+height:4%;
+    }
     
 
     img {
-        margin: 10px 0 0px 210px;
-        width: 160px;
+        margin: auto;
+        width: 180px;
+        @media(max-width:900px){
+            width: 50px;
+        }
         
     }
 
     
 
     .reseau-sociaux {
-        width: 150px;
+        width: 130px;
         display: flex;
         justify-content: space-between;
-        margin-right: 220px;
+        
 
         a {
-            font-size:1vw;
+            font-size:1.5vw;
         }
        
     }
 
     ul {
         display: flex;
-        width: 900px;
+        width: 850px;
         justify-content: space-between;
         
         margin-right: 30px;

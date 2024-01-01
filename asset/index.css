@@ -43,7 +43,7 @@ body button {
 li {
   cursor: pointer;
   list-style: none;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   color: rgb(0, 0, 0);
 }
 li:hover {
@@ -61,9 +61,8 @@ i:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -78,28 +77,37 @@ i:hover {
   left: 0;
   right: 0;
 }
+@media (max-width: 900px) {
+  .menu {
+    height: 4%;
+  }
+}
 .menu img {
-  margin: 10px 0 0px 210px;
-  width: 160px;
+  margin: auto;
+  width: 180px;
+}
+@media (max-width: 900px) {
+  .menu img {
+    width: 50px;
+  }
 }
 .menu .reseau-sociaux {
-  width: 150px;
+  width: 130px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 220px;
 }
 .menu .reseau-sociaux a {
-  font-size: 1vw;
+  font-size: 1.5vw;
 }
 .menu ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 900px;
+  width: 850px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -383,7 +391,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 50px 0 50px 0;
   background: rgba(245, 242, 242, 0.385);
 }
 footer .info {
@@ -641,4 +648,63 @@ section .containerPayement .logo .logoIcon img {
   section {
     display: block;
   }
+  section .containerPayement {
+    height: 120px;
+  }
+  section .containerService {
+    height: 130px;
+  }
+}
+
+main .containerAbout {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 25px;
+}
+main .containerAbout .back {
+  background: url(./img/aPropos.jpg) no-repeat;
+  height: 700px;
+  position: relative;
+  top: 100px;
+  margin-left: 50px;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  -webkit-transition: 1.6s;
+  transition: 1.6s;
+}
+main .containerAbout .back:hover {
+  -webkit-filter: grayscale(10%);
+          filter: grayscale(10%);
+}
+main .containerAbout .textAbout {
+  height: 650px;
+  position: relative;
+  top: 100px;
+  margin-right: 50px;
+}
+main .containerAbout .textAbout p {
+  margin: 20px;
+  color: black;
+  line-height: 25px;
+}
+main .containerAbout .textAbout p span {
+  color: rgb(46, 104, 128);
+  font-weight: 700;
+}
+main .afterHeader {
+  height: 160px;
+  background: rgb(46, 104, 128);
+  position: relative;
+  top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .afterHeader span {
+  color: rgb(128, 173, 193);
+}
+main .afterHeader h1 {
+  position: absolute;
+  bottom: 16px;
+  margin-left: 200px;
 }/*# sourceMappingURL=index.css.map */

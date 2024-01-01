@@ -49,7 +49,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.70) {
+    if (scrollValue > 0.65) {
 
         textVisible3.style.opacity = "1"
         textVisible3.style.top = "45%"
@@ -62,7 +62,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.70) {
+    if (scrollValue > 0.65) {
 
         textVisible4.style.opacity = "1"
         textVisible4.style.top = "45%"
@@ -75,7 +75,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.85) {
+    if (scrollValue > 0.80) {
 
         textVisible5.style.opacity = "1"
         textVisible5.style.top = "45%"
@@ -88,7 +88,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.85) {
+    if (scrollValue > 0.80) {
 
         textVisible6.style.opacity = "1"
         textVisible6.style.top = "45%"

@@ -69,8 +69,12 @@ section {
     @media (max-width:900px) {
         display: block;
 
-        .containerPayement {}
+        .containerPayement {
+            height: 120px;
+        }
 
-        .containerService {}
+        .containerService {
+            height: 130px;
+        }
     }
 }
