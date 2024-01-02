@@ -1,4 +1,4 @@
-main{
+.section1{
     .containerAbout{
         display: grid;
         grid-template-columns:50% 50%;
@@ -52,3 +52,46 @@ main{
         }
     }
 }
+.section2{
+    background: rgb(250, 247, 247);
+    margin-top: 90px;
+    .containerAbout2{
+        display: grid;
+        grid-template-columns:33% 33% 33%;
+        gap: 25px;
+     .img1{
+        background:url(./img/JulienHermanWork.webp)center/cover;
+        width: 80%;
+        border-radius: 10px;
+        margin-left: 50px;
+        transition: 1s;
+          }
+          .img2{
+            background: url(./img/julienConcours.jpg)top/cover;
+            width: 80%;
+            border-radius: 10px;
+            margin-right: 50px;
+            transition: 1s;
+              }
+
+    }
+    
+    .textAbout2{
+        height: 550px;
+        position: relative;
+        margin-top: 90px;
+        display: flex;
+        
+        align-items: center;
+        p{
+            margin: 20px;
+            color: rgb(104, 98, 98);
+            line-height: 45px;
+            text-align: center;
+            padding: 30px;
+            font-size:calc(12px + 1vw)
+            
+            
+        }
+    }   
+    } 
