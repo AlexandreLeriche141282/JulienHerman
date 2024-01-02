@@ -39,3 +39,26 @@ window.addEventListener("scroll", () => {
     }
 
 });
+
+// --------------------------------------------------------------------------------
+// -----------------Effet toggle sur formulaire Popup----------------------------//
+function togglePopup() {
+    let popup = document.querySelector("#popup-overlay")
+    popup.classList.toggle("active");
+}
+
+// --------------------------------------------------------------------------------
+// -----------------Fonction pour envoi de formulaire via EmailJs-----------------//
+function sendMail() {
+    let params = {
+        name: document.getElementById("name").value,
+        sujet: document.getElementById("sujet").value,
+        email: document.getElementById("email").value,
+        telephone: document.getElementById("telephone").value,
+        message: document.getElementById("message").value,
+
+    }
+
+    emailjs.send("service_86vpx3l", "template_2nhdv2u", params).then(alert("Votre message nous a bien été transmis"))
+}
+// ------------------------------------------------------------------------------------
