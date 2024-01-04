@@ -78,3 +78,37 @@ section {
         }
     }
 }
+
+// ------------Newsletter-------------------------//
+.newsletter{
+    background-color: #000000;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/vanilleDessert.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #ffffff;
+    padding: 1em;
+    text-align: center;
+    height:300px;
+    display: flex;
+
+    .newsletterContent{
+        .blockContent{
+            padding: 10px 0 10px 0;
+            h2{
+                font-size:calc(10px + 1.8vw);
+            }
+        }
+        .newsletterForm{
+            display: flex;
+            height: 70%;
+            align-items: center;
+        }
+        #email2{
+            width: 260px;
+
+        }
+        
+        
+
+}
+}

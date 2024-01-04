@@ -122,6 +122,20 @@ function sendMail() {
 
     emailjs.send("service_86vpx3l", "template_2nhdv2u", params).then(alert("Votre message nous a bien été transmis"))
 }
+
+// ----------- Souscription newsletter------------//
+
+function sendMail2() {
+    let param = {
+        
+        email2: document.getElementById("email2").value,
+        
+
+    }
+
+    emailjs.send("service_eajv5m1", "template_pr30z85", param).then(alert("Votre message nous a bien été transmis"))
+}
+
 // ------------------------------------------------------------------------------------
 
 

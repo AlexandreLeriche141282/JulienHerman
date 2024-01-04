@@ -1,14 +1,23 @@
 @charset "UTF-8";
+@font-face {
+  font-family: azerty;
+  src: url(./Fonts/bankgothicltbtlight.ttf);
+}
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: "roboto-light", sans-serif;
+  font-family: azerty, cursive;
   color: white;
+  letter-spacing: 2px;
 }
 * a {
   text-decoration: none;
+}
+* input,
+* textarea:focus {
+  outline-color: rgb(46, 104, 128);
 }
 
 body {
@@ -17,7 +26,6 @@ body {
 body .titre1, body .titre2, body .titre3, body .titre4, body .titre5, body .titre6 {
   text-transform: uppercase;
   font-size: calc(10px + 1.5vw);
-  font-weight: 600;
   top: 75%;
   position: relative;
   -webkit-transition: 1s;
@@ -427,7 +435,7 @@ footer .info .contactBlock {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 350px;
+  width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -435,6 +443,7 @@ footer .info .contactBlock {
 footer .info .contactBlock p {
   color: rgb(109, 100, 100);
   line-height: 1.5em;
+  letter-spacing: 1px;
 }
 footer .logo img {
   width: 200px;
@@ -567,10 +576,6 @@ input[type=submit]:hover {
 .popup-content textarea {
   resize: none;
 }
-.popup-content input,
-.popup-content textarea:focus {
-  outline-color: rgb(46, 104, 128);
-}
 
 section {
   margin-top: 50px;
@@ -660,6 +665,39 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 
+.newsletter {
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(./img/vanilleDessert.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/vanilleDessert.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #ffffff;
+  padding: 1em;
+  text-align: center;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.newsletter .newsletterContent .blockContent {
+  padding: 10px 0 10px 0;
+}
+.newsletter .newsletterContent .blockContent h2 {
+  font-size: calc(10px + 1.8vw);
+}
+.newsletter .newsletterContent .newsletterForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.newsletter .newsletterContent #email2 {
+  width: 260px;
+}
+
 .section1 .containerAbout {
   display: grid;
   grid-template-columns: 50% 50%;
@@ -689,7 +727,7 @@ section .containerPayement .logo .logoIcon img {
 .section1 .containerAbout .textAbout p {
   margin: 20px;
   color: black;
-  line-height: 25px;
+  line-height: 20px;
 }
 .section1 .containerAbout .textAbout p span {
   color: rgb(46, 104, 128);
@@ -752,7 +790,7 @@ section .containerPayement .logo .logoIcon img {
 .section2 .textAbout2 p {
   margin: 20px;
   color: rgb(104, 98, 98);
-  line-height: 45px;
+  line-height: 35px;
   text-align: center;
   padding: 30px;
   font-size: calc(12px + 1vw);
