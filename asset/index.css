@@ -1,7 +1,7 @@
 @charset "UTF-8";
 @font-face {
   font-family: azerty;
-  src: url(./Fonts/bankgothicltbtlight.ttf);
+  src: url(./Fonts/Orbitron-VariableFont_wght.ttf);
 }
 * {
   margin: 0;
@@ -794,5 +794,5 @@ section .containerPayement .logo .logoIcon img {
   line-height: 35px;
   text-align: center;
   padding: 30px;
-  font-size: calc(12px + 1vw);
+  font-size: calc(10px + 1vw);
 }/*# sourceMappingURL=index.css.map */
