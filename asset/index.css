@@ -696,6 +696,7 @@ section .containerPayement .logo .logoIcon img {
 }
 .newsletter .newsletterContent #email2 {
   width: 260px;
+  color: #000000;
 }
 
 .section1 .containerAbout {
