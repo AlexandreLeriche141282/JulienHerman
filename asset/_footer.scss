@@ -16,9 +16,10 @@ background: rgba(245, 242, 242, 0.385);
       .logo{
         display: flex;
         margin-bottom: 10px;
-        img{
-        width: 150px;
-      }
+        .logoRef{
+          display: flex;
+        }
+        
       }
       
       }
@@ -35,13 +36,33 @@ background: rgba(245, 242, 242, 0.385);
      }
      
   }  
-.logo{
+.logo-julien{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: column;
+
     img{
         width: 200px;
-        margin-left: 100px;
-        border-radius: 5px;
+        // margin-left: 100px;
+        
+    }
+    .logoRef{
+      display: flex;
+      img{
+        padding: 20px;
+        width: 150px;
+        animation: gelatine 3s infinite;
+      }
     }
 }
+@keyframes gelatine {
+  from, to { transform: scale(1, 1); }
+  25% { transform: scale(0.9, 1.1); }
+  50% { transform: scale(1.1, 0.9); }
+  75% { transform: scale(0.9, 1.05); }
+}
+
 h2{
   color: rgb(46,104,128);  
   font-size: 2rem;

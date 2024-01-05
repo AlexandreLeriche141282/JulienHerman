@@ -150,6 +150,20 @@ video.videoResponsive {
   z-index: 1;
 }
 
+main .vertical-line {
+  border: 3vw solid rgb(46, 104, 128);
+  height: 1330px;
+  margin: 19px 0px 0 65px;
+  position: absolute;
+  left: 0;
+}
+main .vertical-line2 {
+  border: 3vw solid rgb(46, 104, 128);
+  height: 1330px;
+  margin: 19px 40px 0 0px;
+  position: absolute;
+  right: 0;
+}
 main h2 {
   color: black;
   text-align: center;
@@ -426,8 +440,10 @@ footer .info {
     display: flex;
     margin-bottom: 10px;
   }
-  footer .info .logo img {
-    width: 150px;
+  footer .info .logo .logoRef {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 footer .info .contactBlock {
@@ -445,10 +461,70 @@ footer .info .contactBlock p {
   line-height: 1.5em;
   letter-spacing: 1px;
 }
-footer .logo img {
+footer .logo-julien {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .logo-julien img {
   width: 200px;
-  margin-left: 100px;
-  border-radius: 5px;
+}
+footer .logo-julien .logoRef {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+footer .logo-julien .logoRef img {
+  padding: 20px;
+  width: 150px;
+  -webkit-animation: gelatine 3s infinite;
+          animation: gelatine 3s infinite;
+}
+@-webkit-keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.9, 1.05);
+            transform: scale(0.9, 1.05);
+  }
+}
+@keyframes gelatine {
+  from, to {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+  }
+  25% {
+    -webkit-transform: scale(0.9, 1.1);
+            transform: scale(0.9, 1.1);
+  }
+  50% {
+    -webkit-transform: scale(1.1, 0.9);
+            transform: scale(1.1, 0.9);
+  }
+  75% {
+    -webkit-transform: scale(0.9, 1.05);
+            transform: scale(0.9, 1.05);
+  }
 }
 footer h2 {
   color: rgb(46, 104, 128);
@@ -603,6 +679,7 @@ section .containerService {
       -ms-flex-align: center;
           align-items: center;
   background: black;
+  position: relative;
 }
 section .containerService .logo {
   display: -webkit-box;
@@ -634,6 +711,7 @@ section .containerPayement {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 section .containerPayement .logo {
   display: -webkit-box;

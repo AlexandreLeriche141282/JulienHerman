@@ -1,4 +1,20 @@
 main {
+    .vertical-line{
+        border: 3vw solid rgb(46,104,128);
+        height:1330px;
+        margin: 19px 0px 0 65px ;
+        position: absolute;
+        left: 0;
+        
+      }
+      .vertical-line2{
+        border: 3vw solid rgb(46,104,128);
+        height:1330px;
+        margin: 19px 40px 0 0px ;
+        position: absolute;
+        right: 0;
+        
+      }
     
     h2{
         color: black;
