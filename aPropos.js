@@ -17,11 +17,11 @@ window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
     if (scrollValue > 0.70) {
 
-        img1.style.width = "100%"
+        img1.style.width = "80%"
         
 
     } else {
-        img1.style.width = "80%"
+        img1.style.width = "50%"
        
     }
 
@@ -30,11 +30,11 @@ window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
     if (scrollValue > 0.70) {
 
-        img2.style.width = "100%"
+        img2.style.width = "80%"
         
 
     } else {
-        img2.style.width = "80%"
+        img2.style.width = "50%"
        
     }
 

@@ -14,6 +14,10 @@
 }
 * a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+* a:hover {
+  color: rgb(113, 184, 215);
 }
 * input,
 * textarea:focus {
@@ -118,14 +122,29 @@ i:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 850px;
+  width: 1150px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-right: 30px;
 }
 .menu ul li {
+  position: relative;
   font-size: calc(7px + 0.4vw);
+}
+.menu ul li:hover #subMenu {
+  display: block;
+}
+.menu ul li ul {
+  position: absolute;
+}
+.menu ul li #subMenu {
+  display: none;
+  width: 290px;
+  padding-top: 20px;
+  background: rgb(255, 255, 255);
+  line-height: 30px;
+  padding-left: 8px;
 }
 
 .video16by9 {
@@ -416,7 +435,7 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background: rgba(245, 242, 242, 0.385);
+  background: white;
 }
 footer .info {
   display: -webkit-box;
@@ -477,7 +496,7 @@ footer .logo-julien {
           flex-direction: column;
 }
 footer .logo-julien img {
-  width: 200px;
+  width: 220px;
 }
 footer .logo-julien .logoRef {
   display: -webkit-box;
@@ -841,17 +860,16 @@ section .containerPayement .logo .logoIcon img {
 }
 .section2 .containerAbout2 .img1 {
   background: url(./img/JulienHermanWork.webp) center/cover;
-  width: 80%;
+  width: 90%;
   border-radius: 10px;
-  margin-left: 50px;
+  margin-left: 90px;
   -webkit-transition: 1s;
   transition: 1s;
 }
 .section2 .containerAbout2 .img2 {
-  background: url(./img/julienConcours.jpg) top/cover;
-  width: 80%;
+  background: url(./img/julienConcours.jpg) center/cover;
   border-radius: 10px;
-  margin-right: 50px;
+  margin-right: 90px;
   -webkit-transition: 1s;
   transition: 1s;
 }
