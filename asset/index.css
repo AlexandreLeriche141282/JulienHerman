@@ -816,6 +816,7 @@ section .containerPayement .logo .logoIcon img {
   position: absolute;
   bottom: 16px;
   margin-left: 200px;
+  color: white;
 }
 
 .section2 {
