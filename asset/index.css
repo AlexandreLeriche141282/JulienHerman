@@ -9,7 +9,6 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: Orbitron, cursive;
-  color: white;
   letter-spacing: 2px;
 }
 * a {
@@ -122,7 +121,7 @@ i:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 1150px;
+  width: 1250px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -170,25 +169,21 @@ video.videoResponsive {
 }
 
 main .vertical-line {
-  border: 3vw solid rgb(46, 104, 128);
+  border: 0.75vw solid rgb(46, 104, 128);
   height: 1330px;
   margin: 19px 0px 0 65px;
   position: absolute;
   left: 0;
 }
 main .vertical-line2 {
-  border: 3vw solid rgb(46, 104, 128);
+  border: 0.75vw solid rgb(46, 104, 128);
   height: 1330px;
   margin: 19px 40px 0 0px;
   position: absolute;
   right: 0;
 }
-main h2 {
-  color: black;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 20px;
+main a {
+  color: white;
 }
 main .sectionPhotos1 {
   width: 70%;
@@ -197,6 +192,7 @@ main .sectionPhotos1 {
   justify-items: center;
   padding-top: 20px;
   margin: auto;
+  color: white;
   gap: 30px;
 }
 main .sectionPhotos1 .choux {
@@ -278,6 +274,7 @@ main .sectionPhotos2 {
   margin: auto;
   margin-top: 20px;
   gap: 30px;
+  color: white;
 }
 main .sectionPhotos2 .presentation {
   width: 100%;
@@ -358,6 +355,7 @@ main .sectionPhotos3 {
   margin: auto;
   margin-top: 20px;
   gap: 30px;
+  color: white;
 }
 main .sectionPhotos3 .dessertDeFete {
   width: 100%;
@@ -505,7 +503,7 @@ footer .logo-julien .logoRef {
 }
 footer .logo-julien .logoRef img {
   padding: 20px;
-  width: 150px;
+  width: 110px;
   -webkit-animation: gelatine 3s infinite;
           animation: gelatine 3s infinite;
 }
@@ -675,16 +673,17 @@ input[type=submit]:hover {
 section {
   margin-top: 50px;
   margin-bottom: 50px;
-  background: black;
   display: grid;
   grid-template-columns: 50% 50%;
 }
 section h2 {
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: calc(20px + 0.2vw);
+  color: rgb(189, 171, 138);
 }
 section p {
   font-size: calc(7px + 0.4vw);
+  color: rgb(189, 171, 138);
 }
 section .containerService {
   -webkit-box-orient: vertical;
@@ -697,7 +696,7 @@ section .containerService {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: black;
+  background: rgb(46, 104, 128);
   position: relative;
 }
 section .containerService .logo {
@@ -707,19 +706,21 @@ section .containerService .logo {
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 section .containerService .logo .logoIcon {
   text-align: center;
   width: 25%;
 }
 section .containerService .logo .logoIcon img {
-  width: 25%;
-  margin-bottom: 10px;
+  width: 15%;
+  margin-bottom: 5px;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 section .containerPayement {
-  background: rgb(24, 23, 23);
+  background: rgb(232, 233, 217);
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -739,16 +740,18 @@ section .containerPayement .logo {
   width: 100%;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 section .containerPayement .logo .logoIcon {
   text-align: center;
   width: 25%;
 }
 section .containerPayement .logo .logoIcon img {
-  width: 25%;
-  margin-bottom: 10px;
+  width: 15%;
+  margin-bottom: 5px;
+  -webkit-filter: brightness(50%);
+          filter: brightness(50%);
 }
 @media (max-width: 900px) {
   section {
@@ -760,40 +763,6 @@ section .containerPayement .logo .logoIcon img {
   section .containerService {
     height: 130px;
   }
-}
-
-.newsletter {
-  background-color: #000000;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url(./img/vanilleDessert.jpg);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/vanilleDessert.jpg);
-  background-position: center;
-  background-size: cover;
-  color: #ffffff;
-  padding: 1em;
-  text-align: center;
-  height: 300px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.newsletter .newsletterContent .blockContent {
-  padding: 10px 0 10px 0;
-}
-.newsletter .newsletterContent .blockContent h2 {
-  font-size: calc(10px + 1.8vw);
-}
-.newsletter .newsletterContent .newsletterForm {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 70%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.newsletter .newsletterContent #email2 {
-  width: 260px;
-  color: #000000;
 }
 
 .section1 .containerAbout {
@@ -891,4 +860,44 @@ section .containerPayement .logo .logoIcon img {
   text-align: center;
   padding: 30px;
   font-size: calc(10px + 1vw);
+}
+
+.newsletter {
+  background-color: #000000;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 221, 208, 0.829)), to(rgba(162, 150, 112, 0.8))), url(./img/IMG20230722074502.jpg);
+  background-image: linear-gradient(rgba(217, 221, 208, 0.829), rgba(162, 150, 112, 0.8)), url(./img/IMG20230722074502.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #080808;
+  padding: 1em;
+  text-align: center;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-top: 4vh;
+}
+.newsletter .newsletterContent .blockContent {
+  padding: 10px 0 10px 0;
+}
+.newsletter .newsletterContent .blockContent p {
+  font-size: calc(8px + 0.6vw);
+}
+.newsletter .newsletterContent .blockContent h2 {
+  font-size: calc(10px + 1.8vw);
+  font-weight: normal;
+}
+.newsletter .newsletterContent .newsletterForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.newsletter .newsletterContent #email2 {
+  width: 260px;
+  color: #000000;
 }/*# sourceMappingURL=index.css.map */

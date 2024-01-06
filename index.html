@@ -100,7 +100,7 @@
         </li>
         <li>Gourmandises</li>
         <li>Viennoiseries</li>
-        <li>Déjeuner &<br>Salon de thé</li>
+        <li>Déjeuner & Salon de thé</li>
         <li>Prestations annexes</li>
         <li>Actualités</li>
         <li onclick="togglePopup()">Contact</li>
@@ -175,7 +175,7 @@
       </div>
 
       <div class="viennoiserie">
-        <div class="titre6">Galerie</div>
+        <div class="titre6">Actualités</div>
         <div class="hover-viennoiserie">
 
         </div>
@@ -183,7 +183,32 @@
     </div>
     
   </main>
+  <div class="newsletter">
+    <div class="newsletterContent">
+      <div class="blockContent">
+        <h2>Newsletter</h2>
+        <p>un email gourmand de nos actualités</p>
+      </div>
+      <div class="newsletterForm">
+        <form id="newsletter" method="post" onsubmit="return false">
 
+          <label for="emailAddress">Email <small>*</small></label>
+          <input id="email2" type="email" name="email" placeholder="saisissez votre email" required>
+
+          <input onclick="sendMail2()" type="submit" value="je m'inscris">
+          <div class="checkbox">
+            <input type="checkbox" name="o107_Consentement"
+              value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
+              required> <small>Votre adresse e-mail sera utilisée par notre société uniquement, pour vous adresser des
+              e-mails sur ses offres et actualités. En cochant cette case, vous acceptez notre politique de
+              confidentialité.</small>
+          </div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
   <section>
     <div class="containerService">
       <h2>Nos services</h2>
@@ -236,34 +261,9 @@
     <div style="width: 100%"><iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0"
         marginwidth="0"
         src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=fr&amp;q=+(Desserts%20par%20Julien%20Herman)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a
-        href="https://visite360pro.com/">Trouvez une visite Google Street View</a></div>
+        href="https://visite360pro.com/"></a></div>
   </div>
-  <div class="newsletter">
-    <div class="newsletterContent">
-      <div class="blockContent">
-        <h2>newsletter</h2>
-        <p>un email gourmand de nos actualités</p>
-      </div>
-      <div class="newsletterForm">
-        <form id="newsletter" method="post" onsubmit="return false">
-
-          <label for="emailAddress">Email <small>*</small></label>
-          <input id="email2" type="email" name="email" placeholder="saisissez votre email" required>
-
-          <input onclick="sendMail2()" type="submit" value="je m'inscris">
-          <div class="checkbox">
-            <input type="checkbox" name="o107_Consentement"
-              value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
-              required> <small>Votre adresse e-mail sera utilisée par notre société uniquement, pour vous adresser des
-              e-mails sur ses offres et actualités. En cochant cette case, vous acceptez notre politique de
-              confidentialité.</small>
-          </div>
-        </form>
-
-      </div>
-
-    </div>
-  </div>
+  
   <footer>
 
 

@@ -1,0 +1,43 @@
+// ------------Newsletter-------------------------//
+.newsletter{
+    background-color: #000000;
+    background-image: linear-gradient(rgba(217, 221, 208, 0.829), rgba(162, 150, 112, 0.8)), url(./img/IMG20230722074502.jpg);
+    background-position: center;
+    background-size: cover;
+    color: #080808;
+    padding: 1em;
+    text-align: center;
+    height:300px;
+    display: flex;
+    position: relative;
+    margin-top: 4vh;
+
+
+    .newsletterContent{
+        .blockContent{
+            padding: 10px 0 10px 0;
+            p{
+                font-size:calc(8px + 0.6vw);  
+            }
+            h2{
+                font-size:calc(10px + 1.8vw);
+                font-weight: normal;
+                
+            }
+        }
+        .newsletterForm{
+            display: flex;
+            height: 70%;
+            align-items: center;
+            
+        }
+        #email2{
+            width: 260px;
+            color: #000000;
+
+        }
+        
+        
+
+}
+}

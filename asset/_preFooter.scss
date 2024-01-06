@@ -1,16 +1,17 @@
 section {
     h2 {
-        margin-top: 20px;
+        margin-top: 10px;
         font-size: calc(20px + 0.2vw);
+        color: rgb(189, 171, 138);
     }
 
     p {
         font-size: calc(7px + 0.4vw);
+        color: rgb(189, 171, 138);
     }
 
     margin-top: 50px;
     margin-bottom: 50px;
-    background: black;
     display: grid;
     grid-template-columns:50% 50%;
 
@@ -18,22 +19,25 @@ section {
         flex-direction: column;
         display: flex;
         align-items: center;
-        background: black;
-position: relative;
+        background: rgb(46, 104, 128);
+        position: relative;
+
         .logo {
             display: flex;
             width: 100%;
             justify-content: space-around;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 15px;
+            margin-bottom: 5px;
 
             .logoIcon {
                 text-align: center;
                 width: 25%;
 
                 img {
-                    width: 25%;
-                    margin-bottom: 10px;
+                    width: 15%;
+                    margin-bottom: 5px;
+                    filter: brightness(50%);
+
                 }
             }
 
@@ -41,25 +45,29 @@ position: relative;
     }
 
     .containerPayement {
-        background: rgb(24, 23, 23);
+        background: rgb(232, 233, 217);
         flex-direction: column;
         display: flex;
         align-items: center;
         position: relative;
+        
 
         .logo {
             display: flex;
             width: 100%;
             justify-content: space-around;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            margin-top: 15px;
+            margin-bottom: 5px;
+
             .logoIcon {
                 text-align: center;
                 width: 25%;
+                
 
                 img {
-                    width: 25%;
-                    margin-bottom: 10px;
+                    width: 15%;
+                    margin-bottom: 5px;
+                    filter: brightness(50%);
                 }
             }
 
@@ -77,39 +85,4 @@ position: relative;
             height: 130px;
         }
     }
-}
-
-// ------------Newsletter-------------------------//
-.newsletter{
-    background-color: #000000;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(./img/vanilleDessert.jpg);
-    background-position: center;
-    background-size: cover;
-    color: #ffffff;
-    padding: 1em;
-    text-align: center;
-    height:300px;
-    display: flex;
-
-    .newsletterContent{
-        .blockContent{
-            padding: 10px 0 10px 0;
-            h2{
-                font-size:calc(10px + 1.8vw);
-            }
-        }
-        .newsletterForm{
-            display: flex;
-            height: 70%;
-            align-items: center;
-        }
-        #email2{
-            width: 260px;
-            color: #000000;
-
-        }
-        
-        
-
-}
 }
