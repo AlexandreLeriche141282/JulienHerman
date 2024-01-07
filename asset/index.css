@@ -170,6 +170,7 @@ video.videoResponsive {
 
 main .vertical-line {
   border: 0.75vw solid rgb(46, 104, 128);
+  border-radius: 15px;
   height: 1330px;
   margin: 19px 0px 0 65px;
   position: absolute;
@@ -363,7 +364,7 @@ main .sectionPhotos3 .dessertDeFete {
   height: 400px;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/comme\ un\ burger\,\ sucré.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/salonDeThe/DESSERTS-5S3A3130-WEB-V2.jpg) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -563,6 +564,9 @@ footer button:hover {
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
+footer .question .elementFooter {
+  margin-top: 15px;
+}
 
 #popup-overlay {
   position: fixed;
@@ -614,6 +618,7 @@ input[type=submit] {
   border-color: rgb(115, 108, 108);
   border-radius: 4px;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 input[type=submit]:hover {
@@ -792,7 +797,7 @@ section .containerPayement .logo .logoIcon img {
   margin-right: 50px;
 }
 .section1 .containerAbout .textAbout p {
-  margin: 20px;
+  margin: 0 20px 20px 20px;
   color: black;
   line-height: 20px;
 }
@@ -801,10 +806,9 @@ section .containerPayement .logo .logoIcon img {
   font-weight: 700;
 }
 .section1 .afterHeader {
-  height: 160px;
+  height: 70px;
   background: rgb(46, 104, 128);
   position: relative;
-  top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -863,6 +867,10 @@ section .containerPayement .logo .logoIcon img {
   font-size: calc(10px + 1vw);
 }
 
+main {
+  margin-bottom: 150px;
+}
+
 .newsletter {
   background-color: #000000;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(217, 221, 208, 0.829)), to(rgba(162, 150, 112, 0.8))), url(./img/IMG20230722074502.jpg);
@@ -901,4 +909,32 @@ section .containerPayement .logo .logoIcon img {
 .newsletter .newsletterContent #email2 {
   width: 260px;
   color: #000000;
+}
+
+main {
+  top: 150px;
+  position: relative;
+}
+main .afterHeader {
+  height: 1.5vh;
+  background: rgb(46, 104, 128);
+}
+main .mentionsLegales {
+  height: 61vh;
+  text-align: center;
+  margin: 50px auto 50px;
+}
+main .mentionsLegales .mentionsLegalesContainer {
+  display: inline-block;
+  -moz-text-align-last: left;
+       text-align-last: left;
+  margin-top: 50px;
+  padding: 20px;
+  width: 70vh;
+  border: 1px solid rgb(226, 220, 220);
+  line-height: 25px;
+  font-size: 15px;
+}
+main .mentionsLegales .mentionsLegalesContainer span {
+  font-weight: 600;
 }/*# sourceMappingURL=index.css.map */
