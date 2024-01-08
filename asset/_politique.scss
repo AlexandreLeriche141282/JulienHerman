@@ -1,0 +1,34 @@
+main{
+    top:150px;
+    position: relative;
+    
+ .afterHeader{
+    height: 1.5vh;
+    background:rgb(46,104,128);
+    }
+
+.politique{
+    height: 320vh;
+    text-align: center;
+    margin:50px auto 50px;
+   
+
+    .politiqueContainer{
+        display: inline-block;
+        text-align: left;
+        margin-top: 50px;
+        padding: 20px;
+        width: 120vh;
+        border:1px solid rgb(226, 220, 220);
+        line-height: 25px;
+        font-size: 10px;
+        
+        span{
+            font-weight:600;
+        }
+        
+    }
+   
+}
+
+}

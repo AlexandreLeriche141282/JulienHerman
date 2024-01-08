@@ -98,21 +98,17 @@ i:hover {
 }
 .menu img {
   margin: auto;
-  width: 180px;
-}
-@media (max-width: 900px) {
-  .menu img {
-    width: 50px;
-  }
+  width: 80%;
 }
 .menu .reseau-sociaux {
-  width: 130px;
+  width: 110px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-left: 10px;
 }
 .menu .reseau-sociaux a {
   font-size: 1.5vw;
@@ -125,7 +121,6 @@ i:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-right: 30px;
 }
 .menu ul li {
   position: relative;
@@ -368,6 +363,7 @@ main .sectionPhotos3 .dessertDeFete {
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
+  margin-bottom: 60px;
 }
 main .sectionPhotos3 .dessertDeFete .hover-dessertDeFete {
   /* Positionnement du contenu hover */
@@ -936,5 +932,32 @@ main .mentionsLegales .mentionsLegalesContainer {
   font-size: 15px;
 }
 main .mentionsLegales .mentionsLegalesContainer span {
+  font-weight: 600;
+}
+
+main {
+  top: 150px;
+  position: relative;
+}
+main .afterHeader {
+  height: 1.5vh;
+  background: rgb(46, 104, 128);
+}
+main .politique {
+  height: 320vh;
+  text-align: center;
+  margin: 50px auto 50px;
+}
+main .politique .politiqueContainer {
+  display: inline-block;
+  text-align: left;
+  margin-top: 50px;
+  padding: 20px;
+  width: 120vh;
+  border: 1px solid rgb(226, 220, 220);
+  line-height: 25px;
+  font-size: 10px;
+}
+main .politique .politiqueContainer span {
   font-weight: 600;
 }/*# sourceMappingURL=index.css.map */

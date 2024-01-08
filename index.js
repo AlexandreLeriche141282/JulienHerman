@@ -136,20 +136,21 @@ function sendMail2() {
     emailjs.send("service_eajv5m1", "template_pr30z85", param).then(alert("Votre message nous a bien été transmis"))
 }
 
-// ------------------------------------------------------------------------------------
+// ----------------------------------------------------------------
+
+// --------- Side Bar ----------------------------------//
+
+const sidebar = document.getElementById("side-bar")
+const containerNav = document.querySelector(".container-nav")
 
 
+btn.addEventListener('click', () => {
+    sidebar.classList.toggle("active");
+})
 
-// window.addEventListener("scroll", () => {
-//     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-//     if (scrollValue > 0.40) {
+containerNav.addEventListener("click", () => {
+    sidebar.classList.remove("active")
+    
+})
 
-//         img1.style.size ="100%"
-        
-
-//     } else {
-//         img1.style.size="80%"
-//     }
-
-// });
 

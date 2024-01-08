@@ -1,4 +1,5 @@
 main {
+    
     .vertical-line{
         border: 0.75vw solid rgb(46,104,128);
         border-radius: 15px;
@@ -226,6 +227,7 @@ main {
                     background:rgba(93, 91, 91, 0.3) url(./img/salonDeThe/DESSERTS-5S3A3130-WEB-V2.jpg)center/cover;
                     background-blend-mode: darken;
                     box-shadow: 0 1rem 3rem -1rem rgba(0,0,0,.7);
+                    margin-bottom: 60px;
                     .hover-dessertDeFete {
                         /* Positionnement du contenu hover */
                         position: absolute;
