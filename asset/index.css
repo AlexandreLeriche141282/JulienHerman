@@ -61,7 +61,7 @@ li {
   color: rgb(0, 0, 0);
 }
 li:hover {
-  color: rgb(113, 184, 215);
+  color: rgb(46, 104, 128);
 }
 li:hover::after {
   content: "";
