@@ -9,13 +9,15 @@ $font1:Orbitron,cursive;
     padding: 0;
     box-sizing: border-box;
     font-family:$font1;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     a{
         text-decoration: none;
         color: rgb(0, 0, 0);
         &:hover{
             color:rgb(113, 184, 215); 
+            
         }
+        
     }
     input,
   textarea:focus {
@@ -56,12 +58,30 @@ li{
     color: rgb(0, 0, 0);
     &:hover{
         color: rgb(113, 184, 215);
-
+        &::after{
+            content: "";
+            background: rgb(191,174,142);
+            height: 1px;
+            position: absolute;
+            display: block;
+            animation: resize 0.5s;
+            animation-fill-mode: forwards;
+        }   
     }
 }
+
 i{
     color: rgb(0, 0, 0);
 &:hover{
   color: rgb(46,104,128);  
 }
 }
+@keyframes resize {
+            0%{
+                width: 0%;
+            }
+            100%{
+                width: 50%;
+            }
+            
+        }

@@ -14,6 +14,7 @@ section {
     margin-bottom: 50px;
     display: grid;
     grid-template-columns:50% 50%;
+    
 
     .containerService {
         flex-direction: column;
@@ -21,6 +22,8 @@ section {
         align-items: center;
         background: rgb(46, 104, 128);
         position: relative;
+        border-radius: 10px;
+        margin: 0 10px 10px;
 
         .logo {
             display: flex;
@@ -45,12 +48,13 @@ section {
     }
 
     .containerPayement {
-        background: rgb(232, 233, 217);
+        background: rgb(46, 104, 128);
         flex-direction: column;
         display: flex;
         align-items: center;
         position: relative;
-        
+        border-radius: 10px;
+        margin: 0 10px 10px;
 
         .logo {
             display: flex;

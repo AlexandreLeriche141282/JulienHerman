@@ -136,21 +136,15 @@ function sendMail2() {
     emailjs.send("service_eajv5m1", "template_pr30z85", param).then(alert("Votre message nous a bien été transmis"))
 }
 
-// ----------------------------------------------------------------
 
-// --------- Side Bar ----------------------------------//
+// -------- Burger menu ----------------------//
 
-const sidebar = document.getElementById("side-bar")
-const containerNav = document.querySelector(".container-nav")
+const burgerMenu = document.querySelector(".menuBurger");
+const ulMenu = document.querySelector(".ulMenu");
 
+burgerMenu.addEventListener("click", () => {
+    ulMenu.classList.toggle('mobileMenu')
+});
 
-btn.addEventListener('click', () => {
-    sidebar.classList.toggle("active");
-})
-
-containerNav.addEventListener("click", () => {
-    sidebar.classList.remove("active")
-    
-})
 
 
