@@ -1,14 +1,4 @@
-// ------------------------Apparition textePhoto scroll--------------------------------//
-let lastScroll = 0;
-
-const menu = document.querySelector(".menu");
-const textVisible1 = document.querySelector(".titre1");
-const textVisible2 = document.querySelector(".titre2");
-const textVisible3 = document.querySelector(".titre3");
-const textVisible4 = document.querySelector(".titre4");
-const textVisible5 = document.querySelector(".titre5");
-const textVisible6 = document.querySelector(".titre6");
-
+// -------------- Scroll navBar --------------//
 
 window.addEventListener("scroll", () => {
     if (window.scrollY < lastScroll) {
@@ -21,10 +11,25 @@ window.addEventListener("scroll", () => {
 });
 
 
+// --------------ApparitiontextePhotoscroll-----------------// 
+let lastScroll = 0;
+
+const menu = document.querySelector(".menu");
+const textVisible1 = document.querySelector(".titre1");
+const textVisible2 = document.querySelector(".titre2");
+const textVisible3 = document.querySelector(".titre3");
+const textVisible4 = document.querySelector(".titre4");
+const textVisible5 = document.querySelector(".titre5");
+const textVisible6 = document.querySelector(".titre6");
+
+
+
+
+
 
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.40) {
+    if (scrollValue > 0.40 ) {
 
         textVisible1.style.opacity = "1"
         textVisible1.style.top = "45%"
@@ -51,7 +56,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.50) {
+    if (scrollValue > 0.40) {
 
         textVisible3.style.opacity = "1"
         textVisible3.style.top = "45%"
@@ -64,7 +69,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.50) {
+    if (scrollValue > 0.40) {
 
         textVisible4.style.opacity = "1"
         textVisible4.style.top = "45%"
@@ -77,7 +82,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.65) {
+    if (scrollValue > 0.60) {
 
         textVisible5.style.opacity = "1"
         textVisible5.style.top = "45%"
@@ -90,7 +95,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.65) {
+    if (scrollValue > 0.60) {
 
         textVisible6.style.opacity = "1"
         textVisible6.style.top = "45%"
@@ -141,9 +146,15 @@ function sendMail2() {
 
 const burgerMenu = document.querySelector(".menuBurger");
 const ulMenu = document.querySelector(".ulMenu");
+const croix = document.querySelector(".croix")
 
 burgerMenu.addEventListener("click", () => {
     ulMenu.classList.toggle('mobileMenu')
+    
+});
+croix.addEventListener("click", () => {
+    ulMenu.classList.toggle('mobileMenu')
+    
 });
 
 

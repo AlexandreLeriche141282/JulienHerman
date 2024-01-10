@@ -14,7 +14,7 @@ $font1:Orbitron,cursive;
         text-decoration: none;
         color: rgb(0, 0, 0);
         &:hover{
-            color:rgb(113, 184, 215); 
+            color:rgb(46,104,128); 
             
         }
         
@@ -78,10 +78,10 @@ i{
 }
 @keyframes resize {
             0%{
-                width: 0%;
+                width: 0;
             }
             100%{
-                width: 50%;
+                width: 50px;
             }
             
         }

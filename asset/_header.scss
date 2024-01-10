@@ -1,4 +1,5 @@
 header{
+    
     .actuality{
         text-align: center;
         p{
@@ -35,7 +36,7 @@ header{
 
     @media(max-width:900px) {
         height: 7%;
-        // padding-bottom: 10px;
+        padding-bottom: 20px;
        
     }
 
@@ -123,18 +124,17 @@ header{
                 border-radius: 5px;
                 margin-left: -100%;
                 transition: all 0.5s ease;
+                .croix{
+                    width: 20px;
+                    right: 0;
+                    top: 0;
+                    margin: 20px;
+                    position: absolute;
+                    cursor: pointer;
+                }
                 li{
                     color: white;
                     padding: 10px;
-                    @keyframes resize {
-                        0%{
-                            width: 0%;
-                        }
-                        100%{
-                            width: 10%;
-                        }
-                        
-                    }
                     
                     #subMenu{
                         top: 0;
@@ -171,7 +171,9 @@ header{
     position: relative;
     background: rgb(255, 255, 255);
     
-
+    @media screen and (max-width:1370px){
+    padding-top: 76.25%;
+    }
 
 
 }
@@ -193,6 +195,8 @@ video.videoResponsive {
 }
 @media screen and (max-width:1370px){
         video.videoResponsive{
-        margin-top: 50px;
+        margin-top: 20px;
+        height: 87%;
+        width: 87%;
         }
     }

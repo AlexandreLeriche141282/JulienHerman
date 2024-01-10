@@ -16,7 +16,7 @@
   color: rgb(0, 0, 0);
 }
 * a:hover {
-  color: rgb(113, 184, 215);
+  color: rgb(46, 104, 128);
 }
 * input,
 * textarea:focus {
@@ -84,19 +84,19 @@ i:hover {
 
 @-webkit-keyframes resize {
   0% {
-    width: 0%;
+    width: 0;
   }
   100% {
-    width: 50%;
+    width: 50px;
   }
 }
 
 @keyframes resize {
   0% {
-    width: 0%;
+    width: 0;
   }
   100% {
-    width: 50%;
+    width: 50px;
   }
 }
 header .actuality {
@@ -157,6 +157,7 @@ header .actuality span {
 @media (max-width: 900px) {
   .menu {
     height: 7%;
+    padding-bottom: 20px;
   }
 }
 .menu .logo img {
@@ -231,25 +232,17 @@ header .actuality span {
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
+  .menu .ulMenu .croix {
+    width: 20px;
+    right: 0;
+    top: 0;
+    margin: 20px;
+    position: absolute;
+    cursor: pointer;
+  }
   .menu .ulMenu li {
     color: white;
     padding: 10px;
-  }
-  @-webkit-keyframes resize {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 10%;
-    }
-  }
-  @keyframes resize {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 10%;
-    }
   }
   .menu .ulMenu li #subMenu {
     top: 0;
@@ -281,6 +274,11 @@ header .actuality span {
   position: relative;
   background: rgb(255, 255, 255);
 }
+@media screen and (max-width: 1370px) {
+  .video16by9 {
+    padding-top: 76.25%;
+  }
+}
 
 video.videoResponsive {
   position: absolute;
@@ -297,20 +295,25 @@ video.videoResponsive {
 
 @media screen and (max-width: 1370px) {
   video.videoResponsive {
-    margin-top: 50px;
+    margin-top: 20px;
+    height: 87%;
+    width: 87%;
   }
+}
+main {
+  margin-top: -70px;
 }
 main .vertical-line {
   border: 0.75vw solid rgb(46, 104, 128);
   border-radius: 15px;
-  height: 1250px;
+  height: 100%;
   right: 90%;
   position: absolute;
 }
 main .vertical-line2 {
   border: 0.75vw solid rgb(46, 104, 128);
   border-radius: 15px;
-  height: 1250px;
+  height: 100%;
   margin-right: 65px;
   position: absolute;
   left: 92%;
@@ -330,7 +333,7 @@ main .sectionPhotos1 {
 @media screen and (max-width: 800px) {
   main .sectionPhotos1 {
     display: block;
-    width: 70%;
+    width: 60%;
   }
 }
 main .sectionPhotos1 .choux {
@@ -514,8 +517,7 @@ main .sectionPhotos3 {
   display: grid;
   grid-template-columns: 40% 60%;
   justify-items: center;
-  margin: auto;
-  margin-top: 20px;
+  margin: 20px auto 0;
   gap: 30px;
   color: white;
 }
@@ -535,7 +537,6 @@ main .sectionPhotos3 .dessertDeFete {
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
-  margin-bottom: 60px;
 }
 @media screen and (max-width: 800px) {
   main .sectionPhotos3 .dessertDeFete {
@@ -576,7 +577,6 @@ main .sectionPhotos3 .viennoiserie {
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
-  margin-bottom: 60px;
 }
 @media screen and (max-width: 800px) {
   main .sectionPhotos3 .viennoiserie {
@@ -622,7 +622,7 @@ footer .info {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin-top: 50px;
+  margin-top: 40px;
   width: 100%;
 }
 @media (max-width: 850px) {
@@ -635,7 +635,6 @@ footer .info {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-bottom: 10px;
   }
   footer .info .logo .logoRef {
     display: -webkit-box;
@@ -643,25 +642,34 @@ footer .info {
     display: flex;
   }
 }
-footer .info .contactBlock {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 480px;
+footer .info .contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 850px) {
-  footer .info .contactBlock {
-    width: 280px;
+  footer .info .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
-footer .info .contactBlock p {
-  color: rgb(109, 100, 100);
+footer .info .contact .contactBlock ul {
+  margin-top: 5px;
+}
+footer .info .contact .contactBlock ul a {
+  display: block;
+}
+footer .info .contact .contactBlock p {
+  color: rgb(47, 44, 44);
   line-height: 1.5em;
-  font-size: calc(6px + 0.4vw);
+  font-size: calc(7px + 0.4vw);
 }
 footer .logo-julien {
   display: -webkit-box;
@@ -679,8 +687,8 @@ footer .logo-julien {
           flex-direction: column;
 }
 footer .logo-julien p {
-  margin-bottom: 70px;
-  color: rgb(113, 184, 215);
+  margin-bottom: 15px;
+  color: rgb(46, 104, 128);
 }
 footer .logo-julien img {
   width: 220px;
@@ -691,7 +699,7 @@ footer .logo-julien .logoRef {
   display: flex;
 }
 footer .logo-julien .logoRef img {
-  padding: 20px;
+  padding: 20px 20px 0;
   width: 110px;
   -webkit-animation: gelatine 3s infinite;
           animation: gelatine 3s infinite;
@@ -732,12 +740,24 @@ footer .logo-julien .logoRef img {
             transform: scale(0.9, 1.05);
   }
 }
-footer h2 {
+footer .questionButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .questionButton h2 {
   color: rgb(46, 104, 128);
   font-size: 2rem;
   line-height: 2em;
 }
-footer button {
+footer .questionButton button {
   width: 180px;
   color: rgb(109, 100, 100);
   background-color: rgb(255, 255, 255);
@@ -745,18 +765,52 @@ footer button {
   height: 50px;
   font-size: 1rem;
   text-transform: uppercase;
+  margin-bottom: 5px;
 }
-footer button:hover {
+footer .questionButton button:hover {
   background: black;
   color: white;
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
-footer .question .elementFooter {
-  margin-top: 15px;
+footer .elementFooter {
+  margin-top: 25px;
 }
-footer .question .elementFooter li {
+footer .elementFooter .avisGoogle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+footer .elementFooter .avisGoogle p {
+  color: rgb(46, 104, 128);
+}
+footer .elementFooter img {
+  width: 130px;
+  -webkit-animation: gelatine 3s infinite;
+          animation: gelatine 3s infinite;
+}
+footer .elementFooter li {
   position: relative;
+}
+@media (max-width: 850px) {
+  footer .elementFooter {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 #popup-overlay {
@@ -1083,6 +1137,7 @@ main {
   border-radius: 15px;
   margin-left: 10px;
   margin-right: 10px;
+  margin-top: 200px;
 }
 .newsletter .newsletterContent .blockContent {
   padding: 10px 0 10px 0;
