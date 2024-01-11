@@ -243,6 +243,7 @@ header .actuality span {
   .menu .ulMenu li {
     color: white;
     padding: 10px;
+    width: 170px;
   }
   .menu .ulMenu li #subMenu {
     top: 0;
