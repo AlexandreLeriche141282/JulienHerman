@@ -13,6 +13,7 @@ window.addEventListener("scroll", () => {
 
 // --------------ApparitiontextePhotoscroll-----------------// 
 let lastScroll = 0;
+let playOnce = true;
 
 const menu = document.querySelector(".menu");
 const textVisible1 = document.querySelector(".titre1");
@@ -22,14 +23,32 @@ const textVisible4 = document.querySelector(".titre4");
 const textVisible5 = document.querySelector(".titre5");
 const textVisible6 = document.querySelector(".titre6");
 
+const ratio = 0.1
+const options = {
+    root: null,
+    rootMargin: '0px',
+    threshold: ratio
+}
 
+const handleIntersect = function (entries, observer) {
+    entries.forEach(function (entry){
+        if (entry.intersectionRatio > ratio) {
+            {
+
+                textVisible1.style.opacity = "1"
+                textVisible1.style.top = "45%"
+        
+            }
+       } 
+    })
+}
 
 
 
 
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.20 ) {
+    if (scrollValue > 0.35 ) {
 
         textVisible1.style.opacity = "1"
         textVisible1.style.top = "45%"
@@ -43,7 +62,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.25) {
+    if (scrollValue > 0.35) {
 
         textVisible2.style.opacity = "1"
         textVisible2.style.top = "45%"
@@ -56,7 +75,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.40) {
+    if (scrollValue > 0.50) {
 
         textVisible3.style.opacity = "1"
         textVisible3.style.top = "45%"
@@ -69,7 +88,7 @@ window.addEventListener("scroll", () => {
 });
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.40) {
+    if (scrollValue > 0.50) {
 
         textVisible4.style.opacity = "1"
         textVisible4.style.top = "45%"
