@@ -103,10 +103,10 @@ header .actuality {
   text-align: center;
 }
 header .actuality p {
-  font-size: calc(15px + 0.4vw);
+  font-size: calc(10px + 0.4vw);
 }
 header .actuality span {
-  font-size: calc(30px + 0.6vw);
+  font-size: calc(35px + 0.1vw);
   -webkit-animation: blink 1s infinite;
           animation: blink 1s infinite;
   color: rgb(191, 174, 142);
@@ -154,7 +154,7 @@ header .actuality span {
   left: 0;
   right: 0;
 }
-@media (max-width: 900px) {
+@media (max-width: 1030px) {
   .menu {
     height: 7%;
     padding-bottom: 20px;
@@ -296,12 +296,12 @@ video.videoResponsive {
 @media screen and (max-width: 1370px) {
   video.videoResponsive {
     margin-top: 20px;
-    height: 87%;
-    width: 87%;
+    height: 100%;
+    width: 100%;
   }
 }
 main {
-  margin-top: -70px;
+  margin-top: -10vh;
 }
 main .vertical-line {
   border: 0.75vw solid rgb(46, 104, 128);
@@ -339,7 +339,7 @@ main .sectionPhotos1 {
 main .sectionPhotos1 .choux {
   width: 100%;
   position: relative;
-  height: 400px;
+  height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
   background: rgba(93, 91, 91, 0.3) url(./img/Julien-Herman-and-Marcelline-Lechat.webp) center/cover;
@@ -379,7 +379,7 @@ main .sectionPhotos1 .choux:hover .hover-choux {
 main .sectionPhotos1 .finger {
   width: 100%;
   position: relative;
-  height: 400px;
+  height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
   background: rgba(93, 91, 91, 0.3) url(./img/desserts.jpg) center/cover;
@@ -435,7 +435,7 @@ main .sectionPhotos2 {
 main .sectionPhotos2 .presentation {
   width: 100%;
   position: relative;
-  height: 400px;
+  height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
   background: rgba(93, 91, 91, 0.3) url(./img/sphere\ myrtilles\ cassis.jpg) center/cover;
@@ -475,7 +475,7 @@ main .sectionPhotos2 .presentation:hover .hover-presentation {
 main .sectionPhotos2 .realisation {
   width: 100%;
   position: relative;
-  height: 400px;
+  height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
   background: rgba(93, 91, 91, 0.3) url(./img/viennoiseries.jpg) center/cover;
@@ -530,7 +530,7 @@ main .sectionPhotos3 {
 main .sectionPhotos3 .dessertDeFete {
   width: 100%;
   position: relative;
-  height: 400px;
+  height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
   background: rgba(93, 91, 91, 0.3) url(./img/salonDeThe/DESSERTS-5S3A3130-WEB-V2.jpg) center/cover;
@@ -570,7 +570,7 @@ main .sectionPhotos3 .dessertDeFete:hover .hover-dessertDeFete {
 main .sectionPhotos3 .viennoiserie {
   width: 100%;
   position: relative;
-  height: 400px;
+  height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
   background: rgba(93, 91, 91, 0.3) url(./img/pieceMontee.jpg) center/cover;
@@ -1129,7 +1129,6 @@ main {
   color: #080808;
   padding: 1em;
   text-align: center;
-  height: 300px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1157,6 +1156,9 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.newsletter .newsletterContent .newsletterForm .checkbox {
+  padding-bottom: 0.8%;
 }
 .newsletter .newsletterContent #email2 {
   width: 260px;

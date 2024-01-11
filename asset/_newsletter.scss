@@ -7,7 +7,6 @@
     color: #080808;
     padding: 1em;
     text-align: center;
-    height:300px;
     display: flex;
     position: relative;
     border-radius: 15px;
@@ -32,6 +31,9 @@
             display: flex;
             height: 70%;
             align-items: center;
+            .checkbox{
+            padding-bottom: 0.8%;
+            }
             
         }
         #email2{

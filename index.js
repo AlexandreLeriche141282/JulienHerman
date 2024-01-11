@@ -29,7 +29,7 @@ const textVisible6 = document.querySelector(".titre6");
 
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.40 ) {
+    if (scrollValue > 0.20 ) {
 
         textVisible1.style.opacity = "1"
         textVisible1.style.top = "45%"
@@ -43,7 +43,7 @@ window.addEventListener("scroll", () => {
 
 window.addEventListener("scroll", () => {
     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.40) {
+    if (scrollValue > 0.25) {
 
         textVisible2.style.opacity = "1"
         textVisible2.style.top = "45%"
