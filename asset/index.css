@@ -26,30 +26,6 @@
 body {
   background: white;
 }
-body .titre1, body .titre2, body .titre3, body .titre4, body .titre5, body .titre6 {
-  text-transform: uppercase;
-  font-size: calc(10px + 1.5vw);
-  top: 75%;
-  position: relative;
-  -webkit-transition: 1s;
-  transition: 1s;
-  z-index: 1;
-  opacity: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  text-align: center;
-}
 body button {
   cursor: pointer;
 }
@@ -302,7 +278,33 @@ video.videoResponsive {
   }
 }
 main {
-  margin-top: -10vh;
+  margin-top: -6vh;
+}
+main .titre1, main .titre2, main .titre3, main .titre4, main .titre5, main .titre6 {
+  text-transform: uppercase;
+  font-size: calc(10px + 1.5vw);
+  top: 50%;
+  position: relative;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+@media screen and (max-width: 800px) {
+  main {
+    margin-top: -14vh;
+  }
 }
 main .vertical-line {
   border: 0.75vw solid rgb(46, 104, 128);
@@ -1055,27 +1057,11 @@ section .containerPayement .logo .logoIcon img {
   color: rgb(46, 104, 128);
   font-weight: 700;
 }
-.section1 .afterHeader {
-  height: 70px;
-  background: rgb(46, 104, 128);
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.section1 .afterHeader span {
-  color: rgb(128, 173, 193);
-}
-.section1 .afterHeader h1 {
-  position: absolute;
-  bottom: 16px;
-  margin-left: 200px;
-  color: white;
-}
 
 .section2 {
   background: rgb(250, 247, 247);
   margin-top: 90px;
+  margin-bottom: 120px;
 }
 .section2 .containerAbout2 {
   display: grid;
@@ -1117,8 +1103,25 @@ section .containerPayement .logo .logoIcon img {
   font-size: calc(10px + 1vw);
 }
 
-main {
-  margin-bottom: 150px;
+main .afterHeader {
+  height: 8vh;
+  background: rgb(46, 104, 128);
+  position: relative;
+  margin-top: 3.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+}
+main .afterHeader span {
+  color: rgb(128, 173, 193);
+}
+main .afterHeader h1 {
+  position: absolute;
+  bottom: 16px;
+  margin-left: 10%;
+  color: white;
+  font-size: calc(8px + 1.7vw);
 }
 
 .newsletter {
@@ -1170,10 +1173,6 @@ main {
   top: 150px;
   position: relative;
 }
-main .afterHeader {
-  height: 1.5vh;
-  background: rgb(46, 104, 128);
-}
 main .mentionsLegales {
   height: 61vh;
   text-align: center;
@@ -1198,10 +1197,6 @@ main {
   top: 150px;
   position: relative;
 }
-main .afterHeader {
-  height: 1.5vh;
-  background: rgb(46, 104, 128);
-}
 main .politique {
   height: 320vh;
   text-align: center;
@@ -1219,4 +1214,16 @@ main .politique .politiqueContainer {
 }
 main .politique .politiqueContainer span {
   font-weight: 600;
+}
+
+.section1 {
+  margin: 20px 100px 0 100px;
+}
+.section1 h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: black;
+}
+.section1 p {
+  color: black;
 }/*# sourceMappingURL=index.css.map */

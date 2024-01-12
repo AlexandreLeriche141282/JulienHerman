@@ -83,7 +83,7 @@
 
       </div>
 
-      <ul>
+      <ul class="ulMenu">
         <a href="./aPropos.html">
           <li>Qui sommes-nous ?</li>
         </a>
@@ -92,7 +92,7 @@
             <li><a href="#">Nos desserts individuels</a></li>
             <li><a href="#">Nos entremets à partager</a></li>
             <li><a href="#">Nos prestations sur mesure</a></li>
-            
+
           </ul>
           <i class="fa-solid fa-chevron-down" style="color: #000000;"></i>
         </li>
@@ -102,7 +102,9 @@
         <li>Prestations annexes</li>
         <li>Actualités</li>
         <li onclick="togglePopup()">Contact</li>
+        <img src="./asset/img/logo/traverser.png" alt="fermer" class="croix">
       </ul>
+      <img src="./asset/img/logo/bars.png" alt="burger menu" class="menuBurger">
       <div class="reseau-sociaux">
         <a href="mailto:dessertsparjulienherman@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
         <a title="Suivez-nous sur instagram"href="https://www.instagram.com/dessertsparjulienherman?igshid=YmMyMTA2M2Y%3D" target="_blank"><i
@@ -117,10 +119,10 @@
 
   </header>
   <main>
-    <div class="section1">
     <div class="afterHeader">
         <h1>Á propos de <span>nous</span> ...</h1>
     </div>
+    <div class="section1">
     <div class="containerAbout">
      <div class="back"></div>
      <div class="textAbout">
@@ -161,40 +163,70 @@
   </main>
   
   <footer>
-    
 
-<div class="info">
-  <div class="logo">
-    <img src="./asset/img/logo/EXE_LOGO-JULIEN-HERMAN.svg" alt="Logo">
-  </div>
-  <div class="contact">
-    <div class="contactBlock">
-      <p>4 rue du vert galant</p>
-      <p>72100 le mans</p>
-      <p>Tel : 02 43 20 57 24</p><br>
-      <p>Lundi : Fermé</p>
-      <p>Mardi : 08H30 - 14H00 / 15H00 - 18H00</p>
-      <p>Mercredi : 08H30 - 12H00 / 15H00 - 18H00</p>
-      <p>Jeudi/Vendredi : 08H30 - 14H00 / 15H00 - 18H00 </p>
-      <p>Samedi : 10H00 - 14H00 / 15H00 - 17H30</p>
-      <p>Dimanche : Fermé</p>
+
+    <div class="info">
+      <div class="logo-julien">
+        <img src="./asset/img/logo/EXE_LOGO-JULIEN-HERMAN.svg" alt="Logo">
+        <div class="logoRef">
+          <a href="https://fr.gaultmillau.com/artisans/desserts-par-julien-herman" target="_blank"><img
+              src="./asset/img/logo/gault&millau.png" alt="logo gault et millau"></a>
+
+
+          <a href="https://www.petitfute.com/v28477-le-mans-72000/c650-produits-gourmands-vins/c1107-pains-gateaux-chocolats-glaces/2085691-desserts-par-julien-herman.html"
+            target="_blank"> <img src="./asset/img/logo/petitFuté.png" alt="logo petit futé"></a>
+
+
+        </div>
+
+        <p>Ils parlent de nous ... </p>
+      </div>
+      <div class="contact">
+        <div class="contactBlock">
+          <p>4 rue du vert galant</p>
+          <p>72100 le mans</p>
+          <p>Tel : 02 43 20 57 24</p><br>
+          <p>Lundi : Fermé</p>
+          <p>Mardi : 08H30 - 14H00 / 15H00 - 18H00</p>
+          <p>Mercredi : 08H30 - 12H00 / 15H00 - 18H00</p>
+          <p>Jeudi/Vendredi : 08H30 - 14H00 / 15H00 - 18H00 </p>
+          <p>Samedi : 10H00 - 14H00 / 15H00 - 17H30</p>
+          <p>Dimanche : Fermé</p>
+          <ul>
+            <a href="./mentions.html"><span>Mentions légales</span></a>
+            <a href="./politique.html"><span>Politique de confidentialité</span></a>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="question">
+        <div class="questionButton">
+          <h2>Une question ?</h2>
+          <button onclick="togglePopup()">Contactez-nous</button>
+        </div>
+
+
+        <div class="elementFooter">
+          
+            <div class="avisGoogle">
+             <a href=https://www.google.com/search?q=julien+herman+le+mans&sca_esv=595707050&authuser=1&source=hp&ei=XumWZYXOCqiikdUPhIOCkAk&iflsig=AO6bgOgAAAAAZZb3bjTtXaWMtYxdYxT9l4W_gCFJmBvu&gs_ssp=eJzj4tVP1zc0LKmoyis2Ty42YLRSNagwMU81srBMTjEyM0w2S000tzKoME5LS0y2tEy1TE42MjMwSvESzSrNyUzNU8hILcpNzFPISVUAUsUAhyoYHg&oq=julien+herman+le&gs_lp=Egdnd3Mtd2l6IhBqdWxpZW4gaGVybWFuIGxlKgIIADILEC4YgAQYxwEYrwEyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkj3QVAAWK43cAB4AJABAJgBX6ABzAiqAQIxNrgBAcgBAPgBAcICDhAuGIAEGIoFGLEDGIMBwgIOEAAYgAQYigUYsQMYgwHCAgsQLhiABBjHARjRA8ICBRAAGIAEwgILEC4YgAQYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICCBAuGIAEGLEDwgILEAAYgAQYsQMYgwHCAgUQLhiABMICCxAuGK8BGMcBGIAE&sclient=gws-wiz#lrd=0x47e289cd261c6ea7:0x3ffac99e9cc2602d,3,,,,
+            target="_blank"> 
+              <img src="./asset/img/logo/google.png" alt="logo google avis">
+          </a>
+          <p>Laissez nous votre avis !</p>
+        </div>
+
+      </div>
+    </div>
+
+
 
     </div>
-    
-  </div>
-  <div class="horaires">
-
-  </div>
-  <div class="question">
-    <h2>Une question ?</h2>
-    <button onclick="togglePopup()">Contactez-nous</button>
-  </div>
-  
-
-</div>
   </footer>
-
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./aPropos.js"></script>
+  <script src="./index.js"></script>
 </body>
 
 </html>

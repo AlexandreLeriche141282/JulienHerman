@@ -34,29 +34,12 @@
     }   
     }
     
-    .afterHeader{
-        height: 70px;
-        background:rgb(46,104,128);
-        position: relative;
-        // top: 2px;
-        display: flex;
-        span{
-            color: rgb(128, 173, 193);
-        }
-        
-        h1{
-        position: absolute;
-        bottom: 16px;
-        margin-left: 200px;
-        color: white;
-
-        
-        }
-    }
+    
 }
 .section2{
     background: rgb(250, 247, 247);
     margin-top: 90px;
+    margin-bottom: 120px;
     .containerAbout2{
         display: grid;
         grid-template-columns:33% 33% 33%;
@@ -97,5 +80,24 @@
     }   
     } 
     main{
-        margin-bottom: 150px;
+        .afterHeader{
+            height: 8vh;
+            background:rgb(46,104,128);
+            position: relative;
+            margin-top: 3.5%;
+            display: flex;
+            text-align: center;
+            span{
+                color: rgb(128, 173, 193);
+            }
+            
+            h1{
+            position: absolute;
+            bottom: 16px;
+            margin-left: 10%;
+            color: white;
+            font-size:calc(8px + 1.7vw);
+            
+            }
+        }
     }

@@ -1,6 +1,26 @@
 main {
-margin-top: -10vh;
-    
+    .titre1, .titre2, .titre3, .titre4, .titre5, .titre6{
+        text-transform: uppercase;
+        font-size: calc(10px + 1.5vw);
+        top:50%;  
+        position:relative;
+        // transition: 0.1s;
+        z-index: 1;
+        // opacity: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        
+        
+    }
+        margin-top: -6vh;
+        @media screen and (max-width:800px){
+            margin-top: -14vh;
+            
+            
+            }
     .vertical-line{
         border: 0.75vw solid rgb(46,104,128);
         border-radius: 15px;
