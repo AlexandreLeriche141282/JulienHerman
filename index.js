@@ -110,19 +110,19 @@ croix.addEventListener("click", () => {
     
 });
 
-window.addEventListener("scroll", () => {
-    let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
-    if (scrollValue > 0.70) {
+// window.addEventListener("scroll", () => {
+//     let scrollValue = (window.scrollY + window.innerHeight) / document.body.offsetHeight;
+//     if (scrollValue > 0.70) {
 
-        img1.style.width = "80%"
+//         img1.style.width = "80%"
         
 
-    } else {
-        img1.style.width = "50%"
+//     } else {
+//         img1.style.width = "50%"
        
-    }
+//     }
 
-});
+// });
 
 
 

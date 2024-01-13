@@ -1,6 +1,8 @@
 .mainAbout{
+    
     top:150px;
     position: relative;
+    
     .afterHeader{
         height: 8vh;
         background:rgb(46,104,128);
@@ -15,7 +17,6 @@
         }
         
         h1{
-        // position: absolute;
         bottom: 16px;
         margin-left: 10%;
         color: white;
@@ -24,32 +25,42 @@
         }
     }
 .section1{
+padding-top: 50px;
+
+
     .containerAbout{
         display: grid;
         grid-template-columns:50% 50%;
-        gap: 25px;
+        @media screen and (max-width:800px) {
+            display: block;
+            
+        }
+        
      .back{
-        background: url(./img/aPropos.jpg)no-repeat;
-        height: 700px;
+        background: url(./img/aPropos.jpg)center/cover;
+        height: 70vh;
         position: relative;
-        top: 100px;
-        margin-left: 50px;
+        margin: 0 20px;
         filter: grayscale(100%);
         transition: 1.6s;
+        @media screen and (max-width:500px) {
+            height: 40vh;
+          }
         &:hover {
             filter: grayscale(10%);
           }
+          
     }
     
     .textAbout{
-        height: 650px;
         position: relative;
-        top: 100px;
-        margin-right: 50px;
         p{
             margin:0 20px 20px 20px;
             color: black;
             line-height: 20px;
+            @media screen and (max-width:800px) {
+                padding-top: 10px;
+            }
             
             span{
                 color:rgb(46,104,128);
@@ -63,43 +74,63 @@
 }
 .section2{
     background: rgb(250, 247, 247);
-    margin-top: 90px;
-    margin-bottom: 120px;
+    margin-top: 50px;
     .containerAbout2{
+        @media screen and (max-width:900px) {
+            display: block;
+            
+        }
         display: grid;
         grid-template-columns:33% 33% 33%;
-        gap: 25px;
+        padding: 20px;
      .img1{
         background:url(./img/JulienHermanWork.webp)center/cover;
-        width: 90%;
+        height: 70vh;
+        padding: 20px;
         border-radius: 10px;
         margin-left: 90px;
         transition: 1s;
+        position: relative;
+        @media screen and (max-width:500px) {
+            height: 40vh;
+            // margin-top: 20px;
+          }
           }
           .img2{
-            background: url(./img/julienConcours.jpg)center/cover;
-            border-radius: 10px;
-            margin-right: 90px;
+            background: url(./img/julienConcours.jpg)(no-repeat);
+            background-size:contain ;
+            border-radius: 30px;
+            // margin-left: 90px;
             transition: 1s;
+            height: 70vh;
+            position: relative;
+            @media screen and (max-width:500px) {
+                height: 60vh;
+                // margin-top: 20px;
+              }
               }
 
     }
     
     .textAbout2{
         height: 550px;
-        position: relative;
-        margin-top: 90px;
         display: flex;
-        
         align-items: center;
+        margin: auto 0;
+        @media screen and (max-width:400px) {
+            height: 400px;
+           }
         p{
-            margin: 20px;
+            // margin: 20px;
             color: rgb(104, 98, 98);
             line-height: 35px;
             text-align: center;
             padding: 30px;
-            font-size:calc(10px + 1vw)
             
+            font-size:calc(10px + 1vw);
+            @media screen and (max-width:500px) {
+           
+              }
             
         }
     }   
@@ -133,8 +164,11 @@
             }
         } 
     }
+    
     @media screen and (max-width:800px) {
         top:70px;
+        
+        
     }
-    
-    }
+    } 
+     

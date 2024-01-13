@@ -131,6 +131,7 @@ header .actuality span {
           align-items: center;
   background: rgb(255, 255, 255);
   width: 100%;
+  padding-bottom: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: fixed;
@@ -788,6 +789,7 @@ footer .elementFooter .avisGoogle {
 }
 footer .elementFooter .avisGoogle p {
   color: rgb(46, 104, 128);
+  padding-bottom: 10px;
 }
 footer .elementFooter img {
   width: 130px;
@@ -1045,36 +1047,49 @@ section .containerPayement .logo .logoIcon img {
   color: white;
   font-size: calc(8px + 1.7vw);
 }
+.mainAbout .section1 {
+  padding-top: 50px;
+}
 .mainAbout .section1 .containerAbout {
   display: grid;
   grid-template-columns: 50% 50%;
-  gap: 25px;
+}
+@media screen and (max-width: 800px) {
+  .mainAbout .section1 .containerAbout {
+    display: block;
+  }
 }
 .mainAbout .section1 .containerAbout .back {
-  background: url(./img/aPropos.jpg) no-repeat;
-  height: 700px;
+  background: url(./img/aPropos.jpg) center/cover;
+  height: 70vh;
   position: relative;
-  top: 100px;
-  margin-left: 50px;
+  margin: 0 20px;
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
   -webkit-transition: 1.6s;
   transition: 1.6s;
+}
+@media screen and (max-width: 500px) {
+  .mainAbout .section1 .containerAbout .back {
+    height: 40vh;
+  }
 }
 .mainAbout .section1 .containerAbout .back:hover {
   -webkit-filter: grayscale(10%);
           filter: grayscale(10%);
 }
 .mainAbout .section1 .containerAbout .textAbout {
-  height: 650px;
   position: relative;
-  top: 100px;
-  margin-right: 50px;
 }
 .mainAbout .section1 .containerAbout .textAbout p {
   margin: 0 20px 20px 20px;
   color: black;
   line-height: 20px;
+}
+@media screen and (max-width: 800px) {
+  .mainAbout .section1 .containerAbout .textAbout p {
+    padding-top: 10px;
+  }
 }
 .mainAbout .section1 .containerAbout .textAbout p span {
   color: rgb(46, 104, 128);
@@ -1082,42 +1097,63 @@ section .containerPayement .logo .logoIcon img {
 }
 .mainAbout .section2 {
   background: rgb(250, 247, 247);
-  margin-top: 90px;
-  margin-bottom: 120px;
+  margin-top: 50px;
 }
 .mainAbout .section2 .containerAbout2 {
   display: grid;
   grid-template-columns: 33% 33% 33%;
-  gap: 25px;
+  padding: 20px;
+}
+@media screen and (max-width: 900px) {
+  .mainAbout .section2 .containerAbout2 {
+    display: block;
+  }
 }
 .mainAbout .section2 .containerAbout2 .img1 {
   background: url(./img/JulienHermanWork.webp) center/cover;
-  width: 90%;
+  height: 70vh;
+  padding: 20px;
   border-radius: 10px;
   margin-left: 90px;
   -webkit-transition: 1s;
   transition: 1s;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .mainAbout .section2 .containerAbout2 .img1 {
+    height: 40vh;
+  }
 }
 .mainAbout .section2 .containerAbout2 .img2 {
-  background: url(./img/julienConcours.jpg) center/cover;
-  border-radius: 10px;
-  margin-right: 90px;
+  background: url(./img/julienConcours.jpg) no-repeat;
+  background-size: contain;
+  border-radius: 30px;
   -webkit-transition: 1s;
   transition: 1s;
+  height: 70vh;
+  position: relative;
+}
+@media screen and (max-width: 500px) {
+  .mainAbout .section2 .containerAbout2 .img2 {
+    height: 60vh;
+  }
 }
 .mainAbout .section2 .textAbout2 {
   height: 550px;
-  position: relative;
-  margin-top: 90px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: auto 0;
+}
+@media screen and (max-width: 400px) {
+  .mainAbout .section2 .textAbout2 {
+    height: 400px;
+  }
 }
 .mainAbout .section2 .textAbout2 p {
-  margin: 20px;
   color: rgb(104, 98, 98);
   line-height: 35px;
   text-align: center;
@@ -1182,6 +1218,7 @@ section .containerPayement .logo .logoIcon img {
 }
 .newsletter .newsletterContent .blockContent p {
   font-size: calc(8px + 0.6vw);
+  padding-bottom: 5px;
 }
 .newsletter .newsletterContent .blockContent h2 {
   font-size: calc(10px + 1.8vw);
@@ -1200,7 +1237,7 @@ section .containerPayement .logo .logoIcon img {
   padding-bottom: 0.8%;
 }
 .newsletter .newsletterContent #email2 {
-  width: 260px;
+  width: 230px;
   color: #000000;
 }
 
@@ -1277,16 +1314,4 @@ section .containerPayement .logo .logoIcon img {
   .mainPolitique {
     top: 70px;
   }
-}
-
-.section1 {
-  margin: 20px 100px 0 100px;
-}
-.section1 h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: black;
-}
-.section1 p {
-  color: black;
 }/*# sourceMappingURL=index.css.map */
