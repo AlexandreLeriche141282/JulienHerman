@@ -1,3 +1,28 @@
+.mainAbout{
+    top:150px;
+    position: relative;
+    .afterHeader{
+        height: 8vh;
+        background:rgb(46,104,128);
+        display: flex;
+        align-items: center;
+        @media screen and (max-width:800px) {
+            height: 5vh;
+        }
+      
+        span{
+            color: rgb(128, 173, 193);
+        }
+        
+        h1{
+        // position: absolute;
+        bottom: 16px;
+        margin-left: 10%;
+        color: white;
+        font-size:calc(8px + 1.7vw);
+        
+        }
+    }
 .section1{
     .containerAbout{
         display: grid;
@@ -79,25 +104,37 @@
         }
     }   
     } 
-    main{
-        .afterHeader{
-            height: 8vh;
-            background:rgb(46,104,128);
-            position: relative;
-            margin-top: 3.5%;
-            display: flex;
-            text-align: center;
-            span{
-                color: rgb(128, 173, 193);
+    .section3{
+        background: rgb(250, 247, 247);
+        margin-top: 90px;
+        margin-bottom: 120px;
+        .containerAboutMarso{
+            display: grid;
+            grid-template-columns:50% 50%;
+            .imgMarso{
+                background: url(./img/marso.jpg)center/cover;
+                height: 70vh;
+                border-radius: 10px;
+                margin-left: 90px;
             }
-            
-            h1{
-            position: absolute;
-            bottom: 16px;
-            margin-left: 10%;
-            color: white;
-            font-size:calc(8px + 1.7vw);
-            
+            .textAboutMarso{
+                display: flex;
+                align-items: center;
+                p{
+                    margin: 20px;
+                    color: rgb(104, 98, 98);
+                    line-height: 35px;
+                    text-align: center;
+                    padding: 30px;
+                    font-size:calc(10px + 1vw)
+                    
+                    
+                }
             }
-        }
+        } 
+    }
+    @media screen and (max-width:800px) {
+        top:70px;
+    }
+    
     }

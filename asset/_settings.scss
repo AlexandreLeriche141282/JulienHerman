@@ -10,6 +10,19 @@ $font1:Orbitron,cursive;
     box-sizing: border-box;
     font-family:$font1;
     letter-spacing: 1px;
+    ::-webkit-scrollbar {
+        width: 16px;
+      }
+    
+      *::-webkit-scrollbar-track {
+        background: #ffffff;
+      }
+    
+      *::-webkit-scrollbar-thumb {
+        background-color: rgb(187,168,135);
+        border-radius: 10px;
+        border: 3px solid #ffffff;
+      }
     a{
         text-decoration: none;
         color: rgb(0, 0, 0);
@@ -27,10 +40,7 @@ $font1:Orbitron,cursive;
     
 }
 body{
-    
-    background: white;
-    
-    
+
     button{
         cursor: pointer;
     }

@@ -4,7 +4,7 @@ let lastScroll = 0;
 
 window.addEventListener("scroll", () => {
     if (window.scrollY < lastScroll) {
-        menu.style.top = 0;
+        menu.style.top ="0";
     } else {
         menu.style.top = "-140px"
     }

@@ -1,20 +1,23 @@
-main{
+.mainMentions{
     top:150px;
     position: relative;
  
-
+    .afterHeader{
+        height: 1.5vh;
+        background:rgb(46,104,128);
+        }
 .mentionsLegales{
     height: 61vh;
     text-align: center;
-    margin:50px auto 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
 
     .mentionsLegalesContainer{
-        display: inline-block;
         text-align-last: left;
         margin-top: 50px;
-        padding: 20px;
-        width: 70vh;
         border:1px solid rgb(226, 220, 220);
         line-height: 25px;
         font-size: 15px;
@@ -25,5 +28,7 @@ main{
     }
    
 }
-
+@media screen and (max-width:800px) {
+    top:70px;
+}
 }

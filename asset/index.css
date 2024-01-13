@@ -11,6 +11,17 @@
   font-family: Orbitron, cursive;
   letter-spacing: 1px;
 }
+* ::-webkit-scrollbar {
+  width: 16px;
+}
+* *::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+* *::-webkit-scrollbar-thumb {
+  background-color: rgb(187, 168, 135);
+  border-radius: 10px;
+  border: 3px solid #ffffff;
+}
 * a {
   text-decoration: none;
   color: rgb(0, 0, 0);
@@ -23,9 +34,6 @@
   outline-color: rgb(46, 104, 128);
 }
 
-body {
-  background: white;
-}
 body button {
   cursor: pointer;
 }
@@ -77,6 +85,7 @@ i:hover {
 }
 header .actuality {
   text-align: center;
+  margin-bottom: 6%;
 }
 header .actuality p {
   font-size: calc(10px + 0.4vw);
@@ -122,19 +131,12 @@ header .actuality span {
           align-items: center;
   background: rgb(255, 255, 255);
   width: 100%;
-  height: 15%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
   position: fixed;
   z-index: 2;
   left: 0;
   right: 0;
-}
-@media (max-width: 1030px) {
-  .menu {
-    height: 7%;
-    padding-bottom: 20px;
-  }
 }
 .menu .logo img {
   width: 11vw;
@@ -165,6 +167,9 @@ header .actuality span {
   width: 1250px;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .menu .ulMenu li {
   position: relative;
@@ -278,7 +283,23 @@ video.videoResponsive {
   }
 }
 main {
-  margin-top: -6vh;
+  margin-bottom: 50px;
+  position: relative;
+}
+main .vertical-line {
+  border: 0.75vw solid rgb(46, 104, 128);
+  border-radius: 15px;
+  height: 100%;
+  right: 90%;
+  position: absolute;
+}
+main .vertical-line2 {
+  border: 0.75vw solid rgb(46, 104, 128);
+  border-radius: 15px;
+  height: 100%;
+  margin-right: 65px;
+  position: absolute;
+  left: 92.5%;
 }
 main .titre1, main .titre2, main .titre3, main .titre4, main .titre5, main .titre6 {
   text-transform: uppercase;
@@ -300,26 +321,6 @@ main .titre1, main .titre2, main .titre3, main .titre4, main .titre5, main .titr
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-}
-@media screen and (max-width: 800px) {
-  main {
-    margin-top: -14vh;
-  }
-}
-main .vertical-line {
-  border: 0.75vw solid rgb(46, 104, 128);
-  border-radius: 15px;
-  height: 100%;
-  right: 90%;
-  position: absolute;
-}
-main .vertical-line2 {
-  border: 0.75vw solid rgb(46, 104, 128);
-  border-radius: 15px;
-  height: 100%;
-  margin-right: 65px;
-  position: absolute;
-  left: 92%;
 }
 main a {
   color: white;
@@ -372,7 +373,6 @@ main .sectionPhotos1 .choux .hover-choux {
   /* Style du contenu hover */
   background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
-  padding: 30px;
   /* Centrer le contenu */
 }
 main .sectionPhotos1 .choux:hover .hover-choux {
@@ -413,7 +413,6 @@ main .sectionPhotos1 .finger .hover-finger {
   background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
   color: white;
-  padding: 30px;
 }
 main .finger:hover .hover-finger {
   opacity: 1;
@@ -469,7 +468,6 @@ main .sectionPhotos2 .presentation .hover-presentation {
   background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
   color: white;
-  padding: 30px;
 }
 main .sectionPhotos2 .presentation:hover .hover-presentation {
   opacity: 1;
@@ -509,7 +507,6 @@ main .sectionPhotos2 .realisation .hover-realisation {
   background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
   color: white;
-  padding: 30px;
 }
 main .sectionPhotos2 .realisation:hover .hover-realisation {
   opacity: 1;
@@ -564,7 +561,6 @@ main .sectionPhotos3 .dessertDeFete .hover-dessertDeFete {
   background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
   color: white;
-  padding: 30px;
 }
 main .sectionPhotos3 .dessertDeFete:hover .hover-dessertDeFete {
   opacity: 1;
@@ -604,7 +600,6 @@ main .sectionPhotos3 .viennoiserie .hover-viennoiserie {
   background-color: rgba(0, 0, 0, 0.6);
   /* Couleur par défaut */
   color: white;
-  padding: 30px;
 }
 main .sectionPhotos3 .viennoiserie:hover .hover-viennoiserie {
   opacity: 1;
@@ -1022,12 +1017,40 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 
-.section1 .containerAbout {
+.mainAbout {
+  top: 150px;
+  position: relative;
+}
+.mainAbout .afterHeader {
+  height: 8vh;
+  background: rgb(46, 104, 128);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (max-width: 800px) {
+  .mainAbout .afterHeader {
+    height: 5vh;
+  }
+}
+.mainAbout .afterHeader span {
+  color: rgb(128, 173, 193);
+}
+.mainAbout .afterHeader h1 {
+  bottom: 16px;
+  margin-left: 10%;
+  color: white;
+  font-size: calc(8px + 1.7vw);
+}
+.mainAbout .section1 .containerAbout {
   display: grid;
   grid-template-columns: 50% 50%;
   gap: 25px;
 }
-.section1 .containerAbout .back {
+.mainAbout .section1 .containerAbout .back {
   background: url(./img/aPropos.jpg) no-repeat;
   height: 700px;
   position: relative;
@@ -1038,37 +1061,36 @@ section .containerPayement .logo .logoIcon img {
   -webkit-transition: 1.6s;
   transition: 1.6s;
 }
-.section1 .containerAbout .back:hover {
+.mainAbout .section1 .containerAbout .back:hover {
   -webkit-filter: grayscale(10%);
           filter: grayscale(10%);
 }
-.section1 .containerAbout .textAbout {
+.mainAbout .section1 .containerAbout .textAbout {
   height: 650px;
   position: relative;
   top: 100px;
   margin-right: 50px;
 }
-.section1 .containerAbout .textAbout p {
+.mainAbout .section1 .containerAbout .textAbout p {
   margin: 0 20px 20px 20px;
   color: black;
   line-height: 20px;
 }
-.section1 .containerAbout .textAbout p span {
+.mainAbout .section1 .containerAbout .textAbout p span {
   color: rgb(46, 104, 128);
   font-weight: 700;
 }
-
-.section2 {
+.mainAbout .section2 {
   background: rgb(250, 247, 247);
   margin-top: 90px;
   margin-bottom: 120px;
 }
-.section2 .containerAbout2 {
+.mainAbout .section2 .containerAbout2 {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   gap: 25px;
 }
-.section2 .containerAbout2 .img1 {
+.mainAbout .section2 .containerAbout2 .img1 {
   background: url(./img/JulienHermanWork.webp) center/cover;
   width: 90%;
   border-radius: 10px;
@@ -1076,14 +1098,14 @@ section .containerPayement .logo .logoIcon img {
   -webkit-transition: 1s;
   transition: 1s;
 }
-.section2 .containerAbout2 .img2 {
+.mainAbout .section2 .containerAbout2 .img2 {
   background: url(./img/julienConcours.jpg) center/cover;
   border-radius: 10px;
   margin-right: 90px;
   -webkit-transition: 1s;
   transition: 1s;
 }
-.section2 .textAbout2 {
+.mainAbout .section2 .textAbout2 {
   height: 550px;
   position: relative;
   margin-top: 90px;
@@ -1094,7 +1116,7 @@ section .containerPayement .logo .logoIcon img {
       -ms-flex-align: center;
           align-items: center;
 }
-.section2 .textAbout2 p {
+.mainAbout .section2 .textAbout2 p {
   margin: 20px;
   color: rgb(104, 98, 98);
   line-height: 35px;
@@ -1102,26 +1124,41 @@ section .containerPayement .logo .logoIcon img {
   padding: 30px;
   font-size: calc(10px + 1vw);
 }
-
-main .afterHeader {
-  height: 8vh;
-  background: rgb(46, 104, 128);
-  position: relative;
-  margin-top: 3.5%;
+.mainAbout .section3 {
+  background: rgb(250, 247, 247);
+  margin-top: 90px;
+  margin-bottom: 120px;
+}
+.mainAbout .section3 .containerAboutMarso {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.mainAbout .section3 .containerAboutMarso .imgMarso {
+  background: url(./img/marso.jpg) center/cover;
+  height: 70vh;
+  border-radius: 10px;
+  margin-left: 90px;
+}
+.mainAbout .section3 .containerAboutMarso .textAboutMarso {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.mainAbout .section3 .containerAboutMarso .textAboutMarso p {
+  margin: 20px;
+  color: rgb(104, 98, 98);
+  line-height: 35px;
   text-align: center;
+  padding: 30px;
+  font-size: calc(10px + 1vw);
 }
-main .afterHeader span {
-  color: rgb(128, 173, 193);
-}
-main .afterHeader h1 {
-  position: absolute;
-  bottom: 16px;
-  margin-left: 10%;
-  color: white;
-  font-size: calc(8px + 1.7vw);
+@media screen and (max-width: 800px) {
+  .mainAbout {
+    top: 70px;
+  }
 }
 
 .newsletter {
@@ -1136,11 +1173,9 @@ main .afterHeader h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: relative;
   border-radius: 15px;
   margin-left: 10px;
   margin-right: 10px;
-  margin-top: 200px;
 }
 .newsletter .newsletterContent .blockContent {
   padding: 10px 0 10px 0;
@@ -1169,51 +1204,79 @@ main .afterHeader h1 {
   color: #000000;
 }
 
-main {
+.mainMentions {
   top: 150px;
   position: relative;
 }
-main .mentionsLegales {
+.mainMentions .afterHeader {
+  height: 1.5vh;
+  background: rgb(46, 104, 128);
+}
+.mainMentions .mentionsLegales {
   height: 61vh;
   text-align: center;
-  margin: 50px auto 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-main .mentionsLegales .mentionsLegalesContainer {
-  display: inline-block;
+.mainMentions .mentionsLegales .mentionsLegalesContainer {
   -moz-text-align-last: left;
        text-align-last: left;
   margin-top: 50px;
-  padding: 20px;
-  width: 70vh;
   border: 1px solid rgb(226, 220, 220);
   line-height: 25px;
   font-size: 15px;
 }
-main .mentionsLegales .mentionsLegalesContainer span {
+.mainMentions .mentionsLegales .mentionsLegalesContainer span {
   font-weight: 600;
 }
+@media screen and (max-width: 800px) {
+  .mainMentions {
+    top: 70px;
+  }
+}
 
-main {
+.mainPolitique {
   top: 150px;
   position: relative;
+  margin-bottom: 140px;
 }
-main .politique {
-  height: 320vh;
+.mainPolitique .afterHeader {
+  height: 1.5vh;
+  background: rgb(46, 104, 128);
+}
+.mainPolitique .politiqueTitle {
   text-align: center;
-  margin: 50px auto 50px;
+  margin: 30px;
 }
-main .politique .politiqueContainer {
-  display: inline-block;
-  text-align: left;
-  margin-top: 50px;
-  padding: 20px;
-  width: 120vh;
+.mainPolitique .politiqueTitle h1 {
+  font-size: calc(10px + 1vw);
+}
+.mainPolitique .politiqueContainer {
+  margin: 50px;
+  padding: 10px;
+  min-width: 300px;
   border: 1px solid rgb(226, 220, 220);
   line-height: 25px;
   font-size: 10px;
 }
-main .politique .politiqueContainer span {
+.mainPolitique .politiqueContainer span {
   font-weight: 600;
+}
+@media screen and (max-width: 800px) {
+  .mainPolitique {
+    top: 70px;
+  }
 }
 
 .section1 {

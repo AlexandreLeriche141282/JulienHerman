@@ -35,44 +35,46 @@
   <link rel="shortcut icon" href="./asset/img/logo.jpg">
   <link rel="stylesheet" href="./asset/index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
-  <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-<script type="text/javascript">
-   (function(){
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function () {
       emailjs.init("SPeSZLBDJLWstqlcr");
-   })();
-</script>
+    })();
+  </script>
 </head>
 
 <body>
   <div id="popup-overlay">
     <div class="popup-content">
       <h1>contactez-nous</h1>
-            <form id="validation" method="post" onsubmit="return false">
-              <label for="name">Nom & prénom <small>*</small></label>
-              <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
-              
-              <label for="sujet">Sujet <small>*</small></label>
-              <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
-          
-              <label for="emailAddress">Email <small>*</small></label>
-              <input id="email" type="email" name="email" placeholder="Votre email" required>
-              
-              <label for="tel">Téléphone <small>*</small></label>
-              <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
-              
-          
-              <label for="message">Message <small>*</small></label>
-              <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"required></textarea>
-          
-              <input onclick="sendMail()" type="submit" value="Envoyer">
-              
-              <input type="checkbox" name="o107_Consentement" value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations." required> <small>J'ai lu et j'accepte la Politique de confidentialité.</small>
-              
-            
-            <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">X</a>
-</form>
+      <form id="validation" method="post" onsubmit="return false">
+        <label for="name">Nom & prénom <small>*</small></label>
+        <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
+
+        <label for="sujet">Sujet <small>*</small></label>
+        <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
+
+        <label for="emailAddress">Email <small>*</small></label>
+        <input id="email" type="email" name="email" placeholder="Votre email" required>
+
+        <label for="tel">Téléphone <small>*</small></label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
+
+
+        <label for="message">Message <small>*</small></label>
+        <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"
+          required></textarea>
+
+        <input onclick="sendMail()" type="submit" value="Envoyer">
+
+        <input type="checkbox" name="o107_Consentement"
+          value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
+          required> <small>J'ai lu et j'accepte la Politique de confidentialité.</small>
+
+
+        <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">X</a>
+      </form>
     </div>
   </div>
   <header>
@@ -107,61 +109,86 @@
       <img src="./asset/img/logo/bars.png" alt="burger menu" class="menuBurger">
       <div class="reseau-sociaux">
         <a href="mailto:dessertsparjulienherman@gmail.com" target="_blank"><i class="fa-regular fa-envelope"></i></a>
-        <a title="Suivez-nous sur instagram"href="https://www.instagram.com/dessertsparjulienherman?igshid=YmMyMTA2M2Y%3D" target="_blank"><i
+        <a title="Suivez-nous sur instagram"
+          href="https://www.instagram.com/dessertsparjulienherman?igshid=YmMyMTA2M2Y%3D" target="_blank"><i
             class="fa-brands fa-instagram"></i></a>
-        <a title="Partager sur Facebook"href="https://www.facebook.com/profile.php?id=100090156510675" target="_blank"><i
-            class="fa-brands fa-facebook"></i></a>
+        <a title="Partager sur Facebook" href="https://www.facebook.com/profile.php?id=100090156510675"
+          target="_blank"><i class="fa-brands fa-facebook"></i></a>
       </div>
 
     </div>
 
-    
+
 
   </header>
-  <main>
+  <div class="mainAbout">
     <div class="afterHeader">
-        <h1>Á propos de <span>nous</span> ...</h1>
+      <h1>Á propos de <span>nous</span> ...</h1>
     </div>
     <div class="section1">
-    <div class="containerAbout">
-     <div class="back"></div>
-     <div class="textAbout">
-              <p>
-                Marcelline et moi-même sommes fiers et heureux de vous ouvrir les portes de notre pâtisserie. <br><br>
-      En effet après un riche parcours au sein de divers restaurants étoilés, palaces, traiteur, boulangerie, mais aussi une finale du championnat de France du dessert 2022, nous avions envie de nous lancer.
-      <br><br>Forts de nos expériences professionnelles respectives nous avions envie de concevoir un lieu où la gourmandise serait de mise, une pâtisserie, oui, mais pas seulement...
-      <br><br>En effet c'est un lieu convivial où l'on se sent bien. Les tables basses, les fauteuils cocooning, le parquet ainsi qu'une grande verrière donnant sur notre labo et les 5 mètres de hauteur sous plafond en font un lieu atypique et terriblement chaleureux.
-      On peut venir prendre son petit déjeuner avec nos différentes viennoiseries faites maison, son goûter l'après-midi avec notre formule "le goûter du Gour'Mans", mais aussi manger le midi avec notre formule plat en bocaux/ dessert au choix.
-      
-      <br><br>Une gamme de produits tels que des financiers, caramel beurre salé et autre pâte àtartiner ainsi que nos spécialités de chocolats sont accessibles en libre-service pour satisfaire les plus gourmands d'entre vous petits et grands.
-      
-      <br><br>Vous pouvez également retrouver à la vente dans notre étagère les excellents produits de nos producteurs mis en avant qui sont utilisés dans nos desserts, car sans eux nos desserts et autres gourmandises ne seraient pas si bons.
-      
-      Un maître mot chez nous : <span>GOURMANDISE</span>  
-      <br><br>Bienvenue !
-              </p>
-        
-     </div>
+      <div class="containerAbout">
+        <div class="back"></div>
+        <div class="textAbout">
+          <p>
+            Marcelline et moi-même sommes fiers et heureux de vous ouvrir les portes de notre pâtisserie. <br><br>
+            En effet après un riche parcours au sein de divers restaurants étoilés, palaces, traiteur, boulangerie, mais
+            aussi une finale du championnat de France du dessert 2022, nous avions envie de nous lancer.
+            <br><br>Forts de nos expériences professionnelles respectives nous avions envie de concevoir un lieu où la
+            gourmandise serait de mise, une pâtisserie, oui, mais pas seulement...
+            <br><br>En effet c'est un lieu convivial où l'on se sent bien. Les tables basses, les fauteuils cocooning,
+            le parquet ainsi qu'une grande verrière donnant sur notre labo et les 5 mètres de hauteur sous plafond en
+            font un lieu atypique et terriblement chaleureux.
+            On peut venir prendre son petit déjeuner avec nos différentes viennoiseries faites maison, son goûter
+            l'après-midi avec notre formule "le goûter du Gour'Mans", mais aussi manger le midi avec notre formule plat
+            en bocaux/ dessert au choix.
+
+            <br><br>Une gamme de produits tels que des financiers, caramel beurre salé et autre pâte àtartiner ainsi que
+            nos spécialités de chocolats sont accessibles en libre-service pour satisfaire les plus gourmands d'entre
+            vous petits et grands.
+
+            <br><br>Vous pouvez également retrouver à la vente dans notre étagère les excellents produits de nos
+            producteurs mis en avant qui sont utilisés dans nos desserts, car sans eux nos desserts et autres
+            gourmandises ne seraient pas si bons.
+
+            Un maître mot chez nous : <span>GOURMANDISE</span>
+            <br><br>Bienvenue !
+          </p>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="section2">
+
+      <div class="containerAbout2">
+        <div class="img1"></div>
+        <div class="textAbout2">
+          <p>
+            Julien, riche de son titre de lauréat du dessert régional 2022 vous propose des desserts de grande qualité
+            autant visuellement que gustativement, gourmands, pleins de saveurs et de textures, faits de produits locaux
+            et servis par Marcelline dans un emballage éco responsable.
+          </p>
+
+        </div>
+        <div class="img2"></div>
+
+      </div>
+    </div>
+    <div class="section3">
+      <div class="containerAboutMarso">
+        <div class="imgMarso"></div>
+        <div class="textAboutMarso">
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis blanditiis ducimus iste culpa natus
+            doloremque nihil libero ab cupiditate cumque a corporis, voluptates quod excepturi. Iusto placeat dicta
+            saepe vero possimus animi quo aspernatur odio officiis doloremque, dolores ea provident amet veniam, facere,
+            aliquid quam dolorum? Autem a sequi explicabo.</p>
+        </div>
+      </div>
 
     </div>
-    </div>
-  
-    <div class="section2">
-      
-    <div class="containerAbout2">
-      <div class="img1"></div>
-     <div class="textAbout2">
-              <p>
-                Julien, riche de son titre de lauréat du dessert régional 2022 vous propose des desserts de grande qualité autant visuellement que gustativement, gourmands, pleins de saveurs et de textures, faits de produits locaux et servis par Marcelline dans un emballage éco responsable.
-              </p>
-        
-     </div> 
-     <div class="img2"></div>
-     
-    </div>
-    </div>
-  </main>
-  
+  </div>
+
   <footer>
 
 
@@ -208,17 +235,17 @@
 
 
         <div class="elementFooter">
-          
-            <div class="avisGoogle">
-             <a href=https://www.google.com/search?q=julien+herman+le+mans&sca_esv=595707050&authuser=1&source=hp&ei=XumWZYXOCqiikdUPhIOCkAk&iflsig=AO6bgOgAAAAAZZb3bjTtXaWMtYxdYxT9l4W_gCFJmBvu&gs_ssp=eJzj4tVP1zc0LKmoyis2Ty42YLRSNagwMU81srBMTjEyM0w2S000tzKoME5LS0y2tEy1TE42MjMwSvESzSrNyUzNU8hILcpNzFPISVUAUsUAhyoYHg&oq=julien+herman+le&gs_lp=Egdnd3Mtd2l6IhBqdWxpZW4gaGVybWFuIGxlKgIIADILEC4YgAQYxwEYrwEyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkj3QVAAWK43cAB4AJABAJgBX6ABzAiqAQIxNrgBAcgBAPgBAcICDhAuGIAEGIoFGLEDGIMBwgIOEAAYgAQYigUYsQMYgwHCAgsQLhiABBjHARjRA8ICBRAAGIAEwgILEC4YgAQYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICCBAuGIAEGLEDwgILEAAYgAQYsQMYgwHCAgUQLhiABMICCxAuGK8BGMcBGIAE&sclient=gws-wiz#lrd=0x47e289cd261c6ea7:0x3ffac99e9cc2602d,3,,,,
-            target="_blank"> 
-              <img src="./asset/img/logo/google.png" alt="logo google avis">
-          </a>
-          <p>Laissez nous votre avis !</p>
-        </div>
 
+          <div class="avisGoogle">
+            <a href=https://www.google.com/search?q=julien+herman+le+mans&sca_esv=595707050&authuser=1&source=hp&ei=XumWZYXOCqiikdUPhIOCkAk&iflsig=AO6bgOgAAAAAZZb3bjTtXaWMtYxdYxT9l4W_gCFJmBvu&gs_ssp=eJzj4tVP1zc0LKmoyis2Ty42YLRSNagwMU81srBMTjEyM0w2S000tzKoME5LS0y2tEy1TE42MjMwSvESzSrNyUzNU8hILcpNzFPISVUAUsUAhyoYHg&oq=julien+herman+le&gs_lp=Egdnd3Mtd2l6IhBqdWxpZW4gaGVybWFuIGxlKgIIADILEC4YgAQYxwEYrwEyBhAAGBYYHjIGEAAYFhgeMgYQABgWGB4yBhAAGBYYHkj3QVAAWK43cAB4AJABAJgBX6ABzAiqAQIxNrgBAcgBAPgBAcICDhAuGIAEGIoFGLEDGIMBwgIOEAAYgAQYigUYsQMYgwHCAgsQLhiABBjHARjRA8ICBRAAGIAEwgILEC4YgAQYsQMYgwHCAhEQLhiABBixAxiDARjHARjRA8ICCBAuGIAEGLEDwgILEAAYgAQYsQMYgwHCAgUQLhiABMICCxAuGK8BGMcBGIAE&sclient=gws-wiz#lrd=0x47e289cd261c6ea7:0x3ffac99e9cc2602d,3,,,,
+              target="_blank">
+              <img src="./asset/img/logo/google.png" alt="logo google avis">
+            </a>
+            <p>Laissez nous votre avis !</p>
+          </div>
+
+        </div>
       </div>
-    </div>
 
 
 
