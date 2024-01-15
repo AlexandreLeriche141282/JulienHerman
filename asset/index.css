@@ -1033,11 +1033,6 @@ section .containerPayement .logo .logoIcon img {
       -ms-flex-align: center;
           align-items: center;
 }
-@media screen and (max-width: 800px) {
-  .mainAbout .afterHeader {
-    height: 5vh;
-  }
-}
 .mainAbout .afterHeader span {
   color: rgb(128, 173, 193);
 }
@@ -1169,11 +1164,21 @@ section .containerPayement .logo .logoIcon img {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+@media screen and (max-width: 800px) {
+  .mainAbout .section3 .containerAboutMarso {
+    display: block;
+  }
+}
 .mainAbout .section3 .containerAboutMarso .imgMarso {
   background: url(./img/marso.jpg) center/cover;
   height: 70vh;
   border-radius: 10px;
-  margin-left: 90px;
+  margin: 30px;
+}
+@media screen and (max-width: 800px) {
+  .mainAbout .section3 .containerAboutMarso .imgMarso {
+    margin: 30px;
+  }
 }
 .mainAbout .section3 .containerAboutMarso .textAboutMarso {
   display: -webkit-box;
@@ -1300,7 +1305,7 @@ section .containerPayement .logo .logoIcon img {
   font-size: calc(10px + 1vw);
 }
 .mainPolitique .politiqueContainer {
-  margin: 50px;
+  margin: 30px;
   padding: 10px;
   min-width: 300px;
   border: 1px solid rgb(226, 220, 220);
@@ -1314,4 +1319,11 @@ section .containerPayement .logo .logoIcon img {
   .mainPolitique {
     top: 70px;
   }
+}
+
+.desserts .dessertsPhotos {
+  height: 100px;
+  background: url(./img/choux\ fraises\ vanille.jpg) center;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
 }/*# sourceMappingURL=index.css.map */

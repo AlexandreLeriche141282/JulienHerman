@@ -1,0 +1,9 @@
+.desserts{
+    .dessertsPhotos{
+        height: 100px;
+        background: url(./img/choux\ fraises\ vanille.jpg)center;
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        // border:1px solid black;
+    }
+}

@@ -9,7 +9,7 @@
         display: flex;
         align-items: center;
         @media screen and (max-width:800px) {
-            height: 5vh;
+            // height: 5vh;
         }
       
         span{
@@ -142,11 +142,17 @@ padding-top: 50px;
         .containerAboutMarso{
             display: grid;
             grid-template-columns:50% 50%;
+            @media screen and (max-width:800px){
+                display: block;
+            }
             .imgMarso{
                 background: url(./img/marso.jpg)center/cover;
                 height: 70vh;
                 border-radius: 10px;
-                margin-left: 90px;
+                margin: 30px;
+                @media screen and (max-width:800px){
+                    margin:30px;
+                }
             }
             .textAboutMarso{
                 display: flex;
