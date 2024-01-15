@@ -184,10 +184,10 @@ header .actuality span {
 }
 .menu .ulMenu li #subMenu {
   display: none;
-  width: 290px;
+  width: 260px;
   padding: 20px 0 5px 8px;
   background: rgb(255, 255, 255);
-  line-height: 30px;
+  line-height: 25px;
 }
 @media screen and (max-width: 1370px) {
   .menu video.videoResponsive {
@@ -204,9 +204,9 @@ header .actuality span {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    left: 10px;
+    left: 0;
     position: absolute;
-    top: 100px;
+    top: 80px;
     background: rgb(46, 104, 128);
     width: 300px;
     border-radius: 5px;
@@ -229,8 +229,10 @@ header .actuality span {
   }
   .menu .ulMenu li #subMenu {
     top: 0;
+    left: 0;
     position: relative;
     line-height: 10px;
+    width: 225px;
   }
   .menu .menuBurger {
     display: block;
@@ -386,7 +388,7 @@ main .sectionPhotos1 .finger {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/desserts.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/desserts.webp) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -480,7 +482,7 @@ main .sectionPhotos2 .realisation {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/viennoiseries.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/viennoiseries.webp) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -573,7 +575,7 @@ main .sectionPhotos3 .viennoiserie {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/pieceMontee.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/pieceMontee.webp) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -1055,7 +1057,7 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 .mainAbout .section1 .containerAbout .back {
-  background: url(./img/aPropos.jpg) center/cover;
+  background: url(./img/aPropos.webp) center/cover;
   height: 70vh;
   position: relative;
   margin: 0 20px;
@@ -1120,7 +1122,7 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 .mainAbout .section2 .containerAbout2 .img2 {
-  background: url(./img/julienConcours.jpg) no-repeat;
+  background: url(./img/julienConcours.webp) no-repeat;
   background-size: contain;
   border-radius: 30px;
   -webkit-transition: 1s;
@@ -1170,7 +1172,7 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 .mainAbout .section3 .containerAboutMarso .imgMarso {
-  background: url(./img/marso.jpg) center/cover;
+  background: url(./img/marso.webp) center/cover;
   height: 70vh;
   border-radius: 10px;
   margin: 30px;
@@ -1321,9 +1323,34 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 
-.desserts .dessertsPhotos {
-  height: 100px;
-  background: url(./img/choux\ fraises\ vanille.jpg) center;
+.desserts {
+  top: 150px;
+  position: relative;
+}
+.desserts .dessertsInd {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: 60% 40%;
+  width: 80%;
+  margin: 0 auto 90px;
+}
+.desserts .dessertsInd .dessertsPhotos {
+  height: 60vh;
+  background: url(./img/desserts.webp) center/cover;
+  margin: 50px;
+  border-radius: 10px;
+}
+.desserts .dessertsInd .textDesserts {
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.desserts .dessertsInd .textDesserts p {
+  padding: 20px;
+  color: black;
+  letter-spacing: 2px;
+  line-height: 20px;
 }/*# sourceMappingURL=index.css.map */

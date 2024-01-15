@@ -1,9 +1,29 @@
 .desserts{
-    .dessertsPhotos{
-        height: 100px;
-        background: url(./img/choux\ fraises\ vanille.jpg)center;
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-        // border:1px solid black;
+    top:150px;
+    position: relative;
+        .dessertsInd{
+            display: grid;
+            grid-template-columns: 60% 40%;
+            width: 80%;
+            margin: 0 auto 90px;
+            .dessertsPhotos{
+                height: 60vh;
+        background: url(./img/desserts.webp) center/cover;
+        margin: 50px;
+        border-radius: 10px;
     }
+    .textDesserts{
+text-align: center;
+align-items: center;
+display: flex;
+p{
+    padding: 20px;
+    color: black;
+    letter-spacing: 2px;
+    line-height: 20px;
+}
+    }
+        }
+    
+    
 }
