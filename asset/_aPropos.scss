@@ -41,13 +41,13 @@ padding-top: 50px;
         height: 70vh;
         position: relative;
         margin: 0 20px;
-        filter: grayscale(100%);
         transition: 1.6s;
+        border-radius: 10px;
         @media screen and (max-width:500px) {
             height: 40vh;
           }
         &:hover {
-            filter: grayscale(10%);
+            filter: grayscale(100%);
           }
           
     }
@@ -138,7 +138,7 @@ padding-top: 50px;
     .section3{
         background: rgb(250, 247, 247);
         margin-top: 90px;
-        margin-bottom: 120px;
+        margin-bottom: 160px;
         .containerAboutMarso{
             display: grid;
             grid-template-columns:50% 50%;
