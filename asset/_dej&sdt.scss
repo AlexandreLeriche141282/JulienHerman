@@ -1,0 +1,67 @@
+.dejSdt{
+    a{
+        color: rgb(46,104,128);
+    }
+    top:150px;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;    
+    .dejContainer{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 50px;
+    .dejImg{
+background: url(./img/salonDeThe/dej.jpg)center/cover;
+
+border-radius: 10px;
+height: 500px;
+
+    }
+    .dejText{       
+margin: 50px;
+padding: 20px;
+text-align: center;
+display: grid;
+align-items: center;
+justify-items: center;
+line-height: 25px;
+flex-direction: column;
+background-color: rgb(250,247,247);
+
+.lineDej{
+    border: solid 0.1px rgba(187, 168, 134, 0.25);
+    width: 30%;
+   margin-top: 10px;   
+}
+    }
+}
+    .sdtContainer{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 50px;
+    .sdtImg{
+background: url(./img/salonDeThe/DESSERTS-5S3A3130-WEB-V2-PhotoRoom.png-PhotoRoom.png)center/cover;
+
+border-radius: 10px;
+height: 500px;
+
+    }
+    .sdtText{       
+margin: 50px;
+padding: 20px;
+text-align: center;
+display: grid;
+align-items: center;
+justify-items: center;
+line-height: 25px;
+flex-direction: column;
+background-color: rgb(250,247,247);
+
+.lineSdt{
+    border: solid 0.1px rgba(187, 168, 134, 0.25);
+    width: 30%;
+   margin-top: 10px;   
+}
+    }
+}
+}
