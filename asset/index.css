@@ -83,14 +83,14 @@ i:hover {
     width: 50px;
   }
 }
-header .actuality {
+header .actualityH {
   text-align: center;
   margin-bottom: 6%;
 }
-header .actuality p {
+header .actualityH p {
   font-size: calc(10px + 0.4vw);
 }
-header .actuality span {
+header .actualityH span {
   font-size: calc(35px + 0.1vw);
   -webkit-animation: blink 1s infinite;
           animation: blink 1s infinite;
