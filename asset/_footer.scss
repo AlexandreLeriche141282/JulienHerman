@@ -5,7 +5,7 @@ footer {
     margin: 0 auto;
   }
   height: 350px;
-  margin-top: 160px;
+  margin-top: 150px;
 
   .info {
     display: grid;
@@ -17,7 +17,6 @@ footer {
     @media (max-width: 850px) {
       display: block;
       margin-top: 50px;
-      margin-left: 10px;
 
       .logo {
         display: flex;

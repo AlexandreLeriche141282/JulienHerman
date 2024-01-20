@@ -2,6 +2,7 @@
     top: 150px;
     position: relative;
     padding-bottom: 90px;
+    
 
     .textDesserts {
         text-align: center;
@@ -42,7 +43,10 @@
         font-weight: 600;
         text-transform: uppercase;
         position: relative;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
+        p{
+            font-size: calc(10px + 0.5vw);
+        }
 
         .hoverDesserts {
             /* Positionnement du contenu hover */
@@ -64,7 +68,7 @@
             p {
                 color: rgb(0, 0, 0);
                 font-weight: 500;
-
+                font-size: calc(10px + 0.3vw);
 
             }
 
@@ -99,3 +103,8 @@
     /* Lors du hover, on remet l'opacité à 1 */
 }
 
+.desserts h3{
+    text-align: center;
+    padding:50px 10px;
+    color: rgb(187,168,135);
+}
