@@ -613,6 +613,11 @@ footer {
   height: 350px;
   margin-top: 160px;
 }
+footer .lineFooter {
+  border: 1px solid rgba(234, 227, 219, 0.456);
+  width: 80%;
+  margin: 0 auto;
+}
 footer .info {
   display: grid;
   grid-template-columns: 33% 33% 33%;
@@ -1317,6 +1322,7 @@ section .containerPayement .logo .logoIcon img {
 .desserts {
   top: 150px;
   position: relative;
+  padding-bottom: 90px;
 }
 .desserts .textDesserts {
   text-align: center;
@@ -1339,6 +1345,13 @@ section .containerPayement .logo .logoIcon img {
   grid-template-columns: 33% 33% 33%;
   gap: 20px;
   margin: 0 auto;
+}
+@media screen and (max-width: 950px) {
+  .containerPhotos {
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 20px;
+  }
 }
 .containerPhotos img {
   width: 100%;
@@ -1369,9 +1382,9 @@ section .containerPayement .logo .logoIcon img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1381,7 +1394,27 @@ section .containerPayement .logo .logoIcon img {
   color: rgb(0, 0, 0);
   font-weight: 500;
 }
-.containerPhotos .containerPhotosTitle:hover .hoverDesserts {
+.containerPhotos .containerPhotosTitle .hoverDesserts .reservation p {
+  cursor: pointer;
+  letter-spacing: 3px;
+  font-size: calc(15px + 0.5vw);
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+  color: rgb(46, 104, 128);
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.containerPhotosTitle:hover .hoverDesserts {
   opacity: 1;
   /* Lors du hover, on remet l'opacité à 1 */
 }
@@ -1397,13 +1430,14 @@ section .containerPayement .logo .logoIcon img {
 }
 .gourmandises .gourmandisesContainer {
   display: grid;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 60% 40%;
   padding: 50px;
 }
 .gourmandises .gourmandisesContainer .gourmandisesImg {
-  background: url(./img/magasin/gourmandises.jpg) center/cover;
+  background: url(./img/magasin/etagere.webp);
+  background-size: cover;
   border-radius: 10px;
-  height: 500px;
+  height: 650px;
 }
 .gourmandises .gourmandisesContainer .gourmandisesText {
   margin: 50px;
@@ -1495,9 +1529,11 @@ section .containerPayement .logo .logoIcon img {
   padding: 50px;
 }
 .viennoiseries .viennoiseriesContainer .viennoiseriesImg {
-  background: url(./img/magasin/viennoiserie.jpg) center/cover;
+  background: url(./img/magasin/viennoiserie.jpg);
+  background-size: contain;
   border-radius: 10px;
-  height: 500px;
+  width: 420px;
+  height: 630px;
 }
 .viennoiseries .viennoiseriesContainer .viennoiseriesText {
   margin: 50px;
@@ -1681,7 +1717,7 @@ section .containerPayement .logo .logoIcon img {
   padding-top: 20px;
 }
 .actuality .actualityScroll .actualityContainer .actualityContent img {
-  width: 200px;
+  width: 400px;
   padding-left: 50px;
 }
 .actuality .actualityScroll .actualityContainer .actualityContent p {
@@ -1725,4 +1761,111 @@ section .containerPayement .logo .logoIcon img {
 .actuality .actualityFix .actualityNews p {
   padding: 20px;
   font-size: 12px;
+}
+
+#popup-overlayResa {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 110;
+  background: rgba(0, 0, 0, 0.7);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+}
+
+.active {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+input[type=text],
+textarea,
+input[type=email],
+input[type=tel] {
+  width: 100%;
+  padding: 12px;
+  border: 0.1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 0px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 12px 20px;
+  border-color: rgb(115, 108, 108);
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 5px;
+}
+
+input[type=submit]:hover {
+  background-color: rgb(46, 104, 128);
+  color: white;
+}
+
+.popup-contentResa {
+  /* Ajouter box-sizing */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5px;
+  background: white;
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  height: 860px;
+  /* redéfinition 400 + 2*20 */
+  max-width: 500px;
+  margin: 100px auto 50px;
+  text-align: left;
+}
+.popup-contentResa input, .popup-contentResa textarea, .popup-contentResa label {
+  color: black;
+}
+.popup-contentResa small {
+  color: red;
+}
+.popup-contentResa .popup-exitResa {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  text-decoration: none;
+  background: black;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+.popup-contentResa h1 {
+  color: rgb(46, 104, 128);
+  width: 100%;
+  text-align: center;
+  font-size: calc(0.5rem + 1vw);
+  text-transform: uppercase;
+  margin: 30px 0;
+  letter-spacing: 5px;
+  font-weight: 300;
+}
+.popup-contentResa label {
+  margin: 0 0 15px 0;
+  width: 100%;
+}
+.popup-contentResa textarea {
+  resize: none;
 }/*# sourceMappingURL=index.css.map */

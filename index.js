@@ -60,13 +60,22 @@ sr.reveal(".titre6", {
 });
 
 
-// -----------------Effet toggle sur formulaire Popup----------------------------//
+// -----------------Effet toggle sur formulaire contact Popup----------------------------//
 function togglePopup() {
     let popup = document.querySelector("#popup-overlay")
     popup.classList.toggle("active");
 }
 
 // --------------------------------------------------------------------------------
+// -----------------Effet toggle sur formulaire réservation Popup----------------------------//
+function togglePopupResa() {
+    let popup2 = document.querySelector("#popup-overlayResa")
+    popup2.classList.toggle("active");
+}
+
+// --------------------------------------------------------------------------------
+
+
 // -----------------Fonction pour envoi de formulaire via EmailJs-----------------//
 function sendMail() {
     let params = {

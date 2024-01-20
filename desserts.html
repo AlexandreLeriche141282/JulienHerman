@@ -77,6 +77,38 @@
       </form>
     </div>
   </div>
+  <div id="popup-overlayResa">
+    <div class="popup-contentResa">
+      <h1>Réservation</h1>
+      <form id="validation" method="post" onsubmit="return false">
+        <label for="name">Nom & prénom <small>*</small></label>
+        <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
+
+        <label for="sujet">Sujet <small>*</small></label>
+        <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
+
+        <label for="emailAddress">Email <small>*</small></label>
+        <input id="email" type="email" name="email" placeholder="Votre email" required>
+
+        <label for="tel">Téléphone <small>*</small></label>
+        <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
+
+
+        <label for="message">Message <small>*</small></label>
+        <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"
+          required></textarea>
+
+        <input onclick="sendMail()" type="submit" value="Envoyer">
+
+        <input type="checkbox" name="o107_Consentement"
+          value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
+          required> <small>J'ai lu et j'accepte la Politique de confidentialité.</small>
+
+
+        <a href="javascript:void(0)" onclick="togglePopupResa()" class="popup-exitResa">X</a>
+      </form>
+    </div>
+  </div>
   <header>
     <div class="menu">
       <div class="logo">
@@ -137,6 +169,9 @@
             <p>Pâte à choux</p>
             <p>Crème vanille</p>
             <p>Réduction de fraises</p>
+            <div class="reservation" onclick="togglePopupResa()">
+              <p>RÉSERVER</p>
+            </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
@@ -146,6 +181,9 @@
             <p>Pâte à choux</p>
             <p>Crème vanille</p>
             <p>Réduction de fraises</p>
+            <div class="reservation" onclick="togglePopupResa()">
+              <p>RÉSERVER</p>
+            </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
@@ -155,6 +193,9 @@
             <p>Pâte à choux</p>
             <p>Crème vanille</p>
             <p>Réduction de fraises</p>
+            <div class="reservation" onclick="togglePopupResa()">
+              <p>RÉSERVER</p>
+            </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
@@ -164,6 +205,9 @@
             <p>Pâte à choux</p>
             <p>Crème vanille</p>
             <p>Réduction de fraises</p>
+            <div class="reservation" onclick="togglePopupResa()">
+              <p>RÉSERVER</p>
+            </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
@@ -173,15 +217,21 @@
             <p>Pâte à choux</p>
             <p>Crème vanille</p>
             <p>Réduction de fraises</p>
+            <div class="reservation" onclick="togglePopupResa()">
+              <p>RÉSERVER</p>
+            </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
           <img src="./asset/img/choux fraises vanille.jpg" alt="">
           <p>Choux fraise</p>
-          <div class="hoverDesserts">
+          <div class="hoverDesserts" onclick="togglePopupResa()">
             <p>Pâte à choux</p>
             <p>Crème vanille</p>
             <p>Réduction de fraises</p>
+            <div class="reservation" onclick="togglePopupResa()">
+              <p>RÉSERVER</p>
+            </div>
           </div>
         </div>
         
@@ -190,7 +240,7 @@
 
   <footer>
 
-
+    <div class="lineFooter"></div>
     <div class="info">
       <div class="logo-julien">
         <img src="./asset/img/logo/EXE_LOGO-JULIEN-HERMAN.svg" alt="Logo">

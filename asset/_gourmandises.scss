@@ -8,13 +8,13 @@
     margin: 0 auto;    
     .gourmandisesContainer{
         display: grid;
-        grid-template-columns: 50% 50%;
+        grid-template-columns: 60% 40%;
         padding: 50px;
     .gourmandisesImg{
-background: url(./img/magasin/gourmandises.jpg)center/cover;
-
+background: url(./img/magasin/etagere.webp);
+background-size: cover;
 border-radius: 10px;
-height: 500px;
+height: 650px;
 
     }
     .gourmandisesText{       
