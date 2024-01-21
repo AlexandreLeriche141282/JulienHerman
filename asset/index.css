@@ -1324,6 +1324,11 @@ section .containerPayement .logo .logoIcon img {
   position: relative;
   padding-bottom: 90px;
 }
+@media screen and (max-width: 800px) {
+  .desserts {
+    top: 100px;
+  }
+}
 .desserts .textDesserts {
   text-align: center;
   -webkit-box-pack: center;
@@ -1431,22 +1436,38 @@ section .containerPayement .logo .logoIcon img {
 .gourmandises {
   top: 150px;
   position: relative;
-  width: 80%;
+  width: 85%;
   margin: 0 auto;
 }
 .gourmandises a {
   color: rgb(46, 104, 128);
+}
+@media screen and (max-width: 800px) {
+  .gourmandises {
+    width: 100%;
+    top: 20px;
+  }
 }
 .gourmandises .gourmandisesContainer {
   display: grid;
   grid-template-columns: 60% 40%;
   padding: 50px;
 }
+@media screen and (max-width: 800px) {
+  .gourmandises .gourmandisesContainer {
+    padding: 10px 50px;
+  }
+}
 .gourmandises .gourmandisesContainer .gourmandisesImg {
-  background: url(./img/magasin/etagere.webp);
-  background-size: cover;
+  background: url(./img/magasin/etagere.webp) no-repeat;
+  background-size: contain;
   border-radius: 10px;
-  height: 650px;
+  height: 750px;
+}
+@media screen and (max-width: 1350px) {
+  .gourmandises .gourmandisesContainer .gourmandisesImg {
+    height: 400px;
+  }
 }
 .gourmandises .gourmandisesContainer .gourmandisesText {
   margin: 50px;
@@ -1464,10 +1485,21 @@ section .containerPayement .logo .logoIcon img {
           flex-direction: column;
   background-color: rgb(250, 247, 247);
 }
+@media screen and (max-width: 1350px) {
+  .gourmandises .gourmandisesContainer .gourmandisesText {
+    margin: 20px auto;
+    padding-bottom: 10px;
+  }
+}
 .gourmandises .gourmandisesContainer .gourmandisesText .lineGour {
   border: solid 0.1px rgba(187, 168, 134, 0.25);
   width: 30%;
   margin-top: 10px;
+}
+@media screen and (max-width: 1350px) {
+  .gourmandises .gourmandisesContainer {
+    display: block;
+  }
 }
 .gourmandises .containerPhotosGourmandises {
   width: 80%;
@@ -1476,6 +1508,14 @@ section .containerPayement .logo .logoIcon img {
   gap: 20px;
   margin: 0 auto;
   padding-bottom: 100px;
+}
+@media screen and (max-width: 950px) {
+  .gourmandises .containerPhotosGourmandises {
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 0 50px;
+    gap: 10px;
+  }
 }
 .gourmandises .containerPhotosGourmandises img {
   width: 100%;
@@ -1486,6 +1526,12 @@ section .containerPayement .logo .logoIcon img {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 700px) {
+  .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle {
+    font-size: calc(6px + 0.4vw);
+    padding-bottom: 0;
+  }
 }
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle .hoverGourmandises {
   /* Positionnement du contenu hover */
@@ -1532,16 +1578,20 @@ section .containerPayement .logo .logoIcon img {
 .viennoiseries a {
   color: rgb(46, 104, 128);
 }
+@media screen and (max-width: 800px) {
+  .viennoiseries {
+    width: 100%;
+    top: 100px;
+  }
+}
 .viennoiseries .viennoiseriesContainer {
   display: grid;
   grid-template-columns: 50% 50%;
-  padding: 50px;
+  padding: 20px;
 }
 @media screen and (max-width: 950px) {
   .viennoiseries .viennoiseriesContainer {
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    padding: 20px;
+    display: block;
   }
 }
 .viennoiseries .viennoiseriesContainer .viennoiseriesImg {
@@ -1550,6 +1600,13 @@ section .containerPayement .logo .logoIcon img {
   border-radius: 10px;
   width: 420px;
   height: 630px;
+}
+@media screen and (max-width: 950px) {
+  .viennoiseries .viennoiseriesContainer .viennoiseriesImg {
+    width: 280px;
+    height: 420px;
+    margin: 0 auto;
+  }
 }
 .viennoiseries .viennoiseriesContainer .viennoiseriesText {
   margin: 50px;
@@ -1566,6 +1623,12 @@ section .containerPayement .logo .logoIcon img {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: rgb(250, 247, 247);
+}
+@media screen and (max-width: 950px) {
+  .viennoiseries .viennoiseriesContainer .viennoiseriesText {
+    margin-bottom: 30px;
+    margin-top: 0;
+  }
 }
 .viennoiseries .viennoiseriesContainer .viennoiseriesText .lineVienn {
   border: solid 0.1px rgba(187, 168, 134, 0.25);
@@ -1584,7 +1647,7 @@ section .containerPayement .logo .logoIcon img {
   .viennoiseries .containerPhotosViennoiseries {
     grid-template-columns: 50% 50%;
     width: 100%;
-    padding: 0px;
+    padding: 50px;
     gap: 10px;
   }
 }
