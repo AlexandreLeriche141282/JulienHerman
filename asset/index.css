@@ -1537,6 +1537,13 @@ section .containerPayement .logo .logoIcon img {
   grid-template-columns: 50% 50%;
   padding: 50px;
 }
+@media screen and (max-width: 950px) {
+  .viennoiseries .viennoiseriesContainer {
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 20px;
+  }
+}
 .viennoiseries .viennoiseriesContainer .viennoiseriesImg {
   background: url(./img/magasin/viennoiserie.jpg);
   background-size: contain;
@@ -1573,9 +1580,23 @@ section .containerPayement .logo .logoIcon img {
   margin: 0 auto;
   padding-bottom: 100px;
 }
+@media screen and (max-width: 950px) {
+  .viennoiseries .containerPhotosViennoiseries {
+    grid-template-columns: 50% 50%;
+    width: 100%;
+    padding: 0px;
+    gap: 10px;
+  }
+}
 .viennoiseries .containerPhotosViennoiseries img {
   width: 272px;
   height: 363px;
+}
+@media screen and (max-width: 700px) {
+  .viennoiseries .containerPhotosViennoiseries img {
+    width: 135px;
+    height: 180px;
+  }
 }
 .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle {
   text-align: center;
@@ -1583,6 +1604,11 @@ section .containerPayement .logo .logoIcon img {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 20px;
+}
+@media screen and (max-width: 700px) {
+  .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle p {
+    font-size: calc(6px + 0.4vw);
+  }
 }
 .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle .hoverViennoiseries {
   /* Positionnement du contenu hover */
@@ -1720,20 +1746,30 @@ section .containerPayement .logo .logoIcon img {
 .actuality a {
   color: rgb(46, 104, 128);
 }
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .actuality {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    top: 50px;
+    top: 80px;
   }
 }
 .actuality .actualityScroll {
   width: 60%;
 }
+@media screen and (max-width: 1200px) {
+  .actuality .actualityScroll {
+    width: 100%;
+  }
+}
 .actuality .actualityScroll .actualityContainer {
   margin-top: 30px;
+}
+.actuality .actualityScroll .actualityContainer span {
+  font-size: calc(6px + 0.4vw);
+  font-style: italic;
+  color: rgb(187, 168, 135);
 }
 .actuality .actualityScroll .actualityContainer .lineActuality {
   border: 1px solid rgba(234, 227, 219, 0.353);
@@ -1742,7 +1778,7 @@ section .containerPayement .logo .logoIcon img {
   margin-left: 50px;
 }
 .actuality .actualityScroll .actualityContainer h2 {
-  font-size: calc(8px + 0.6vw);
+  font-size: calc(10px + 0.6vw);
 }
 .actuality .actualityScroll .actualityContainer .actualityContent {
   display: -webkit-box;
@@ -1750,7 +1786,7 @@ section .containerPayement .logo .logoIcon img {
   display: flex;
   padding-top: 20px;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .actuality .actualityScroll .actualityContainer .actualityContent {
     display: block;
   }
@@ -1758,7 +1794,7 @@ section .containerPayement .logo .logoIcon img {
 .actuality .actualityScroll .actualityContainer .actualityContent img {
   width: 40%;
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .actuality .actualityScroll .actualityContainer .actualityContent img {
     width: 80%;
   }
@@ -1767,7 +1803,7 @@ section .containerPayement .logo .logoIcon img {
   padding-left: 50px;
   font-size: calc(8px + 0.5vw);
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1200px) {
   .actuality .actualityScroll .actualityContainer .actualityContent p {
     padding-left: 0;
   }

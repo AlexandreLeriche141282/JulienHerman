@@ -6,16 +6,26 @@
     width: 80%;
     margin: 30px auto 0; 
     display: flex;
-    @media screen and (max-width:1200px) {
+    @media screen and (max-width:800px) {
         flex-direction: column;
-        top: 50px;
+        top: 80px;
     }
     .actualityScroll{
 
 width: 60%;
+@media screen and (max-width:1200px) {
+    width: 100%;
+    
+}
 
 .actualityContainer{
     margin-top: 30px;
+    span{
+        font-size: calc(6px + 0.4vw);
+        font-style: italic;
+        color:rgb(187,168,135) ;
+    }
+    
     .lineActuality{
         border: 1px solid rgba(234, 227, 219, 0.353);
         width: 100%;
@@ -23,25 +33,25 @@ width: 60%;
         margin-left: 50px;
     }
     h2{
-        // padding-left: 50px;
-        font-size: calc(8px + 0.6vw);
+        font-size: calc(10px + 0.6vw);
     }
     .actualityContent{
         display: flex;
         padding-top: 20px;
-        @media screen and (max-width:800px) {
+        @media screen and (max-width:1200px) {
             display: block;
+            
         }
         img{
             width: 40%;
-            @media screen and (max-width:800px) {
+            @media screen and (max-width:1200px) {
                 width: 80%;
             }
         }
         p{
             padding-left: 50px;
             font-size: calc(8px + 0.5vw);
-            @media screen and (max-width:800px) {
+            @media screen and (max-width:1200px) {
             padding-left: 0;
             }
         }
