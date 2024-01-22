@@ -174,7 +174,7 @@ header .actualityH span {
 }
 .menu .ulMenu li {
   position: relative;
-  font-size: calc(7px + 0.4vw);
+  font-size: calc(7px + 0.3vw);
 }
 .menu .ulMenu li:hover #subMenu {
   display: block;
