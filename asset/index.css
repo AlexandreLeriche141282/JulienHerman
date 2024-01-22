@@ -878,7 +878,7 @@ input[type=submit]:hover {
   padding: 20px;
   width: 90%;
   position: absolute;
-  height: 860px;
+  height: 760px;
   /* redéfinition 400 + 2*20 */
   max-width: 500px;
   margin: 100px auto 50px;
