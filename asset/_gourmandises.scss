@@ -9,7 +9,7 @@
     margin: 0 auto;
     @media screen and (max-width:800px) {
         width: 100%;
-        top: 20px;
+        top: 80px;
     }    
     .gourmandisesContainer{
         display: grid;
@@ -67,7 +67,12 @@ background-color: rgb(250,247,247);
     gap: 10px;
 }
     img{
-        width: 100%;
+        width: 272px;
+        height: 363px;
+        @media screen and (max-width:700px) {
+            width: 135px;
+            height: 180px;
+        }
         
         
     }
@@ -96,7 +101,7 @@ background-color: rgb(250,247,247);
             background-color: rgba(214, 212, 212, 0.485);
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: space-evenly;
             flex-direction: column;
             p{
                 color: rgb(0, 0, 0);
@@ -106,7 +111,14 @@ background-color: rgb(250,247,247);
                 
 
             }
-            
+         
+               .reservation p {
+                cursor: pointer;
+                letter-spacing: 3px;
+                font-size: calc(15px + 0.5vw);
+                animation: blink 1s infinite;
+                color: rgb(46,104,128);
+            }
         }
     }
     .containerPhotosGourTitle:hover .hoverGourmandises {

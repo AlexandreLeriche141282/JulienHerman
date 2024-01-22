@@ -876,7 +876,7 @@ input[type=submit]:hover {
   border-radius: 5px;
   background: white;
   padding: 20px;
-  width: 100%;
+  width: 90%;
   position: absolute;
   height: 860px;
   /* redéfinition 400 + 2*20 */
@@ -1445,7 +1445,7 @@ section .containerPayement .logo .logoIcon img {
 @media screen and (max-width: 800px) {
   .gourmandises {
     width: 100%;
-    top: 20px;
+    top: 80px;
   }
 }
 .gourmandises .gourmandisesContainer {
@@ -1518,7 +1518,14 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 .gourmandises .containerPhotosGourmandises img {
-  width: 100%;
+  width: 272px;
+  height: 363px;
+}
+@media screen and (max-width: 700px) {
+  .gourmandises .containerPhotosGourmandises img {
+    width: 135px;
+    height: 180px;
+  }
 }
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle {
   text-align: center;
@@ -1552,9 +1559,9 @@ section .containerPayement .logo .logoIcon img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1563,6 +1570,14 @@ section .containerPayement .logo .logoIcon img {
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle .hoverGourmandises p {
   color: rgb(0, 0, 0);
   font-weight: 500;
+}
+.gourmandises .containerPhotosGourmandises .containerPhotosGourTitle .hoverGourmandises .reservation p {
+  cursor: pointer;
+  letter-spacing: 3px;
+  font-size: calc(15px + 0.5vw);
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+  color: rgb(46, 104, 128);
 }
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle:hover .hoverGourmandises {
   opacity: 1;
@@ -1667,6 +1682,12 @@ section .containerPayement .logo .logoIcon img {
   text-transform: uppercase;
   position: relative;
   padding-bottom: 20px;
+  margin-top: 50px;
+}
+@media screen and (max-width: 700px) {
+  .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle {
+    margin-top: 0;
+  }
 }
 @media screen and (max-width: 700px) {
   .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle p {
@@ -1692,13 +1713,21 @@ section .containerPayement .logo .logoIcon img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+.viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle .hoverViennoiseries .reservation p {
+  cursor: pointer;
+  letter-spacing: 3px;
+  font-size: calc(15px + 0.5vw);
+  -webkit-animation: blink 1s infinite;
+          animation: blink 1s infinite;
+  color: rgb(46, 104, 128);
 }
 .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle .hoverViennoiseries p {
   color: rgb(0, 0, 0);
@@ -1718,17 +1747,38 @@ section .containerPayement .logo .logoIcon img {
 .dejSdt a {
   color: rgb(46, 104, 128);
 }
+@media screen and (max-width: 775px) {
+  .dejSdt {
+    top: 70px;
+    width: 100%;
+  }
+}
 .dejSdt .dejContainer {
   display: grid;
   grid-template-columns: 60% 40%;
   padding: 50px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1450px) {
+  .dejSdt .dejContainer {
+    display: block;
+    padding: 0;
+  }
 }
 .dejSdt .dejContainer .dejImg {
-  background: url(./img/salonDeThe/plateauPtdej-PhotoRoom.png) center/cover;
+  background: url(./img/salonDeThe/plateauPtdej-PhotoRoom.png) no-repeat;
+  background-size: contain;
   border-radius: 10px;
   height: 600px;
 }
+@media screen and (max-width: 775px) {
+  .dejSdt .dejContainer .dejImg {
+    height: 300px;
+    margin: 0 80px;
+  }
+}
 .dejSdt .dejContainer .dejText {
+  font-size: calc(8px + 0.4vw);
   margin: 50px;
   padding: 20px;
   text-align: center;
@@ -1743,6 +1793,11 @@ section .containerPayement .logo .logoIcon img {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: rgb(250, 247, 247);
+}
+@media screen and (max-width: 775px) {
+  .dejSdt .dejContainer .dejText {
+    margin: 10px;
+  }
 }
 .dejSdt .dejContainer .dejText .lineDej {
   border: solid 0.1px rgba(187, 168, 134, 0.25);
@@ -1751,8 +1806,14 @@ section .containerPayement .logo .logoIcon img {
 }
 .dejSdt .sdtContainer {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  margin: 0 auto;
+  grid-template-columns: 30% 36% 30%;
+  margin: 50px auto;
+}
+@media screen and (max-width: 1350px) {
+  .dejSdt .sdtContainer {
+    display: block;
+    margin: 0;
+  }
 }
 .dejSdt .sdtContainer .sdtImg {
   background: url(./img/salonDeThe/DESSERTS-5S3A3130-WEB-V2-PhotoRoom.png-PhotoRoom.png) no-repeat;
@@ -1760,14 +1821,27 @@ section .containerPayement .logo .logoIcon img {
   height: 500px;
   margin-top: 60px;
 }
+@media screen and (max-width: 775px) {
+  .dejSdt .sdtContainer .sdtImg {
+    height: 300px;
+    margin-top: 0;
+  }
+}
 .dejSdt .sdtContainer .sdtImg2 {
-  background: url(./img/salonDeThe/IMG_20240120_123601-removebg-preview.png) no-repeat;
+  background: url(./img/salonDeThe/IMG_20240120_123601-removebg-preview.png);
   background-size: contain;
   border-radius: 10px;
   height: 500px;
 }
+@media screen and (max-width: 775px) {
+  .dejSdt .sdtContainer .sdtImg2 {
+    height: 300px;
+    margin: 0 20px;
+    margin-bottom: 40px;
+  }
+}
 .dejSdt .sdtContainer .sdtText {
-  margin: 50px;
+  margin: 5px;
   padding: 20px;
   text-align: center;
   display: grid;
@@ -1781,6 +1855,7 @@ section .containerPayement .logo .logoIcon img {
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: rgb(250, 247, 247);
+  font-size: calc(8px + 0.4vw);
 }
 .dejSdt .sdtContainer .sdtText .lineSdt {
   border: solid 0.1px rgba(187, 168, 134, 0.25);
@@ -1793,9 +1868,28 @@ section .containerPayement .logo .logoIcon img {
   margin: 0 auto;
   padding-bottom: 100px;
 }
+@media screen and (max-width: 775px) {
+  .dejSdt .photosSdt {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
+    padding-bottom: 0px;
+  }
+}
 .dejSdt .photosSdt img {
   width: 90%;
   border-radius: 10px;
+  margin: 10px auto;
+}
+@media screen and (max-width: 775px) {
+  .dejSdt .photosSdt img {
+    width: 70%;
+  }
 }
 
 .actuality {
