@@ -443,7 +443,7 @@ main .sectionPhotos2 .presentation {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/sphere\ myrtilles\ cassis.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/gourmandise/IMG_20240119_203325-removebg-preview-_1_.webp) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -536,7 +536,7 @@ main .sectionPhotos3 .dessertDeFete {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/salonDeThe/DESSERTS-5S3A3130-WEB-V2.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/façade/facade.webp) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -575,7 +575,7 @@ main .sectionPhotos3 .viennoiserie {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/pieceMontee.webp) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/gourmandise/ourson.webp) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
