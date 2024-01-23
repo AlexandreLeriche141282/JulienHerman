@@ -1337,6 +1337,10 @@ section .containerPayement .logo .logoIcon img {
   width: 80%;
   margin: 10px auto;
 }
+.desserts .textDesserts span {
+  color: rgb(187, 168, 135);
+  font-weight: 500;
+}
 .desserts .textDesserts p {
   padding: 20px;
   color: black;
@@ -1518,10 +1522,10 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 .gourmandises .containerPhotosGourmandises img {
-  width: 272px;
-  height: 363px;
+  width: 372px;
+  height: 463px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1500px) {
   .gourmandises .containerPhotosGourmandises img {
     width: 135px;
     height: 180px;
@@ -1942,6 +1946,7 @@ section .containerPayement .logo .logoIcon img {
 }
 .actuality .actualityScroll .actualityContainer h2 {
   font-size: calc(10px + 0.6vw);
+  font-weight: 300;
 }
 .actuality .actualityScroll .actualityContainer .actualityContent {
   display: -webkit-box;
