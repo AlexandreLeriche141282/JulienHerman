@@ -1570,6 +1570,7 @@ section .containerPayement .logo .logoIcon img {
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle .hoverGourmandises p {
   color: rgb(0, 0, 0);
   font-weight: 500;
+  font-size: calc(10px + 0.3vw);
 }
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle .hoverGourmandises .reservation p {
   cursor: pointer;
@@ -1774,7 +1775,8 @@ section .containerPayement .logo .logoIcon img {
 @media screen and (max-width: 775px) {
   .dejSdt .dejContainer .dejImg {
     height: 300px;
-    margin: 0 80px;
+    width: 300px;
+    margin: 0 auto;
   }
 }
 .dejSdt .dejContainer .dejText {
@@ -1806,38 +1808,42 @@ section .containerPayement .logo .logoIcon img {
 }
 .dejSdt .sdtContainer {
   display: grid;
-  grid-template-columns: 30% 36% 30%;
+  grid-template-columns: 33% 33% 33%;
   margin: 50px auto;
 }
 @media screen and (max-width: 1350px) {
   .dejSdt .sdtContainer {
-    display: block;
-    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
   }
 }
 .dejSdt .sdtContainer .sdtImg {
-  background: url(./img/salonDeThe/DESSERTS-5S3A3130-WEB-V2-PhotoRoom.png-PhotoRoom.png) no-repeat;
+  background: url(./img/salonDeThe/DESSERTS-5S3A3130-WEB-V2-PhotoRoom.png-PhotoRoom65116.png) no-repeat;
   background-size: contain;
-  height: 500px;
-  margin-top: 60px;
 }
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 1350px) {
   .dejSdt .sdtContainer .sdtImg {
-    height: 300px;
-    margin-top: 0;
+    height: 200px;
+    margin: 0 auto;
+    width: 200px;
   }
 }
 .dejSdt .sdtContainer .sdtImg2 {
-  background: url(./img/salonDeThe/IMG_20240120_123601-removebg-preview.png);
+  background: url(./img/salonDeThe/sandwich12.png) no-repeat;
   background-size: contain;
   border-radius: 10px;
-  height: 500px;
 }
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 1350px) {
   .dejSdt .sdtContainer .sdtImg2 {
     height: 300px;
-    margin: 0 20px;
-    margin-bottom: 40px;
+    margin: 0 auto;
+    width: 200px;
   }
 }
 .dejSdt .sdtContainer .sdtText {
