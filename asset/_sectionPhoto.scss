@@ -93,14 +93,7 @@ main {
 
                 /* Style du contenu hover */
                 background-color: rgba(0, 0, 0, 0.6);
-                /* Couleur par défaut */
-                
-                // padding: 30px;
-
-                /* Centrer le contenu */
-                
                
-                
             }
 
         }
@@ -141,7 +134,7 @@ main {
                 background-color: rgba(0, 0, 0, 0.6);
                 /* Couleur par défaut */
                 color: white;
-                // padding: 30px;
+                
                 
                 
             }
@@ -281,6 +274,7 @@ main {
                     
                     @media screen and (max-width:800px){
                         margin: 10px 0;
+                        
                         }
                     .hover-dessertDeFete {
                         /* Positionnement du contenu hover */

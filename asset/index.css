@@ -88,14 +88,15 @@ header .actualityH {
   margin-bottom: 6%;
 }
 header .actualityH p {
-  font-size: calc(8px + 0.4vw);
+  font-size: calc(7px + 0.4vw);
   padding: 0 50px;
 }
 header .actualityH span {
-  font-size: calc(35px + 0.1vw);
+  font-size: calc(15px + 0.8vw);
   -webkit-animation: blink 1s infinite;
           animation: blink 1s infinite;
   color: rgb(191, 174, 142);
+  line-height: 60px;
 }
 @-webkit-keyframes blink {
   0% {
@@ -161,6 +162,7 @@ header .actualityH span {
 }
 .menu .reseau-sociaux a {
   font-size: 20px;
+  padding: 5px;
 }
 .menu .ulMenu {
   display: -webkit-box;
@@ -196,6 +198,9 @@ header .actualityH span {
   }
   .menu .reseau-sociaux {
     margin-top: 20px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .menu .ulMenu {
     display: -webkit-box;
@@ -376,8 +381,6 @@ main .sectionPhotos1 .choux .hover-choux {
   /* Effet de transition sur le hover */
   /* Style du contenu hover */
   background-color: rgba(0, 0, 0, 0.6);
-  /* Couleur par défaut */
-  /* Centrer le contenu */
 }
 main .sectionPhotos1 .choux:hover .hover-choux {
   opacity: 1;
@@ -1970,6 +1973,7 @@ section .containerPayement .logo .logoIcon img {
 .actuality .actualityScroll .actualityContainer h2 {
   font-size: calc(10px + 0.6vw);
   font-weight: 300;
+  color: rgb(187, 168, 135);
 }
 .actuality .actualityScroll .actualityContainer .actualityContent {
   display: -webkit-box;
