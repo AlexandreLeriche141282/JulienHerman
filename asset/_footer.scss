@@ -40,8 +40,21 @@ align-items: center;
      ul{
       margin:5px 0 10px;
       a{
-        display: block;
+      display: block;
+      font-size: calc(7px + 0.4vw);  
       }
+      #AL{
+        font-size: calc(7px + 0.4vw);
+        color: rgb(187,168,135);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+      img{
+        width: 40px;
+        padding-left: 10px;
+      }
+      
      }
       
       

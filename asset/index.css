@@ -444,7 +444,7 @@ main .sectionPhotos2 .presentation {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/IMG_20240123_185230.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/IMG_20240123_185230.jpg) bottom/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -665,6 +665,20 @@ footer .info .contact .contactBlock ul {
 }
 footer .info .contact .contactBlock ul a {
   display: block;
+  font-size: calc(7px + 0.4vw);
+}
+footer .info .contact .contactBlock ul #AL {
+  font-size: calc(7px + 0.4vw);
+  color: rgb(187, 168, 135);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+footer .info .contact .contactBlock ul img {
+  width: 40px;
+  padding-left: 10px;
 }
 footer .info .contact .contactBlock p {
   color: rgb(47, 44, 44);
@@ -2449,7 +2463,7 @@ input[type=submit]:hover {
 .prestaAnnexe {
   top: 150px;
   position: relative;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 .prestaAnnexe a {
@@ -2472,7 +2486,8 @@ input[type=submit]:hover {
   }
 }
 .prestaAnnexe .prestaContainerAnnexe .prestaImgAnnexe1 {
-  background: url(./img/salonDeThe/1.jpg) center/cover;
+  background: url(./img/salonDeThe/1.webp);
+  background-size: cover;
   border-radius: 10px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -2484,15 +2499,19 @@ input[type=submit]:hover {
 @media screen and (max-width: 1350px) {
   .prestaAnnexe .prestaContainerAnnexe .prestaImgAnnexe1 {
     height: 500px;
+    background: url(./img/salonDeThe/1.webp) center/cover;
   }
 }
 .prestaAnnexe .prestaContainerAnnexe .prestaImgAnnexe2 {
-  background: url(./img/salonDeThe/2.jpg) center/cover;
+  background: url(./img/salonDeThe/2.webp);
+  background-size: cover;
   border-radius: 10px;
+  image-rendering: auto;
 }
 @media screen and (max-width: 1350px) {
   .prestaAnnexe .prestaContainerAnnexe .prestaImgAnnexe2 {
     height: 500px;
+    background: url(./img/salonDeThe/2.webp) center/cover;
   }
 }
 .prestaAnnexe .prestaContainerAnnexe .prestaTextAnnexe {
@@ -2536,6 +2555,9 @@ input[type=submit]:hover {
     display: block;
   }
 }
+.prestaAnnexe .prestaContainerAnnexeColl {
+  padding-bottom: 50px;
+}
 .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer {
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -2551,7 +2573,7 @@ input[type=submit]:hover {
   }
 }
 .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl1 {
-  background: url(./img/dessertAssiette/1.jpg);
+  background: url(./img/dessertAssiette/1.webp);
   background-size: cover;
   border-radius: 10px;
   width: 480px;
@@ -2566,7 +2588,7 @@ input[type=submit]:hover {
   }
 }
 .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl2 {
-  background: url(./img/dessertAssiette/2.jpg);
+  background: url(./img/dessertAssiette/2.webp);
   background-size: cover;
   border-radius: 10px;
   width: 480px;
@@ -2581,7 +2603,7 @@ input[type=submit]:hover {
   }
 }
 .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl3 {
-  background: url(./img/dessertAssiette/3.jpg);
+  background: url(./img/dessertAssiette/3.webp);
   background-size: cover;
   border-radius: 10px;
   width: 480px;
@@ -2596,7 +2618,7 @@ input[type=submit]:hover {
   }
 }
 .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl4 {
-  background: url(./img/dessertAssiette/4.jpg);
+  background: url(./img/dessertAssiette/4.webp);
   background-size: cover;
   border-radius: 10px;
   width: 480px;
@@ -2649,5 +2671,56 @@ input[type=submit]:hover {
 @media screen and (max-width: 1350px) {
   .prestaAnnexe .prestaContainerAnnexeColl {
     display: block;
+  }
+}
+.prestaAnnexe .prestaExt {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
+}
+@media screen and (max-width: 1350px) {
+  .prestaAnnexe .prestaExt {
+    display: block;
+  }
+}
+.prestaAnnexe .prestaExt .prestaExtText {
+  margin: 30px 50px 30px;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  line-height: 25px;
+  background-color: rgb(250, 247, 247);
+  font-size: calc(8px + 0.3vw);
+}
+.prestaAnnexe .prestaExt .prestaExtText .linePrestaExtColl {
+  border: solid 0.1px rgba(187, 168, 134, 0.25);
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.prestaAnnexe .prestaExt .prestaExtImg {
+  background: url(./img/salonDeThe/prestaExt.webp);
+  background-size: cover;
+  border-radius: 10px;
+  width: 550px;
+  height: 550px;
+  margin: 0 auto;
+}
+.prestaAnnexe .prestaExt .prestaExtImg p {
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+}
+@media screen and (max-width: 1065px) {
+  .prestaAnnexe .prestaExt .prestaExtImg {
+    width: 320px;
+    height: 266px;
+    margin: 10px auto;
   }
 }/*# sourceMappingURL=index.css.map */
