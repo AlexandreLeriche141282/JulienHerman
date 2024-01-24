@@ -16,7 +16,9 @@
         padding: 50px;
         margin: 0 auto;
         @media screen and (max-width:1450px) {
-            display: block;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
             padding: 0;
         }
     .dejImg{
@@ -24,9 +26,9 @@ background: url(./img/salonDeThe/plateauPtdej-PhotoRoom.png)no-repeat;
 background-size: contain;
 border-radius: 10px;
 height: 600px;
-@media screen and (max-width:775px) {
+@media screen and (max-width:1350px) {
     height: 300px;
-    width: 300px;
+    width: 200px;
     margin: 0 auto;
 }
     }
@@ -56,6 +58,7 @@ background-color: rgb(250,247,247);
         display: grid;
         grid-template-columns: 33% 33% 33%;
         margin: 50px auto;
+        gap: 30px;
         @media screen and (max-width:1350px) {
             display: flex;
             flex-direction: column;
@@ -72,12 +75,12 @@ background-size: contain;
 
     }
     .sdtImg2{
-        background: url(./img/salonDeThe/sandwich12.png)no-repeat;
+        background: url(./img/salonDeThe/sandwich12.webp)no-repeat;
         background-size: contain;
         border-radius: 10px;
 // height: 500px;
 @media screen and (max-width:1350px) {
-    height: 300px;
+    height: 250px;
     margin: 0 auto;
     width: 200px;
 }

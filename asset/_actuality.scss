@@ -51,9 +51,11 @@ width: 60%;
         }
         p{
             padding-left: 50px;
-            font-size: calc(8px + 0.5vw);
+            font-size: calc(8px + 0.4vw);
             @media screen and (max-width:1200px) {
             padding-left: 0;
+            padding-top: 10px;
+            width: 80%;
             }
         }
     }

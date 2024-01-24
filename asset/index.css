@@ -88,7 +88,8 @@ header .actualityH {
   margin-bottom: 6%;
 }
 header .actualityH p {
-  font-size: calc(10px + 0.4vw);
+  font-size: calc(8px + 0.4vw);
+  padding: 0 50px;
 }
 header .actualityH span {
   font-size: calc(35px + 0.1vw);
@@ -388,7 +389,7 @@ main .sectionPhotos1 .finger {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/desserts.webp) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/IMG_20240123_185757.jpg) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -443,7 +444,7 @@ main .sectionPhotos2 .presentation {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/gourmandise/IMG_20240119_203325-removebg-preview-_1_.webp) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/IMG_20240123_185230.jpg) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -1766,7 +1767,14 @@ section .containerPayement .logo .logoIcon img {
 }
 @media screen and (max-width: 1450px) {
   .dejSdt .dejContainer {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0 auto;
     padding: 0;
   }
 }
@@ -1776,10 +1784,10 @@ section .containerPayement .logo .logoIcon img {
   border-radius: 10px;
   height: 600px;
 }
-@media screen and (max-width: 775px) {
+@media screen and (max-width: 1350px) {
   .dejSdt .dejContainer .dejImg {
     height: 300px;
-    width: 300px;
+    width: 200px;
     margin: 0 auto;
   }
 }
@@ -1814,6 +1822,7 @@ section .containerPayement .logo .logoIcon img {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   margin: 50px auto;
+  gap: 30px;
 }
 @media screen and (max-width: 1350px) {
   .dejSdt .sdtContainer {
@@ -1839,13 +1848,13 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 .dejSdt .sdtContainer .sdtImg2 {
-  background: url(./img/salonDeThe/sandwich12.png) no-repeat;
+  background: url(./img/salonDeThe/sandwich12.webp) no-repeat;
   background-size: contain;
   border-radius: 10px;
 }
 @media screen and (max-width: 1350px) {
   .dejSdt .sdtContainer .sdtImg2 {
-    height: 300px;
+    height: 250px;
     margin: 0 auto;
     width: 200px;
   }
@@ -1969,11 +1978,13 @@ section .containerPayement .logo .logoIcon img {
 }
 .actuality .actualityScroll .actualityContainer .actualityContent p {
   padding-left: 50px;
-  font-size: calc(8px + 0.5vw);
+  font-size: calc(8px + 0.4vw);
 }
 @media screen and (max-width: 1200px) {
   .actuality .actualityScroll .actualityContainer .actualityContent p {
     padding-left: 0;
+    padding-top: 10px;
+    width: 80%;
   }
 }
 .actuality .actualityFix {
@@ -2433,4 +2444,210 @@ input[type=submit]:hover {
 .presta .containerPhotosPresta .containerPhotosPrestaTitle:hover .hoverPresta {
   opacity: 1;
   /* Lors du hover, on remet l'opacité à 1 */
+}
+
+.prestaAnnexe {
+  top: 150px;
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+}
+.prestaAnnexe a {
+  color: rgb(46, 104, 128);
+}
+@media screen and (max-width: 800px) {
+  .prestaAnnexe {
+    width: 100%;
+    top: 80px;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexe {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding: 50px;
+}
+@media screen and (max-width: 800px) {
+  .prestaAnnexe .prestaContainerAnnexe {
+    padding: 10px 50px;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexe .prestaImgAnnexe1 {
+  background: url(./img/salonDeThe/1.jpg) center/cover;
+  border-radius: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (max-width: 1350px) {
+  .prestaAnnexe .prestaContainerAnnexe .prestaImgAnnexe1 {
+    height: 500px;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexe .prestaImgAnnexe2 {
+  background: url(./img/salonDeThe/2.jpg) center/cover;
+  border-radius: 10px;
+}
+@media screen and (max-width: 1350px) {
+  .prestaAnnexe .prestaContainerAnnexe .prestaImgAnnexe2 {
+    height: 500px;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexe .prestaTextAnnexe {
+  margin: 0 50px;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  line-height: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgb(250, 247, 247);
+  font-size: calc(8px + 0.3vw);
+}
+.prestaAnnexe .prestaContainerAnnexe .prestaTextAnnexe h2 {
+  padding-bottom: 10px;
+}
+.prestaAnnexe .prestaContainerAnnexe .prestaTextAnnexe span {
+  font-weight: 500;
+  font-style: italic;
+}
+@media screen and (max-width: 1350px) {
+  .prestaAnnexe .prestaContainerAnnexe .prestaTextAnnexe {
+    margin: 20px auto;
+    padding-bottom: 10px;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexe .prestaTextAnnexe .linePrestaAnnexe {
+  border: solid 0.1px rgba(187, 168, 134, 0.25);
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1350px) {
+  .prestaAnnexe .prestaContainerAnnexe {
+    display: block;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media screen and (max-width: 730px) {
+  .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer {
+    display: block;
+    padding: 20px;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl1 {
+  background: url(./img/dessertAssiette/1.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  width: 480px;
+  height: 400px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1065px) {
+  .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl1 {
+    width: 320px;
+    height: 266px;
+    margin: 10px auto;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl2 {
+  background: url(./img/dessertAssiette/2.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  width: 480px;
+  height: 400px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1065px) {
+  .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl2 {
+    width: 320px;
+    height: 266px;
+    margin: 10px auto;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl3 {
+  background: url(./img/dessertAssiette/3.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  width: 480px;
+  height: 400px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1065px) {
+  .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl3 {
+    width: 320px;
+    height: 266px;
+    margin: 10px auto;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl4 {
+  background: url(./img/dessertAssiette/4.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  width: 480px;
+  height: 400px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1065px) {
+  .prestaAnnexe .prestaContainerAnnexeColl .prestaImgAnnexeContainer .prestaImgAnnexeColl4 {
+    width: 320px;
+    height: 266px;
+    margin: 10px auto;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaTextAnnexeColl {
+  margin: 30px 50px 30px;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-items: center;
+  line-height: 25px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgb(250, 247, 247);
+  font-size: calc(8px + 0.3vw);
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaTextAnnexeColl h2 {
+  margin-bottom: 20px;
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaTextAnnexeColl span {
+  font-weight: 500;
+  font-style: italic;
+}
+@media screen and (max-width: 1350px) {
+  .prestaAnnexe .prestaContainerAnnexeColl .prestaTextAnnexeColl {
+    margin: 20px auto;
+    padding-bottom: 10px;
+  }
+}
+.prestaAnnexe .prestaContainerAnnexeColl .prestaTextAnnexeColl .linePrestaAnnexeColl {
+  border: solid 0.1px rgba(187, 168, 134, 0.25);
+  width: 30%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1350px) {
+  .prestaAnnexe .prestaContainerAnnexeColl {
+    display: block;
+  }
 }/*# sourceMappingURL=index.css.map */
