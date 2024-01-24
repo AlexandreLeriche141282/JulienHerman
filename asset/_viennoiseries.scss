@@ -76,11 +76,13 @@ background-color: rgb(250,247,247);
     }
     .containerPhotosViennTitle{
         text-align: center;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-weight: 300;
         position: relative;
         padding-bottom: 20px;
         margin-top: 50px;
+        p{
+            font-size: calc(10px + 0.5vw);
+        }
         @media screen and (max-width:700px) {
             margin-top: 0;
         }
@@ -112,12 +114,6 @@ background-color: rgb(250,247,247);
                 font-size: calc(15px + 0.5vw);
                 animation: blink 1s infinite;
                 color: rgb(46,104,128);
-            }
-            p{
-                color: rgb(0, 0, 0);
-                font-weight: 500;
-                
-
             }
             
         }

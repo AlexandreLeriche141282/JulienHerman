@@ -5,7 +5,7 @@
     }
     top:150px;
     position: relative;
-    width: 85%;
+    width: 100%;
     margin: 0 auto;
     @media screen and (max-width:800px) {
         width: 100%;
@@ -13,13 +13,23 @@
     }    
     .prestaContainer{
         display: grid;
-        grid-template-columns: 60% 40%;
+        grid-template-columns:33% 33% 33%;
         padding: 50px;
         @media screen and (max-width:800px) {
             padding: 10px 50px;
         }
     .prestaImg{
-background: url(./img/pieceMontee.webp);
+background: url(./img/imgNewsletter.webp);
+background-size: cover;
+border-radius: 10px;
+height: 750px;
+@media screen and (max-width:1350px) {
+    height: 400px;
+}
+
+    }
+    .prestaImg2{
+background: url(./img/NakedCake.jpg);
 background-size: cover;
 border-radius: 10px;
 height: 750px;
@@ -37,6 +47,7 @@ align-items: center;
 justify-items: center;
 line-height: 25px;
 flex-direction: column;
+position: relative;
 background-color: rgb(250,247,247);
 @media screen and (max-width:1350px) {
     margin:20px auto;
@@ -47,6 +58,11 @@ background-color: rgb(250,247,247);
     border: solid 0.1px rgba(187, 168, 134, 0.25);
     width: 30%;
    margin-top: 10px;   
+}
+.cookie{
+    background: url(./img/cookie.webp) center/cover;
+    height: 300px;
+    width: 300px;
 }
     }
     @media screen and (max-width:1350px) {

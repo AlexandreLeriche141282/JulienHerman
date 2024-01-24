@@ -392,7 +392,7 @@ main .sectionPhotos1 .finger {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/IMG_20240123_185757.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/IMG_20240123_185230.jpg) bottom/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -447,7 +447,7 @@ main .sectionPhotos2 .presentation {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/IMG_20240123_185230.jpg) bottom/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/gourmandise/macaron.webp);
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -1421,7 +1421,8 @@ section .containerPayement .logo .logoIcon img {
 }
 .containerPhotos .containerPhotosTitle .hoverDesserts p {
   color: rgb(0, 0, 0);
-  font-weight: 500;
+  font-weight: 100;
+  padding: 0 10px;
   font-size: calc(10px + 0.3vw);
 }
 .containerPhotos .containerPhotosTitle .hoverDesserts .reservation p {
@@ -1551,10 +1552,12 @@ section .containerPayement .logo .logoIcon img {
 }
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle {
   text-align: center;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 200;
   position: relative;
   padding-bottom: 20px;
+}
+.gourmandises .containerPhotosGourmandises .containerPhotosGourTitle p {
+  font-size: calc(10px + 0.5vw);
 }
 @media screen and (max-width: 700px) {
   .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle {
@@ -1591,7 +1594,8 @@ section .containerPayement .logo .logoIcon img {
 }
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle .hoverGourmandises p {
   color: rgb(0, 0, 0);
-  font-weight: 500;
+  font-weight: 100;
+  padding: 0 10px;
   font-size: calc(10px + 0.3vw);
 }
 .gourmandises .containerPhotosGourmandises .containerPhotosGourTitle .hoverGourmandises .reservation p {
@@ -1701,11 +1705,13 @@ section .containerPayement .logo .logoIcon img {
 }
 .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle {
   text-align: center;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 300;
   position: relative;
   padding-bottom: 20px;
   margin-top: 50px;
+}
+.viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle p {
+  font-size: calc(10px + 0.5vw);
 }
 @media screen and (max-width: 700px) {
   .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle {
@@ -1751,10 +1757,6 @@ section .containerPayement .logo .logoIcon img {
   -webkit-animation: blink 1s infinite;
           animation: blink 1s infinite;
   color: rgb(46, 104, 128);
-}
-.viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle .hoverViennoiseries p {
-  color: rgb(0, 0, 0);
-  font-weight: 500;
 }
 .viennoiseries .containerPhotosViennoiseries .containerPhotosViennTitle:hover .hoverViennoiseries {
   opacity: 1;
@@ -2178,9 +2180,7 @@ input[type=submit]:hover {
   }
 }
 .shareDesserts .shareDessertsContainer {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  padding: 50px;
+  padding: 5px;
 }
 @media screen and (max-width: 800px) {
   .shareDesserts .shareDessertsContainer {
@@ -2247,10 +2247,10 @@ input[type=submit]:hover {
   }
 }
 .shareDesserts .containerPhotosShareDesserts img {
-  width: 272px;
-  height: 363px;
+  width: 372px;
+  height: 463px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1500px) {
   .shareDesserts .containerPhotosShareDesserts img {
     width: 135px;
     height: 180px;
@@ -2258,8 +2258,7 @@ input[type=submit]:hover {
 }
 .shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle {
   text-align: center;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 300;
   position: relative;
   padding-bottom: 20px;
 }
@@ -2298,7 +2297,7 @@ input[type=submit]:hover {
 }
 .shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle .hoverShareDesserts p {
   color: rgb(0, 0, 0);
-  font-weight: 500;
+  font-weight: 300;
 }
 .shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle .hoverShareDesserts .reservation p {
   cursor: pointer;
@@ -2316,7 +2315,7 @@ input[type=submit]:hover {
 .presta {
   top: 150px;
   position: relative;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
 }
 .presta a {
@@ -2330,7 +2329,7 @@ input[type=submit]:hover {
 }
 .presta .prestaContainer {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 33% 33% 33%;
   padding: 50px;
 }
 @media screen and (max-width: 800px) {
@@ -2339,13 +2338,24 @@ input[type=submit]:hover {
   }
 }
 .presta .prestaContainer .prestaImg {
-  background: url(./img/pieceMontee.webp);
+  background: url(./img/imgNewsletter.webp);
   background-size: cover;
   border-radius: 10px;
   height: 750px;
 }
 @media screen and (max-width: 1350px) {
   .presta .prestaContainer .prestaImg {
+    height: 400px;
+  }
+}
+.presta .prestaContainer .prestaImg2 {
+  background: url(./img/NakedCake.jpg);
+  background-size: cover;
+  border-radius: 10px;
+  height: 750px;
+}
+@media screen and (max-width: 1350px) {
+  .presta .prestaContainer .prestaImg2 {
     height: 400px;
   }
 }
@@ -2363,6 +2373,7 @@ input[type=submit]:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  position: relative;
   background-color: rgb(250, 247, 247);
 }
 @media screen and (max-width: 1350px) {
@@ -2375,6 +2386,11 @@ input[type=submit]:hover {
   border: solid 0.1px rgba(187, 168, 134, 0.25);
   width: 30%;
   margin-top: 10px;
+}
+.presta .prestaContainer .prestaText .cookie {
+  background: url(./img/cookie.webp) center/cover;
+  height: 300px;
+  width: 300px;
 }
 @media screen and (max-width: 1350px) {
   .presta .prestaContainer {

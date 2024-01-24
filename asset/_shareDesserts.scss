@@ -12,9 +12,7 @@
         top: 80px;
     }    
     .shareDessertsContainer{
-        display: grid;
-        grid-template-columns: 60% 40%;
-        padding: 50px;
+        padding: 5px;
         @media screen and (max-width:800px) {
             padding: 10px 50px;
         }
@@ -66,20 +64,20 @@ background-color: rgb(250,247,247);
     padding: 0 50px;
     gap: 10px;
 }
-    img{
-        width: 272px;
-        height: 363px;
-        @media screen and (max-width:700px) {
-            width: 135px;
-            height: 180px;
-        }
-        
-        
+    
+img{
+    width: 372px;
+    height: 463px;
+    @media screen and (max-width:1500px) {
+        width: 135px;
+        height: 180px;
     }
+    
+    
+}
     .containerPhotosShareDessertsTitle{
         text-align: center;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-weight: 300;
         position: relative;
         padding-bottom: 20px;
         @media screen and (max-width:700px) {
@@ -105,7 +103,7 @@ background-color: rgb(250,247,247);
             flex-direction: column;
             p{
                 color: rgb(0, 0, 0);
-                font-weight: 500;
+                font-weight: 300;
                 
                     
                 
