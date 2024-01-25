@@ -103,6 +103,20 @@ function sendMail2() {
     emailjs.send("service_eajv5m1", "template_pr30z85", param).then(alert("Votre message nous a bien été transmis"))
 }
 
+// --------Formulaire réservation------------------///
+
+// function sendMail3() {
+//     let param3 = {
+//         name3: document.getElementById("name").value,
+//         sujet3: document.getElementById("sujet").value,
+//         email3: document.getElementById("email").value,
+//         telephone3: document.getElementById("telephone").value,
+//         message3: document.getElementById("message").value,
+
+//     }
+
+//     emailjs.send("service_86vpx3l", "template_2nhdv2u", param3).then(alert("Votre message nous a bien été transmis"))
+// }
 
 // -------- Burger menu ----------------------//
 

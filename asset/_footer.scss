@@ -129,17 +129,17 @@ align-items: center;
 
 h2 {
     color: rgb(46, 104, 128);
-    font-size: 2rem;
+    font-size:calc(20px + 0.4vw);
     line-height: 2em;
   }
 
   button {
-    width: 180px;
+    width: 150px;
     color: rgb(109, 100, 100);
     background-color: rgb(255, 255, 255);
     border-radius: 5px;
     height: 50px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     
 

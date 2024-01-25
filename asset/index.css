@@ -392,7 +392,7 @@ main .sectionPhotos1 .finger {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/IMG_20240123_185230.jpg) bottom/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/dessert\ ind/dessertVitrine.webp) bottom/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -447,7 +447,7 @@ main .sectionPhotos2 .presentation {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/gourmandise/macaron.webp);
+  background: rgba(93, 91, 91, 0.3) url(./img/gourmandise/macaron.webp) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -772,16 +772,16 @@ footer .questionButton {
 }
 footer .questionButton h2 {
   color: rgb(46, 104, 128);
-  font-size: 2rem;
+  font-size: calc(20px + 0.4vw);
   line-height: 2em;
 }
 footer .questionButton button {
-  width: 180px;
+  width: 150px;
   color: rgb(109, 100, 100);
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   height: 50px;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
 }
 footer .questionButton button:hover {
@@ -1577,7 +1577,7 @@ section .containerPayement .logo .logoIcon img {
   opacity: 0;
   -webkit-transition: opacity 0.85s ease-in-out;
   transition: opacity 0.85s ease-in-out;
-  background-color: rgba(214, 212, 212, 0.485);
+  background-color: rgba(249, 250, 252, 0.755);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2280,7 +2280,7 @@ input[type=submit]:hover {
   opacity: 0;
   -webkit-transition: opacity 0.85s ease-in-out;
   transition: opacity 0.85s ease-in-out;
-  background-color: rgba(214, 212, 212, 0.485);
+  background-color: rgba(249, 250, 252, 0.755);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2329,7 +2329,6 @@ input[type=submit]:hover {
 }
 .presta .prestaContainer {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
   padding: 50px;
 }
 @media screen and (max-width: 800px) {
@@ -2337,31 +2336,9 @@ input[type=submit]:hover {
     padding: 10px 50px;
   }
 }
-.presta .prestaContainer .prestaImg {
-  background: url(./img/imgNewsletter.webp);
-  background-size: cover;
-  border-radius: 10px;
-  height: 750px;
-}
-@media screen and (max-width: 1350px) {
-  .presta .prestaContainer .prestaImg {
-    height: 400px;
-  }
-}
-.presta .prestaContainer .prestaImg2 {
-  background: url(./img/NakedCake.jpg);
-  background-size: cover;
-  border-radius: 10px;
-  height: 750px;
-}
-@media screen and (max-width: 1350px) {
-  .presta .prestaContainer .prestaImg2 {
-    height: 400px;
-  }
-}
 .presta .prestaContainer .prestaText {
-  margin: 0 50px;
-  padding: 20px 20px 0 20px;
+  margin: 0 auto;
+  padding: 20px 20px 20px 20px;
   text-align: center;
   display: grid;
   -webkit-box-align: center;
@@ -2373,7 +2350,6 @@ input[type=submit]:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: relative;
   background-color: rgb(250, 247, 247);
 }
 @media screen and (max-width: 1350px) {
@@ -2414,10 +2390,10 @@ input[type=submit]:hover {
   }
 }
 .presta .containerPhotosPresta img {
-  width: 272px;
-  height: 363px;
+  width: 463px;
+  height: 463px;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1500px) {
   .presta .containerPhotosPresta img {
     width: 135px;
     height: 180px;
@@ -2425,10 +2401,13 @@ input[type=submit]:hover {
 }
 .presta .containerPhotosPresta .containerPhotosPrestaTitle {
   text-align: center;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 300;
   position: relative;
   padding-bottom: 20px;
+}
+.presta .containerPhotosPresta .containerPhotosPrestaTitle p {
+  padding-top: 10px;
+  font-size: calc(10px + 0.5vw);
 }
 @media screen and (max-width: 700px) {
   .presta .containerPhotosPresta .containerPhotosPrestaTitle {
@@ -2448,7 +2427,7 @@ input[type=submit]:hover {
   opacity: 0;
   -webkit-transition: opacity 0.85s ease-in-out;
   transition: opacity 0.85s ease-in-out;
-  background-color: rgba(214, 212, 212, 0.485);
+  background-color: rgba(249, 250, 252, 0.755);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2465,15 +2444,9 @@ input[type=submit]:hover {
 }
 .presta .containerPhotosPresta .containerPhotosPrestaTitle .hoverPresta p {
   color: rgb(0, 0, 0);
-  font-weight: 500;
-}
-.presta .containerPhotosPresta .containerPhotosPrestaTitle .hoverPresta .reservation p {
-  cursor: pointer;
-  letter-spacing: 3px;
-  font-size: calc(15px + 0.5vw);
-  -webkit-animation: blink 1s infinite;
-          animation: blink 1s infinite;
-  color: rgb(46, 104, 128);
+  font-weight: 100;
+  padding: 0 10px;
+  font-size: calc(10px + 0.3vw);
 }
 .presta .containerPhotosPresta .containerPhotosPrestaTitle:hover .hoverPresta {
   opacity: 1;

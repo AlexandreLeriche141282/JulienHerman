@@ -13,41 +13,22 @@
     }    
     .prestaContainer{
         display: grid;
-        grid-template-columns:33% 33% 33%;
+        
         padding: 50px;
         @media screen and (max-width:800px) {
             padding: 10px 50px;
         }
-    .prestaImg{
-background: url(./img/imgNewsletter.webp);
-background-size: cover;
-border-radius: 10px;
-height: 750px;
-@media screen and (max-width:1350px) {
-    height: 400px;
-}
-
-    }
-    .prestaImg2{
-background: url(./img/NakedCake.jpg);
-background-size: cover;
-border-radius: 10px;
-height: 750px;
-@media screen and (max-width:1350px) {
-    height: 400px;
-}
-
-    }
+    
+   
     .prestaText{       
-margin: 0 50px;
-padding:20px 20px 0 20px;
+margin: 0 auto;
+padding:20px 20px 20px 20px;
 text-align: center;
 display: grid;
 align-items: center;
 justify-items: center;
 line-height: 25px;
 flex-direction: column;
-position: relative;
 background-color: rgb(250,247,247);
 @media screen and (max-width:1350px) {
     margin:20px auto;
@@ -82,22 +63,25 @@ background-color: rgb(250,247,247);
     padding: 0 50px;
     gap: 10px;
 }
-    img{
-        width: 272px;
-        height: 363px;
-        @media screen and (max-width:700px) {
-            width: 135px;
-            height: 180px;
-        }
-        
-        
+img{
+    width: 463px;
+    height: 463px;
+    @media screen and (max-width:1500px) {
+        width: 135px;
+        height: 180px;
     }
+    
+    
+}
     .containerPhotosPrestaTitle{
         text-align: center;
-        font-weight: 600;
-        text-transform: uppercase;
+        font-weight: 300;
         position: relative;
         padding-bottom: 20px;
+        p{
+            padding-top: 10px;
+            font-size: calc(10px + 0.5vw);
+        }
         @media screen and (max-width:700px) {
             font-size:calc(6px + 0.4vw) ;
             padding-bottom: 0;
@@ -114,26 +98,19 @@ background-color: rgb(250,247,247);
             border: 1px solid rgb(215, 203, 203);
             opacity: 0;
             transition: opacity 0.85s ease-in-out;
-            background-color: rgba(214, 212, 212, 0.485);
+            background-color: rgba(249, 250, 252, 0.755);
             display: flex;
             align-items: center;
             justify-content: space-evenly;
             flex-direction: column;
             p{
                 color: rgb(0, 0, 0);
-                font-weight: 500;
-                
+                font-weight: 100;
+                padding: 0 10px;
+                font-size: calc(10px + 0.3vw);
                     
                 
 
-            }
-         
-               .reservation p {
-                cursor: pointer;
-                letter-spacing: 3px;
-                font-size: calc(15px + 0.5vw);
-                animation: blink 1s infinite;
-                color: rgb(46,104,128);
             }
         }
     }
