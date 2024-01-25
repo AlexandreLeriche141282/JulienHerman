@@ -77,38 +77,7 @@
       </form>
     </div>
   </div>
-  <div id="popup-overlayResa">
-    <div class="popup-contentResa">
-      <h1>Réservation</h1>
-      <form id="validation" method="post" onsubmit="return false">
-        <label for="name">Nom & prénom <small>*</small></label>
-        <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
-
-        <label for="sujet">Sujet <small>*</small></label>
-        <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
-
-        <label for="emailAddress">Email <small>*</small></label>
-        <input id="email" type="email" name="email" placeholder="Votre email" required>
-
-        <label for="tel">Téléphone <small>*</small></label>
-        <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
-
-
-        <label for="message">Message <small>*</small></label>
-        <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"
-          required></textarea>
-
-        <input onclick="sendMail()" type="submit" value="Envoyer">
-
-        <input type="checkbox" name="o107_Consentement"
-          value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
-          required> <small>J'ai lu et j'accepte la Politique de confidentialité.</small>
-
-
-        <a href="javascript:void(0)" onclick="togglePopupResa()" class="popup-exitResa">X</a>
-      </form>
-    </div>
-  </div>
+  
   <header>
     <div class="menu">
       <div class="logo">
@@ -178,7 +147,7 @@
           <p>Boîte de 5 pièces<br>Boîte de 12 pièces</p>
           
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
           <p>Réserver</p></div>
         </div>
       </div>
@@ -188,7 +157,7 @@
         <div class="hoverGourmandises">
           <p>Biscuit madeleine, fourrée avec un crémeux gianduja</p>
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>Réserver</p></div>
         </div>
       </div>
@@ -197,7 +166,7 @@
         <p>Nos différentes gourmandises</p>
         <div class="hoverGourmandises">
           <p>Pâte à tartiner, babas au rhum, nougats, pâtes de fruits et bien d'autres en boutique ...</p>
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>Réserver</p></div>
         </div>
       </div>
@@ -208,7 +177,7 @@
           <p>Chocolat noir "Nyangbo 68%" gelée de marollaise (vin cuit sarthois aux notes de cerise et d'amande)</p>
           <p>Boîte de 12 pièces</p>
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>Réserver</p></div>
         </div>
       </div>
@@ -220,7 +189,7 @@
             Boîte de 9 pièces
           </p>
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>Réserver</p></div>
         </div>
       </div>
@@ -229,7 +198,7 @@
         <p>Les gourmandises de nos producteurs sarthois</p>
         <div class="hoverGourmandises">
           <p>Bières, cola, confitures, safran, miel et bien d'autres encore ...</p>
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>Réserver</p></div>
         </div>
       </div>

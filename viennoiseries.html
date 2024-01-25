@@ -77,38 +77,7 @@
       </form>
     </div>
   </div>
-  <div id="popup-overlayResa">
-    <div class="popup-contentResa">
-      <h1>Réservation</h1>
-      <form id="validation" method="post" onsubmit="return false">
-        <label for="name">Nom & prénom <small>*</small></label>
-        <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
-
-        <label for="sujet">Sujet <small>*</small></label>
-        <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
-
-        <label for="emailAddress">Email <small>*</small></label>
-        <input id="email" type="email" name="email" placeholder="Votre email" required>
-
-        <label for="tel">Téléphone <small>*</small></label>
-        <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
-
-
-        <label for="message">Message <small>*</small></label>
-        <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"
-          required></textarea>
-
-        <input onclick="sendMail()" type="submit" value="Envoyer">
-
-        <input type="checkbox" name="o107_Consentement"
-          value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
-          required> <small>J'ai lu et j'accepte la Politique de confidentialité.</small>
-
-
-        <a href="javascript:void(0)" onclick="togglePopupResa()" class="popup-exitResa">X</a>
-      </form>
-    </div>
-  </div>
+ 
   <header>
     <div class="menu">
       <div class="logo">
@@ -176,7 +145,7 @@
         <p>Croissant</p>
         <div class="hoverViennoiseries">
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>RÉSERVER</p>
           </div>
         </div>
@@ -186,7 +155,7 @@
         <p>Pain chocolat 55%</p>
         <div class="hoverViennoiseries">
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>RÉSERVER</p>
           </div>
         </div>
@@ -196,7 +165,7 @@
         <p>Brioche feuilletée caramélisée</p>
         <div class="hoverViennoiseries">
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>RÉSERVER</p>
           </div>
         </div>
@@ -206,7 +175,7 @@
         <p>Chausson aux pommes sarthoises</p>
         <div class="hoverViennoiseries">
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>RÉSERVER</p>
           </div>
         </div>
@@ -216,7 +185,7 @@
         <p>Pain suisse</p>
         <div class="hoverViennoiseries">
           
-          <div class="reservation" onclick="togglePopupResa()">
+          <div class="reservation" onclick="togglePopup()">
             <p>RÉSERVER</p>
           </div>
         </div>
