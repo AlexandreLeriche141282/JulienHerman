@@ -97,9 +97,9 @@ function sendMail2() {
         
         email2: document.getElementById("email2").value,
         
-
     }
-
+        
+        
     emailjs.send("service_eajv5m1", "template_pr30z85", param).then(alert("Votre message nous a bien été transmis"))
 }
 
