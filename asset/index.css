@@ -2009,7 +2009,7 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 .actuality .actualityFix {
-  background: rgb(250, 250, 250);
+  background: rgb(255, 255, 255);
   width: 40%;
   position: fixed;
   left: 80%;
@@ -2710,6 +2710,7 @@ input[type=submit]:hover {
   color: white;
   text-align: center;
   padding-top: 20px;
+  font-size: calc(8px + 0.6vw);
 }
 @media screen and (max-width: 1065px) {
   .prestaAnnexe .prestaExt .prestaExtImg {

@@ -103,8 +103,6 @@ function sendMail2() {
     emailjs.send("service_eajv5m1", "template_pr30z85", param).then(alert("Votre message nous a bien été transmis"))
 }
 
-
-
 // -------- Burger menu ----------------------//
 
 const burgerMenu = document.querySelector(".menuBurger");
