@@ -251,4 +251,35 @@
                 }
     }
    }
+
+   .giftCard{
+    display: flex;
+    flex-direction: column-reverse;
+    padding-bottom: 50px;
+    margin: 0 auto;
+    article{
+        margin: 0 50px;
+            padding: 20px;
+            text-align: center;
+            align-items: center;
+            justify-items: center;
+            line-height: 25px;
+            flex-direction: column;
+            background-color: rgb(250, 247, 247);
+            font-size: calc(8px + 0.3vw);
+            h2{
+                padding-bottom: 10px;
+                font-size: 20px; 
+            }
+    }
+    img{
+width: 650px;
+margin: 0 auto;
+padding-top: 50px;
+@media screen and (max-width:760px) {
+    width: 350px;
+}
+   }
+    }
+
 }
