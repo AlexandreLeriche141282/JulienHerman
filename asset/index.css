@@ -1989,6 +1989,23 @@ section .containerPayement .logo .logoIcon img {
     display: block;
   }
 }
+.actuality .actualityScroll .actualityContainer .actualityContent .gg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 253px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.actuality .actualityScroll .actualityContainer .actualityContent .gg img {
+  height: 200px;
+  width: 200px;
+}
 .actuality .actualityScroll .actualityContainer .actualityContent img {
   width: 40%;
 }

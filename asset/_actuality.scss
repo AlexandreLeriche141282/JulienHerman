@@ -44,6 +44,16 @@ width: 60%;
             display: block;
             
         }
+        .gg{
+            display: flex;
+            width: 253px;
+            flex-direction: column;
+            align-items: center;
+            img{
+                height: 200px;
+                width: 200px;
+            }
+        }
         img{
             width: 40%;
             @media screen and (max-width:1200px) {
