@@ -1989,7 +1989,7 @@ section .containerPayement .logo .logoIcon img {
     display: block;
   }
 }
-.actuality .actualityScroll .actualityContainer .actualityContent .gg {
+.actuality .actualityScroll .actualityContainer .actualityContent .picturePaques {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2002,7 +2002,7 @@ section .containerPayement .logo .logoIcon img {
       -ms-flex-align: center;
           align-items: center;
 }
-.actuality .actualityScroll .actualityContainer .actualityContent .gg img {
+.actuality .actualityScroll .actualityContainer .actualityContent .picturePaques img {
   height: 200px;
   width: 200px;
 }
