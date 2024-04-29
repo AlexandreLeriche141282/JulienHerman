@@ -57,12 +57,14 @@ align-items: center;
       
      }
       
-      
-
       p {
         color: rgb(47, 44, 44);
         line-height: 1.5em;
         font-size: calc(7px + 0.4vw);
+        
+      }
+      @media (max-width: 850px) {
+      text-align: center;
         
       }
     }
