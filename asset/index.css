@@ -1371,6 +1371,9 @@ section .containerPayement .logo .logoIcon img {
   letter-spacing: 2px;
   line-height: 25px;
 }
+.desserts .textDesserts .message {
+  font-style: italic;
+}
 
 .containerPhotos {
   width: 80%;
