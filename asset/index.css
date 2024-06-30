@@ -1230,6 +1230,7 @@ section .containerPayement .logo .logoIcon img {
   background-image: linear-gradient(rgba(217, 221, 208, 0.829), rgba(162, 150, 112, 0.8)), url(./img/dessert\ à\ partager/numberCake.webp);
   background-position: center;
   background-size: cover;
+  background-attachment: fixed;
   color: #080808;
   padding: 1em;
   text-align: center;
@@ -1239,6 +1240,9 @@ section .containerPayement .logo .logoIcon img {
   border-radius: 15px;
   margin-left: 10px;
   margin-right: 10px;
+}
+.newsletter .newsletterContent {
+  margin: 0 auto;
 }
 .newsletter .newsletterContent .blockContent {
   padding: 10px 0 10px 0;

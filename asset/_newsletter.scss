@@ -1,9 +1,10 @@
 // ------------Newsletter-------------------------//
-.newsletter{
+.newsletter {
     background-color: #000000;
     background-image: linear-gradient(rgba(217, 221, 208, 0.829), rgba(162, 150, 112, 0.8)), url(./img/dessert\ à\ partager/numberCake.webp);
     background-position: center;
     background-size: cover;
+    background-attachment: fixed; // Ajoutez cette ligne
     color: #080808;
     padding: 1em;
     text-align: center;
@@ -12,37 +13,30 @@
     margin-left: 10px;
     margin-right: 10px;
 
-
-
-    .newsletterContent{
-        .blockContent{
+    .newsletterContent {
+        margin: 0 auto;
+        .blockContent {
             padding: 10px 0 10px 0;
-            p{
-                font-size:calc(8px + 0.6vw);  
+            p {
+                font-size: calc(8px + 0.6vw);  
                 padding-bottom: 5px;
             }
-            h2{
-                font-size:calc(10px + 1.8vw);
+            h2 {
+                font-size: calc(10px + 1.8vw);
                 font-weight: normal;
-                
             }
         }
-        .newsletterForm{
+        .newsletterForm {
             display: flex;
             height: 70%;
             align-items: center;
-            .checkbox{
-            padding-bottom: 0.8%;
+            .checkbox {
+                padding-bottom: 0.8%;
             }
-            
         }
-        #email2{
+        #email2 {
             width: 230px;
             color: #000000;
-
         }
-        
-        
-
-}
+    }
 }

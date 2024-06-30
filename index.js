@@ -92,16 +92,30 @@ function sendMail() {
 
 // ----------- Souscription newsletter------------//
 
-function sendMail2() {
-    let param = {
-        
-        email2: document.getElementById("email2").value,
-        
+function sendMail2(event) {
+    event.preventDefault(); // Empêche la soumission par défaut du formulaire
+
+    let consentCheckbox = document.getElementById("consent");
+    if (!consentCheckbox.checked) {
+        alert("Veuillez accepter la politique de confidentialité pour vous inscrire.");
+        return false;
     }
-        
-        
-    emailjs.send("service_eajv5m1", "template_pr30z85", param).then(alert("Votre message nous a bien été transmis"))
+
+    let param = {
+        email2: document.getElementById("email2").value,
+    }
+    
+    emailjs.send("service_eajv5m1", "template_pr30z85", param)
+        .then(function(response) {
+            alert("Votre inscription à la newsletter a bien été enregistrée");
+        }, function(error) {
+            alert("Une erreur s'est produite, veuillez réessayer plus tard");
+        });
+
+    return false; // Empêche la soumission du formulaire
 }
+
+
 
 // -------- Burger menu ----------------------//
 
