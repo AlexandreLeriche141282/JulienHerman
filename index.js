@@ -77,6 +77,48 @@ function togglePopupResa() {
 
 
 // -----------------Fonction pour envoi de formulaire via EmailJs-----------------//
+document.addEventListener('DOMContentLoaded', function() {
+    var dateInput = document.getElementById('date');
+    
+    dateInput.addEventListener('input', function() {
+        var selectedDate = new Date(this.value);
+        var day = selectedDate.getUTCDay();
+        
+        // Si c'est un dimanche (0) ou un lundi (1), réinitialiser la valeur
+        if (day === 0 || day === 1) {
+            this.value = '';
+            alert('Veuillez choisir un jour du mardi au samedi.');
+        }
+    });
+
+    // Définir la date minimale à aujourd'hui
+    var today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+
+    // Fonction pour obtenir le prochain jour valide
+    function getNextValidDate(date) {
+        do {
+            date.setDate(date.getDate() + 1);
+        } while (date.getUTCDay() === 0 || date.getUTCDay() === 1);
+        return date;
+    }
+
+    // Désactiver les lundis et dimanches dans le calendrier
+    dateInput.addEventListener('focus', function() {
+        this.addEventListener('keydown', function(e) {
+            e.preventDefault();
+        });
+    });
+
+    dateInput.addEventListener('click', function() {
+        var currentDate = new Date(this.value || new Date());
+        if (currentDate.getUTCDay() === 0 || currentDate.getUTCDay() === 1) {
+            currentDate = getNextValidDate(currentDate);
+        }
+        this.valueAsDate = currentDate;
+    });
+});
+
 function sendMail() {
     let params = {
         name: document.getElementById("name").value,
@@ -84,11 +126,25 @@ function sendMail() {
         email: document.getElementById("email").value,
         telephone: document.getElementById("telephone").value,
         message: document.getElementById("message").value,
-
+        date: document.getElementById("date").value // Ajout du champ date
     }
 
-    emailjs.send("service_86vpx3l", "template_2nhdv2u", params).then(alert("Votre message nous a bien été transmis"))
+    emailjs.send("service_86vpx3l", "template_2nhdv2u", params)
+        .then(function(response) {
+            alert("Votre message nous a bien été transmis");
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            alert("Une erreur s'est produite, veuillez réessayer");
+            console.log('FAILED...', error);
+        });
 }
+
+// Ajout d'un écouteur d'événements pour le formulaire
+document.getElementById('validation').addEventListener('submit', function(e) {
+    e.preventDefault(); // Empêche la soumission par défaut du formulaire
+    sendMail(); // Appelle la fonction sendMail
+});
+
 
 // ----------- Souscription newsletter------------//
 
@@ -131,9 +187,3 @@ croix.addEventListener("click", () => {
     ulMenu.classList.toggle('mobileMenu')
     
 });
-
-
-
-
-
-

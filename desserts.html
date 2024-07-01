@@ -78,33 +78,36 @@
   <div id="popup-overlay">
     <div class="popup-content">
       <h1>contactez-nous</h1>
-      <form id="validation" method="post" onsubmit="return false">
+      <form id="validation" method="post">
         <label for="name">Nom & prénom <small>*</small></label>
         <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
-
+    
         <label for="sujet">Sujet <small>*</small></label>
         <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
-
-        <label for="emailAddress">Email <small>*</small></label>
+    
+        <label for="email">Email <small>*</small></label>
         <input id="email" type="email" name="email" placeholder="Votre email" required>
-
-        <label for="tel">Téléphone <small>*</small></label>
+    
+        <label for="telephone">Téléphone <small>*</small></label>
         <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
-
-
+    
+        <label for="date">Date <small>*</small></label>
+        <input type="date" id="date" name="date" required>
+    
         <label for="message">Message <small>*</small></label>
-        <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"
-          required></textarea>
-
-        <input onclick="sendMail()" type="submit" value="Envoyer">
-
-        <input type="checkbox" name="o107_Consentement"
-          value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
-          required> <small>J'ai lu et j'accepte la Politique de confidentialité.</small>
-
-
+        <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider?" style="height:200px" required></textarea>
+    
+        <input type="submit" value="Envoyer">
+    
+        <div>
+            <input type="checkbox" id="consentement" name="o107_Consentement" required>
+            <label for="consentement">
+                <small>J'accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations. J'ai lu et j'accepte la Politique de confidentialité.</small>
+            </label>
+        </div>
+    
         <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">X</a>
-      </form>
+    </form>
     </div>
   </div>
   

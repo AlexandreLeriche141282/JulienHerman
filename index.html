@@ -232,23 +232,28 @@
       </div>
       <div class="newsletterForm">
         <form id="newsletter" onsubmit="return sendMail2(event)">
-          <label for="email2">Email <small>*</small></label>
-          <input id="email2" type="email" name="email" placeholder="saisissez votre email" required>
-
-          <input type="submit" value="je m'inscris">
-          <div class="checkbox">
+          <div class="form-group">
+            <label for="email2">Email <small>*</small></label>
+            <input id="email2" type="email" name="email" placeholder="saisissez votre email" required>
+          </div>
+          <div class="form-group">
+            <input type="submit" value="je m'inscris">
+          </div>
+          <div class="form-group checkbox">
             <label>
-            <input type="checkbox" id="consent" name="o107_Consentement"
-              value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
-              required> <small>Votre adresse e-mail sera utilisée par notre société uniquement, pour vous adresser des
-              e-mails sur ses offres et actualités. En cochant cette case, vous acceptez notre politique de
-              confidentialité.</small>
+              <input type="checkbox" id="consent" name="o107_Consentement" required>
+              <span>
+                <small>Votre adresse e-mail sera utilisée par notre société uniquement, pour vous adresser des
+                e-mails sur ses offres et actualités. En cochant cette case, vous acceptez notre politique de
+                confidentialité.</small>
+              </span>
             </label>  
           </div>
         </form>
       </div>
     </div>
   </div>
+  
   
   <section>
     <div class="containerService">

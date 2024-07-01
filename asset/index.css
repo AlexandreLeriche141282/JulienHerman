@@ -853,6 +853,7 @@ footer .elementFooter li {
       -ms-flex-pack: center;
           justify-content: center;
   display: none;
+  overflow-y: auto;
 }
 
 .active {
@@ -861,52 +862,23 @@ footer .elementFooter li {
   display: flex !important;
 }
 
-input[type=text],
-textarea,
-input[type=email],
-input[type=tel] {
-  width: 100%;
-  padding: 12px;
-  border: 0.1px solid #ccc;
-  border-radius: 4px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  margin-right: 0px;
-  margin-left: 0px;
-  resize: vertical;
-}
-
-input[type=submit] {
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  padding: 12px 20px;
-  border-color: rgb(115, 108, 108);
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 5px;
-}
-
-input[type=submit]:hover {
-  background-color: rgb(46, 104, 128);
-  color: white;
-}
-
 .popup-content {
-  /* Ajouter box-sizing */
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 5px;
   background: white;
   padding: 20px;
-  width: 90%;
-  position: absolute;
-  height: 760px;
-  /* redéfinition 400 + 2*20 */
-  max-width: 500px;
-  margin: 100px auto 50px;
+  width: 100%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: 5vh auto;
   text-align: left;
+  position: relative;
+}
+.popup-content #validation {
+  margin: 0;
+  width: 100%;
 }
 .popup-content input, .popup-content textarea, .popup-content label {
   color: black;
@@ -917,13 +889,12 @@ input[type=submit]:hover {
 }
 .popup-content .popup-exit {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 15px;
+  right: 15px;
   text-decoration: none;
   background: black;
   color: #ffffff;
   padding: 5px 10px;
-  border-radius: 50%;
 }
 .popup-content h1 {
   color: rgb(46, 104, 128);
@@ -941,6 +912,42 @@ input[type=submit]:hover {
 }
 .popup-content textarea {
   resize: none;
+}
+.popup-content input[type=date] {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  color: #95a5a6;
+  font-family: "Helvetica", arial, sans-serif;
+  font-size: 18px;
+  background: #ecf0f1;
+  padding: 5px;
+  display: inline-block !important;
+  visibility: visible !important;
+}
+.popup-content input[type=date]::-webkit-calendar-picker-indicator {
+  color: #95a5a6;
+  cursor: pointer;
+}
+.popup-content input[type=text],
+.popup-content textarea,
+.popup-content input[type=email],
+.popup-content input[type=tel],
+.popup-content input[type=date] {
+  width: 100%;
+  padding: 12px;
+  border: 0.1px solid #ccc;
+  border-radius: 4px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  margin-right: 0px;
+  margin-left: 0px;
+  resize: vertical;
+}
+.popup-content input[type=submit] {
+  background-color: rgb(222, 223, 235);
 }
 
 section {
