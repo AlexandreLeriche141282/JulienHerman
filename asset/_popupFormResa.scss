@@ -49,6 +49,10 @@ background-color: rgb(46,104,128);
 color: white;
 
 }
+.disabled-date {
+  color: #d3d3d3; /* couleur grise pour les dates non accessibles */
+  pointer-events: none; /* désactiver l'interaction de l'utilisateur */
+}
 
 .popup-contentResa {
 /* Ajouter box-sizing */

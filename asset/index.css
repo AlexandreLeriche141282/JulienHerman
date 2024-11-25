@@ -673,16 +673,17 @@ footer .info .contact .contactBlock ul a {
 }
 footer .info .contact .contactBlock ul #AL {
   font-size: calc(7px + 0.4vw);
-  color: rgb(187, 168, 135);
+  color: black;
+  font-weight: 500;
+  font-style: italic;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 30% 70%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 footer .info .contact .contactBlock ul img {
-  width: 40px;
-  padding-left: 10px;
+  width: 140px;
 }
 footer .info .contact .contactBlock p {
   color: rgb(47, 44, 44);
@@ -1401,7 +1402,7 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 .containerPhotos img {
-  width: 90%;
+  width: 80%;
 }
 .containerPhotos .containerPhotosTitle {
   text-align: center;
@@ -2151,6 +2152,11 @@ input[type=submit]:hover {
   color: white;
 }
 
+.disabled-date {
+  color: #d3d3d3; /* couleur grise pour les dates non accessibles */
+  pointer-events: none; /* désactiver l'interaction de l'utilisateur */
+}
+
 .popup-contentResa {
   /* Ajouter box-sizing */
   -webkit-box-sizing: border-box;
@@ -2285,12 +2291,12 @@ input[type=submit]:hover {
 }
 .shareDesserts .containerPhotosShareDesserts img {
   width: 372px;
-  height: 463px;
+  height: 372px;
 }
 @media screen and (max-width: 1500px) {
   .shareDesserts .containerPhotosShareDesserts img {
     width: 135px;
-    height: 180px;
+    height: 135px;
   }
 }
 .shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle {
@@ -2335,6 +2341,7 @@ input[type=submit]:hover {
 .shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle .hoverShareDesserts p {
   color: rgb(0, 0, 0);
   font-weight: 300;
+  padding: 0 10px;
 }
 .shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle .hoverShareDesserts .reservation p {
   cursor: pointer;
@@ -2795,4 +2802,18 @@ input[type=submit]:hover {
   .prestaAnnexe .giftCard img {
     width: 348px;
   }
+}
+
+form#unsubscribeForm {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 0 auto;
+  font-size: calc(0.6vw + 8px);
+}
+form#unsubscribeForm button {
+  padding: 10px;
+}
+
+.headerUnsubscribe {
+  height: 150px;
 }/*# sourceMappingURL=index.css.map */

@@ -33,7 +33,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css">
+  <link rel="stylesheet" href="./asset/index.css?v=1.4">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -78,7 +78,7 @@
   <div id="popup-overlay">
     <div class="popup-content">
       <h1>contactez-nous</h1>
-      <form id="validation" method="post">
+      <form id="validation" method="post" action="#">
         <label for="name">Nom & prénom <small>*</small></label>
         <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
     
@@ -91,7 +91,7 @@
         <label for="telephone">Téléphone <small>*</small></label>
         <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
     
-        <label for="date">Date <small>*</small></label>
+        <label for="date">Date de retrait de la commande<small>*</small></label>
         <input type="date" id="date" name="date" required>
     
         <label for="message">Message <small>*</small></label>
@@ -167,10 +167,10 @@
       </div>
       <div class="containerPhotos">
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/sphere.webp" alt="dessert au à la framboise et au miel">
-          <p>Sphère</p>
+          <img src="./asset/img/dessert ind/Octobre-rose.webp" alt="dessert au pamplemousse">
+          <p>Octobre rose </p>
           <div class="hoverDesserts">
-            <p>Mousse légère au miel Sarthois, gel framboise, pollen, perles craquantes et bisuit moelleux au citron</p>
+            <p>Streusel amande, mousse légère au yaourt de la ferme de Spay, pesto de menthe, caviar de pamplemousse ruby red.</p>
             
             <div class="reservation" onclick="togglePopup()">
               <p>RÉSERVER</p>
@@ -178,10 +178,10 @@
           </div>
         </div>
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/fingerframboise.webp" alt="dessert à la framboise et à la menthe">
-          <p>Finger</p>
+          <img src="./asset/img/dessert ind/poire.png" alt="dessert à la poire et au caramel">
+          <p>Choux poire/ caramel/ xérès</p>
           <div class="hoverDesserts">
-            <p>Mousse légère au yaourt de la ferme et à la menthe, croquant chocolat blanc, meringuettes, framboises françaises, crémeux framboise</p>
+            <p>Pâte à choux croquante, mousse légère au caramel beurre salé, compotée de poires et gel poire au vinaigre de xérès, sablé noisette et pop corn caramélisés.</p>
             
             <div class="reservation" onclick="togglePopup()">
               <p>RÉSERVER</p>
@@ -189,43 +189,11 @@
           </div>
         </div>
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/tartelettefraise.webp" alt="Tartelette aux fraises bio sarthoises">
-          <p>Tartelette aux fraises bio sarthoises de MR Coulon</p>
-          <div class="hoverDesserts">
-            <p>Pâte sucrée noisettes, biscuit moelleux, gel fraises, réduction de balsamique, mousse citronnée </p>
-            
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
-            </div>
-          </div>
-        </div>
-        <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/citron.webp" alt="dessert au citron">
+          <img src="./asset/img/dessert ind/0lh0y85f.png" alt="dessert au citron">
           <p>Citron/Olive/Aneth</p>
           <div class="hoverDesserts">
             <p>Mousse légère au citron et à l'huile d'olive noir, croustillant et biscuit moelleux yuzu,  confit de citron à l'aneth</p>
             
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
-            </div>
-          </div>
-        </div>
-        <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/poire.webp" alt="dessert à la poire">
-          <p>La poire</p>
-          <div class="hoverDesserts">
-            <p>Compotée de poires infusées aux baies de verveine, mousse légère à la poire, gel poire citronné, sablé croquant au sarrasin.</p>
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
-            </div>
-          </div>
-        </div>
-        <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/orange.webp" alt="dessert à l' orange ">
-          <p>Carotte Sarthoise/ orange sanguine.</p>
-          <div class="hoverDesserts">
-            <p>Mousse légère et segments d'orange sanguine,  gel carotte sarthoise pointe de citronnelle, granola châtaigne noisette, pickles de carotte
-              (Desserts végétarien, sans lactose, sans oeufs, halal, IG bas, sans gluten)</p>
             <div class="reservation" onclick="togglePopup()">
               <p>RÉSERVER</p>
             </div>
@@ -243,10 +211,10 @@
           </div>
         </div>
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/parisBrest.webp" alt="Paris-Brest">
-          <p>Paris-Brest cacahuète caramel</p>
+          <img src="./asset/img/dessert ind/chocolat.png" alt="Le chocolat dans tous ses états">
+          <p>Le chocolat dans tous ses états</p>
           <div class="hoverDesserts">
-            <p>Pâte à choux, mousse légère cacahuète, caramel beurre sâlé.</p>
+            <p>Streusel cacao fleur de sel, Biscuit moelleux cacao, Crémeux grué de cacao @valrhonafrance, Mousse oqo 73% @valrhonafrance( chocolat d'exception grand crus avec ses éclats de fèves de cacao), Enrobage croquant oqo, Jus de fèves de cacao" oabika" coulant  @valrhonafrance, Spirale de chocolat 66% Caraïbes @valrhonafrance</p>
             
             <div class="reservation" onclick="togglePopup()">
               <p>RÉSERVER</p>
@@ -326,6 +294,9 @@
               target="_blank">
               <img src="./asset/img/logo/google.png" alt="logo google avis">
             </a>
+            <a href="https://fr.restaurantguru.com/desserts-par-julien-herman-Le-Mans#google_vignettel"
+            target="_blank"> <img src="./asset/img/logo/logoTirpodvisor.png" alt="logo tripodvisor"></a>
+            <img src="./asset/img/logo/logoCollegeCulinaire-removebg-preview.webp" alt="logo du collège culinaire de France">
             <p>Laissez nous votre avis !</p>
           </div>
 
@@ -352,8 +323,8 @@
             <a href="./mentions.html"><span>Mentions légales</span></a>
             <a href="./politique.html"><span>Politique de confidentialité</span></a> <br>
             <p>© 2024 - Julien Herman - tous droits réservés</p>
-          <a id="AL" href="https://alexandreleriche141282.github.io/portfolio/">réalisé par Alexandre Leriche <img src="./asset/img/logo/logoAL.jpg" alt="logo développeur du site">
-          </a>
+            <a id="AL" href="https://www.pikcel.fr">Réalisé par<img src="./asset/img/logo/logoPikcel.svg" alt="logo de l'agence Pikcel, créateur de sites web">
+            </a>
           </ul>
         </div>
 

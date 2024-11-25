@@ -1,8 +1,13 @@
-// form{
-//     width: 200px;
-//     // margin-top: 600px;
-// }
-// .headerUnsubscribe{
-//     position: fixed;
-//     top: 0;
-// }
+form#unsubscribeForm{
+    max-width:1000px;
+    padding: 20px;
+   margin: 0 auto;
+   font-size: calc(0.6vw + 8px);
+   button{
+    padding: 10px;
+   }
+}
+.headerUnsubscribe{
+   height: 150px;
+   
+}
