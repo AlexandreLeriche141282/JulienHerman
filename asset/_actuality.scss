@@ -48,8 +48,9 @@ width: 60%;
             width: 253px;
             flex-direction: column;
             align-items: center;
+            
             img{
-                height: 200px;
+                // height: 200px;
                 width: 200px;
             }
         }
@@ -62,6 +63,18 @@ width: 60%;
         p{
             padding-left: 50px;
             font-size: calc(8px + 0.4vw);
+            @keyframes colorChange {
+                0% { color: rgb(46, 104, 128); } /* Couleur d'origine */
+                25% { color: rgb(66, 124, 148); } /* Légèrement plus clair */
+                50% { color: rgb(86, 144, 168); } /* Encore plus clair */
+                75% { color: rgb(46, 104, 128); } /* Retour à la couleur d'origine */
+                100% { color: rgb(46, 104, 128); } /* Boucle complète */
+              }
+              
+              strong {
+                font-size: calc(18px + 0.6vw);
+                animation: colorChange 3s linear infinite; /* Durée de l'animation */
+              }
             @media screen and (max-width:1200px) {
             padding-left: 0;
             padding-top: 10px;

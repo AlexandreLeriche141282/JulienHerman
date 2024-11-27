@@ -90,14 +90,12 @@ header .actualityH {
 }
 header .actualityH p {
   font-size: calc(7px + 0.4vw);
-  padding: 0 50px;
 }
 header .actualityH span {
-  font-size: calc(15px + 0.8vw);
-  -webkit-animation: blink 1s infinite;
-          animation: blink 1s infinite;
+  font-size: calc(10px + 0.8vw);
+  -webkit-animation: blink 2s infinite;
+          animation: blink 2s infinite;
   color: rgb(191, 174, 142);
-  line-height: 60px;
 }
 @-webkit-keyframes blink {
   0% {
@@ -2023,7 +2021,6 @@ section .containerPayement .logo .logoIcon img {
           align-items: center;
 }
 .actuality .actualityScroll .actualityContainer .actualityContent .picturePaques img {
-  height: 200px;
   width: 200px;
 }
 .actuality .actualityScroll .actualityContainer .actualityContent img {
@@ -2037,6 +2034,45 @@ section .containerPayement .logo .logoIcon img {
 .actuality .actualityScroll .actualityContainer .actualityContent p {
   padding-left: 50px;
   font-size: calc(8px + 0.4vw);
+}
+@-webkit-keyframes colorChange {
+  0% {
+    color: rgb(46, 104, 128);
+  } /* Couleur d'origine */
+  25% {
+    color: rgb(66, 124, 148);
+  } /* Légèrement plus clair */
+  50% {
+    color: rgb(86, 144, 168);
+  } /* Encore plus clair */
+  75% {
+    color: rgb(46, 104, 128);
+  } /* Retour à la couleur d'origine */
+  100% {
+    color: rgb(46, 104, 128);
+  } /* Boucle complète */
+}
+@keyframes colorChange {
+  0% {
+    color: rgb(46, 104, 128);
+  } /* Couleur d'origine */
+  25% {
+    color: rgb(66, 124, 148);
+  } /* Légèrement plus clair */
+  50% {
+    color: rgb(86, 144, 168);
+  } /* Encore plus clair */
+  75% {
+    color: rgb(46, 104, 128);
+  } /* Retour à la couleur d'origine */
+  100% {
+    color: rgb(46, 104, 128);
+  } /* Boucle complète */
+}
+.actuality .actualityScroll .actualityContainer .actualityContent p strong {
+  font-size: calc(18px + 0.6vw);
+  -webkit-animation: colorChange 3s linear infinite;
+          animation: colorChange 3s linear infinite; /* Durée de l'animation */
 }
 @media screen and (max-width: 1200px) {
   .actuality .actualityScroll .actualityContainer .actualityContent p {

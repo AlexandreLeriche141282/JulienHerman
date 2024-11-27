@@ -6,15 +6,11 @@ header{
         
         p{
             font-size: calc(7px + 0.4vw);
-            padding: 0 50px;
         };
         span{
-            font-size: calc(15px + 0.8vw );
-            animation: blink 1s infinite;
+            font-size: calc(10px + 0.8vw );
+            animation: blink 2s infinite;
             color:rgb(191,174,142);
-            line-height: 60px;
-            
-            
         }
         @keyframes blink { 
             0% { opacity:0; }
