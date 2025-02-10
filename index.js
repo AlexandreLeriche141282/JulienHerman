@@ -138,11 +138,30 @@ function sendMail() {
             console.log('FAILED...', error);
         });
 }
+function sendMail3() {
+    let params = {
+        name: document.getElementById("name").value,
+        sujet: document.getElementById("sujet").value,
+        email: document.getElementById("email").value,
+        telephone: document.getElementById("telephone").value,
+        message: document.getElementById("message").value
+        
+    }
+
+    emailjs.send("service_85xjoav", "template_ap4z49a", params)
+        .then(function(response) {
+            alert("Votre message nous a bien été transmis");
+            console.log('SUCCESS!', response.status, response.text);
+        }, function(error) {
+            alert("Une erreur s'est produite, veuillez réessayer");
+            console.log('FAILED...', error);
+        });
+}
 
 // Ajout d'un écouteur d'événements pour le formulaire
 document.getElementById('validation').addEventListener('submit', function(e) {
     e.preventDefault(); // Empêche la soumission par défaut du formulaire
-    sendMail(); // Appelle la fonction sendMail
+    sendMail3(); // Appelle la fonction sendMail
 });
 
 

@@ -539,7 +539,7 @@ main .sectionPhotos3 .dessertDeFete {
   height: 43.5vh;
   border-radius: 5px;
   cursor: pointer;
-  background: rgba(93, 91, 91, 0.3) url(./img/façade/facade.jpg) center/cover;
+  background: rgba(93, 91, 91, 0.3) url(./img/façade/facade_1.webp) center/cover;
   background-blend-mode: darken;
   -webkit-box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
           box-shadow: 0 1rem 3rem -1rem rgba(0, 0, 0, 0.7);
@@ -1227,6 +1227,48 @@ section .containerPayement .logo .logoIcon img {
 @media screen and (max-width: 800px) {
   .mainAbout {
     top: 70px;
+  }
+}
+.mainAbout .video-section {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+}
+.mainAbout .video-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+}
+.mainAbout .custom-video {
+  width: 100%;
+  max-width: 800px;
+  height: 80vh;
+  border-radius: 10px;
+}
+.mainAbout .video-description {
+  width: 100%;
+  max-width: 800px;
+  text-align: center;
+}
+.mainAbout .video-description a {
+  color: rgb(46, 104, 128);
+}
+@media (max-width: 768px) {
+  .mainAbout .video-content {
+    padding: 0 15px;
+  }
+  .mainAbout .video-description {
+    font-size: 0.8rem;
+  }
+  .mainAbout .custom-video {
+    width: 100%;
   }
 }
 

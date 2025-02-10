@@ -33,7 +33,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=1.5">
+  <link rel="stylesheet" href="./asset/index.css?v=1.8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -96,7 +96,7 @@
         <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"
           required></textarea>
 
-        <input onclick="sendMail()" type="submit" value="Envoyer">
+        <input onclick="sendMail3()" type="submit" value="Envoyer">
 
         <input type="checkbox" name="o107_Consentement"
           value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
@@ -215,8 +215,22 @@
       </div>
 
     </div>
+    <div class="video-section">
+    <div class="container">
+      <div class="video-content">
+        <div class="video-description">
+          <h2>Le chef <a href="https://www.instagram.com/chef_julien_serri/">@JulienSerri</a>  fait découvrir notre boutique à son acolyte <a href="https://www.instagram.com/dakuman_story/">@dakuman_story</a></h2>
+          <!-- <p>Description détaillée de votre vidéo. Expliquez ce que les spectateurs vont découvrir, l'histoire derrière la vidéo ou son importance.</p> -->
+        </div>
+        <video controls poster="" class="custom-video">
+          <source src="/asset/video/influenceur1.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la balise vidéo.
+        </video>
+      </div>
+    </div>
   </div>
-
+  </div>
+  
   <footer>
     <div class="lineFooter"></div>
     <div class="info">
@@ -279,7 +293,7 @@
             <a href="./mentions.html"><span>Mentions légales</span></a>
             <a href="./politique.html"><span>Politique de confidentialité</span></a> <br>
             <p>© 2024 - Julien Herman - tous droits réservés</p>
-            <a id="AL" href="https://www.pikcel.fr">Réalisé par<img src="./asset/img/logo/logoPikcel.svg" alt="logo de l'agence Pikcel, créateur de sites web">
+            <a id="AL" href="https://www.pikcel.fr">Réalisé par<img src="./asset/img/logo/logoPikcel.svg" alt="logo de l'agence Pikcel, agence web à Denain et Valenciennes, création de sites internet">
             </a>
           </ul>
         </div>
@@ -289,8 +303,8 @@
     </div>
   </footer>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="./aPropos.js"></script>
-  <script src="./index.js"></script>
+  <script src="./aPropos.js?v=1"></script>
+  <script src="./index.js?v=1"></script>
 </body>
 
 </html>
