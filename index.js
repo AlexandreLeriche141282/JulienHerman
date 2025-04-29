@@ -138,6 +138,8 @@ function sendMail() {
             console.log('FAILED...', error);
         });
 }
+
+// Formulaire de contact ------------------------------------------------------------------------------
 function sendMail3() {
     let params = {
         name: document.getElementById("name").value,
@@ -145,23 +147,33 @@ function sendMail3() {
         email: document.getElementById("email").value,
         telephone: document.getElementById("telephone").value,
         message: document.getElementById("message").value
-        
-    }
+    };
 
     emailjs.send("service_85xjoav", "template_ap4z49a", params)
         .then(function(response) {
-            alert("Votre message nous a bien été transmis");
             console.log('SUCCESS!', response.status, response.text);
+
+            // Affiche un message temporaire dans la popup
+            const popupContent = document.querySelector('.popup-content');
+            popupContent.innerHTML = `
+                <h2>Message envoyé avec succès !</h2>
+                <p>Nous avons bien reçu votre message et nous vous répondrons dans les plus brefs délais.</p>
+            `;
+
+            // Ferme la popup après 2 secondes
+            setTimeout(() => {
+                togglePopup();
+            }, 2000);
         }, function(error) {
             alert("Une erreur s'est produite, veuillez réessayer");
             console.log('FAILED...', error);
         });
 }
 
-// Ajout d'un écouteur d'événements pour le formulaire
+// Soumission propre du formulaire -------------------------------------------
 document.getElementById('validation').addEventListener('submit', function(e) {
-    e.preventDefault(); // Empêche la soumission par défaut du formulaire
-    sendMail3(); // Appelle la fonction sendMail
+    e.preventDefault();
+    sendMail3();
 });
 
 

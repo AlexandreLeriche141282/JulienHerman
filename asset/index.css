@@ -93,9 +93,9 @@ header .actualityH p {
 }
 header .actualityH span {
   font-size: calc(10px + 0.8vw);
-  -webkit-animation: blink 2s infinite;
-          animation: blink 2s infinite;
-  color: rgb(191, 174, 142);
+  -webkit-animation: blink 4s infinite;
+          animation: blink 4s infinite;
+  color: #8B6F4E;
 }
 @-webkit-keyframes blink {
   0% {
@@ -2037,6 +2037,15 @@ section .containerPayement .logo .logoIcon img {
   font-size: calc(10px + 0.6vw);
   font-weight: 300;
   color: rgb(187, 168, 135);
+}
+.actuality .actualityScroll .actualityContainer h3 {
+  color: rgb(46, 104, 128);
+  font-size: clamp(1rem, 2vw, 1.5rem);
+}
+.actuality .actualityScroll .actualityContainer h4 {
+  color: rgb(46, 104, 128);
+  font-size: clamp(0.5rem, 2vw, 1rem);
+  font-style: italic;
 }
 .actuality .actualityScroll .actualityContainer .actualityContent {
   display: -webkit-box;

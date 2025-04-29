@@ -9,8 +9,8 @@ header{
         };
         span{
             font-size: calc(10px + 0.8vw );
-            animation: blink 2s infinite;
-            color:rgb(191,174,142);
+            animation: blink 4s infinite;
+            color: #8B6F4E; 
         }
         @keyframes blink { 
             0% { opacity:0; }
