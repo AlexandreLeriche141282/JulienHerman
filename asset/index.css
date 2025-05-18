@@ -105,7 +105,7 @@ header .actualityH span {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 @keyframes blink {
@@ -116,7 +116,7 @@ header .actualityH span {
     opacity: 1;
   }
   100% {
-    opacity: 0;
+    opacity: 1;
   }
 }
 
@@ -1991,6 +1991,28 @@ section .containerPayement .logo .logoIcon img {
   }
 }
 
+.textSalon {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin: 10px auto;
+}
+.textSalon span {
+  color: rgb(187, 168, 135);
+  font-weight: 500;
+}
+.textSalon p {
+  padding: 20px;
+  color: black;
+  letter-spacing: 2px;
+  line-height: 25px;
+}
+.textSalon .message {
+  font-style: italic;
+}
+
 .actuality {
   top: 150px;
   width: 80%;
@@ -2361,7 +2383,7 @@ input[type=submit]:hover {
   }
 }
 .shareDesserts .containerPhotosShareDesserts {
-  width: 80%;
+  width: 100%;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   gap: 20px;
@@ -2391,6 +2413,17 @@ input[type=submit]:hover {
   font-weight: 300;
   position: relative;
   padding-bottom: 20px;
+}
+.shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle h2 {
+  font-size: calc(18px + 0.5vw);
+  color: rgb(46, 104, 128);
+  margin-bottom: 10px;
+  font-weight: 200;
+}
+@media screen and (max-width: 700px) {
+  .shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle h2 {
+    font-size: calc(11px + 0.5vw);
+  }
 }
 @media screen and (max-width: 700px) {
   .shareDesserts .containerPhotosShareDesserts .containerPhotosShareDessertsTitle {

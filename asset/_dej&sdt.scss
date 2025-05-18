@@ -127,3 +127,24 @@ font-size: calc(8px + 0.4vw);
 
 }
 }
+
+.textSalon {
+    text-align: center;
+    justify-content: center;
+    width: 80%;
+    margin: 10px auto;
+    span{
+        color: rgb(187,168,135);
+        font-weight: 500;
+    }
+
+    p {
+        padding: 20px;
+        color: black;
+        letter-spacing: 2px;
+        line-height: 25px;
+    }
+    .message{
+        font-style: italic;
+    }
+}

@@ -33,7 +33,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=2">
+  <link rel="stylesheet" href="./asset/index.css?v=2.3">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -72,6 +72,15 @@
       ]
     }
     </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S5K3H5SZ0X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S5K3H5SZ0X');
+</script>
 </head>
 
 <body>
@@ -181,10 +190,41 @@
     
       
     </div>
+
+    <div class="textSalon">
+      <p>Les créations originales de Julien Herman évoluent au fil des saisons et vous font voyager dans un univers gourmand et coloré, à travers des jeux de textures et des saveurs étonnantes.</p>
+      <span>Les incontournables de notre gamme ...</span>
+      <p class="message">'Cliquez sur l'image pour voir la composition'</p>
+    </div>
+    
+    <div class="containerPhotos">
+        
+      <div class="containerPhotosTitle">
+        <img src="./asset/img/salonDeThe/Croissant salé.webp" alt="Croissant salé garni de coppa, tomme de brebis, cornichon et guacamole épicé">
+        <p>Croissant salé</p>
+        <div class="hoverDesserts">
+          <p>Coppa, tomme de brebis, cornichon et guacamole épicé.</p>
+          <div class="reservation" onclick="togglePopup()">
+            <p>RÉSERVER</p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="containerPhotosTitle">
+        <img src="./asset/img/salonDeThe/Tartelette salée.webp" alt="Tartelette salée au houmous de patate douce, saumon fumé et mozzarella">
+        <p>Tartelette salée</p>
+        <div class="hoverDesserts">
+          <p>Houmous de patate douce au curry, saumon fumé et bille de mozzarella, roquette et pickles d'oignons rouges </p>
+          <div class="reservation" onclick="togglePopup()">
+            <p>RÉSERVER</p>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="photosSdt">
-      <img src="./asset/img/salonDeThe/sdt1.jpg" alt="">
-      <img src="./asset/img/salonDeThe/sdt2.jpg" alt="">
-      <img src="./asset/img/salonDeThe/sdt3.jpg" alt="">
+      <img src="./asset/img/salonDeThe/sdt1.jpg" alt="Vue du salon de thé avec ambiance chaleureuse et douce lumière">
+      <img src="./asset/img/salonDeThe/sdt2.jpg" alt="Présentation de thés, cafés et chocolats chauds maison">
+      <img src="./asset/img/salonDeThe/sdt3.jpg" alt="Clients dégustant desserts et boissons dans l’espace salon de thé">
       
     </div>
     

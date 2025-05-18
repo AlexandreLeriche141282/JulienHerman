@@ -33,7 +33,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=2">
+  <link rel="stylesheet" href="./asset/index.css?v=2.3">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -73,6 +73,15 @@
       ]
     }
     </script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S5K3H5SZ0X"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-S5K3H5SZ0X');
+</script>
 </head>
 
 <body>
@@ -175,58 +184,117 @@
     </div>
     <div class="containerPhotosGourmandises">
       <div class="containerPhotosGourTitle">
-        <img src="./asset/img/gourmandise/Madeleine.jpg" alt="Madeleine chocolat">
+        <img src="./asset/img/gourmandise/pâte-a-tartiner.webp" alt="Pâte à tartiner cacao et praliné noisette maison">
+        <p>Caramel beurre salé à tartiner</p>
+        <div class="hoverGourmandises">
+          <p>Pâte à tartiner cacao, et praliné noisette maison. <br>Pot de 200g</p>
+          <div class="reservation" onclick="togglePopup()">
+            <p>Réserver</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerPhotosGourTitle">
+        <img src="./asset/img/gourmandise/pâte-caramel-beurre-sale.webp" alt="Pot de caramel beurre salé à la vanille de Madagascar et fleur de sel">
+        <p>Caramel beurre salé à tartiner</p>
+        <div class="hoverGourmandises">
+          <p>Caramel beurre salé vanille Madagascar et fleur de sel de Noirmoutier <br>Pot de 200g</p>
+          <div class="reservation" onclick="togglePopup()">
+            <p>Réserver</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerPhotosGourTitle">
+        <img src="./asset/img/gourmandise/spritz.webp" alt="Biscuit Spritz à la vanille et chocolat noir 66%">
+        <p>Spritz</p>
+        <div class="hoverGourmandises">
+          <p>Biscuit sablé à la vanille Madagascar et fleur de sel, enrobage chocolat noir 66% <br>Sachet de 1 pièce</p>
+          <div class="reservation" onclick="togglePopup()">
+            <p>Réserver</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerPhotosGourTitle">
+        <img src="./asset/img/gourmandise/Cacahuètes.webp" alt="Bonbons de cacahuètes en chocolat Dulcey et praliné">
+        <p>Cacahuètes</p>
+        <div class="hoverGourmandises">
+          <p>Bonbons cacahuètes en chocolat Dulcey farcis de praliné cacahuète <br>Sachet de 10 pièces</p>
+          <div class="reservation" onclick="togglePopup()">
+            <p>Réserver</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerPhotosGourTitle">
+        <img src="./asset/img/gourmandise/Sablé-Gourmands.webp" alt="Sablé breton à la guimauve vanille enrobé de chocolat noir">
+        <p>Sablé Gourmands</p>
+        <div class="hoverGourmandises">
+          <p>Sablé bretons, guimauve à la vanille Madagascar enrobé de chocolat noir 66% <br>Sachet de 2 pièces</p>
+          <div class="reservation" onclick="togglePopup()">
+            <p>Réserver</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="containerPhotosGourTitle">
+        <img src="./asset/img/gourmandise/Madeleine.jpg" alt="Madeleine fourrée au crémeux gianduja">
         <p>Madeleine chocolat/gianduja</p>
         <div class="hoverGourmandises">
           <p>Biscuit madeleine, fourrée avec un crémeux gianduja</p>
-          
           <div class="reservation" onclick="togglePopup()">
-            <p>Réserver</p></div>
+            <p>Réserver</p>
+          </div>
         </div>
       </div>
+    
       <div class="containerPhotosGourTitle">
-        <img src="./asset/img/gourmandise/mixGourm.webp" alt="Nos différentes gourmandises">
+        <img src="./asset/img/gourmandise/mixGourm.webp" alt="Assortiment de gourmandises maison : pâte à tartiner, nougats, pâtes de fruits, etc.">
         <p>Nos différentes gourmandises</p>
         <div class="hoverGourmandises">
           <p>Pâte à tartiner, babas au rhum, nougats, pâtes de fruits et bien d'autres en boutique ...</p>
           <div class="reservation" onclick="togglePopup()">
-            <p>Réserver</p></div>
+            <p>Réserver</p>
+          </div>
         </div>
       </div>
+    
       <div class="containerPhotosGourTitle">
-        <img src="./asset/img/gourmandise/tablette.webp" alt="Chocolat coeur de la Sarthe">
+        <img src="./asset/img/gourmandise/tablette.webp" alt="Chocolat noir Nyangbo 68% au cœur de gelée de marollaise">
         <p>Ô coeur de la Sarthe</p>
         <div class="hoverGourmandises">
-          <p>Chocolat noir "Nyangbo 68%" gelée de marollaise (vin cuit sarthois aux notes de cerise et d'amande)</p>
+          <p>Chocolat noir 'Nyangbo 68%' gelée de marollaise (vin cuit sarthois aux notes de cerise et d'amande)</p>
           <p>Boîte de 12 pièces</p>
-          
           <div class="reservation" onclick="togglePopup()">
-            <p>Réserver</p></div>
+            <p>Réserver</p>
+          </div>
         </div>
       </div>
+    
       <div class="containerPhotosGourTitle">
-        <img src="./asset/img/gourmandise/ourson.webp" alt="">
+        <img src="./asset/img/gourmandise/ourson.webp" alt="Ourson guimauve vanille enrobé de chocolat noir 66%">
         <p>Oursons guimauve</p>
         <div class="hoverGourmandises">
-          <p>Ourson à la vanille, enrobée de chocolat noir 66% <br>
-            Boîte de 9 pièces
-          </p>
-          
+          <p>Ourson à la vanille, enrobée de chocolat noir 66% <br>Boîte de 9 pièces</p>
           <div class="reservation" onclick="togglePopup()">
-            <p>Réserver</p></div>
+            <p>Réserver</p>
+          </div>
         </div>
       </div>
+    
       <div class="containerPhotosGourTitle">
-        <img src="./asset/img/gourmandise/boisson.webp" alt="producteurs sarthois">
+        <img src="./asset/img/gourmandise/boisson.webp" alt="Produits locaux sarthois : bières, cola, confitures, miel, safran">
         <p>Les gourmandises de nos producteurs sarthois</p>
         <div class="hoverGourmandises">
           <p>Bières, cola, confitures, safran, miel et bien d'autres encore ...</p>
           <div class="reservation" onclick="togglePopup()">
-            <p>Réserver</p></div>
+            <p>Réserver</p>
+          </div>
         </div>
       </div>
-     
     </div>
+    
     
   </div>
 

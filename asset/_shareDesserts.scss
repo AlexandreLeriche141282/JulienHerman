@@ -52,7 +52,7 @@ background-color: rgb(250,247,247);
     }
 }
 .containerPhotosShareDesserts{
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns:33% 33% 33%;
     gap: 20px;
@@ -80,6 +80,16 @@ img{
         font-weight: 300;
         position: relative;
         padding-bottom: 20px;
+
+        h2{
+            font-size: calc(18px + 0.5vw);
+            color: rgb(46,104,128);
+            margin-bottom: 10px;
+            font-weight: 200;
+            @media screen and (max-width:700px) {
+                font-size: calc(11px + 0.5vw);
+            }
+        }
         @media screen and (max-width:700px) {
             font-size:calc(6px + 0.4vw) ;
             padding-bottom: 0;
