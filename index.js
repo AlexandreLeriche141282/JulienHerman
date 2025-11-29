@@ -218,3 +218,46 @@ croix.addEventListener("click", () => {
     ulMenu.classList.toggle('mobileMenu')
     
 });
+
+// --------- Apparition machine à écrire ---------- //
+const line1 = "Voici notre carte des fêtes de fin d'année a télécharger en cliquant ici";
+const line2 = "Pour visualiser nos bûches, desserts de fêtes et autres gourmandises cliquez ici ";
+// const auteurs = "Marcelline et Julien";
+
+function typeWriter(element, text, speed = 25, cb = null) {
+  element.innerHTML = '';
+  let i = 0;
+  function typing() {
+    if (i < text.length) {
+      if (text[i] === "<") {
+        let close = text.indexOf(">", i);
+        element.innerHTML += text.substring(i, close + 1);
+        i = close + 1;
+      } else {
+        element.innerHTML += text[i];
+        i++;
+      }
+      setTimeout(typing, speed);
+    } else if (cb) {
+      cb();
+    }
+  }
+  typing();
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const el1 = document.getElementById("actuLine1");
+  const el2 = document.getElementById("actuLine2");
+  const elAuteurs = document.getElementById("auteursLine");
+
+  typeWriter(el1, line1, 60, () => {
+    setTimeout(() => {
+      typeWriter(el2, line2, 20, () => {
+        setTimeout(() => {
+          typeWriter(elAuteurs, auteurs, 30);
+        }, 700);
+      });
+    }, 1500);
+  });
+});
+

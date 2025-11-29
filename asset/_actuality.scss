@@ -21,18 +21,18 @@ width: 60%;
 .actualityContainer{
     margin-top: 30px;
     span{
-        font-size: calc(6px + 0.4vw);
+        font-size: calc(14px + 0.4vw);
         font-style: italic;
         color:rgb(187,168,135) ;
     }
     .lineActuality{
         border: 1px solid rgba(234, 227, 219, 0.353);
-        width: 100%;
+        width: 90%;
         margin-top: 20px;
-        margin-left: 50px;
+        // margin-left: 50px;
     }
     h2{
-        font-size: calc(10px + 0.6vw);
+        font-size: calc(14px + 0.6vw);
         font-weight: 300;
         color:rgb(187,168,135) ;
     }
@@ -60,7 +60,7 @@ width: 60%;
             
             img{
                 // height: 200px;
-                width: 200px;
+                width: 250px;
             }
         }
         img{
@@ -88,10 +88,14 @@ width: 60%;
             @media screen and (max-width:1200px) {
             padding-left: 0;
             padding-top: 10px;
-            width: 80%;
+            // width: 80%;
+            }
+            em{
+                color: rgb(255, 0, 0);
             }
         }
     }
+    
 }
     }
 
