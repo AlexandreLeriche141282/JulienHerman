@@ -21,3 +21,5 @@ const img2 = document.querySelector(".img2");
 // -------------------------------------------------//
 
 
+// Changement automatique de la date ----------------------------------------------------------------------------
+document.getElementById("year").textContent = new Date().getFullYear();

@@ -1,3 +1,7 @@
+// Changement automatique de la date ----------------------------------------------------------------------------
+document.getElementById("year").textContent = new Date().getFullYear();
+
+
 // -------------- Scroll navBar --------------//
 const menu = document.querySelector(".menu");
 let lastScroll = 0;
@@ -220,8 +224,8 @@ croix.addEventListener("click", () => {
 });
 
 // --------- Apparition machine à écrire ---------- //
-const line1 = "Voici notre carte des fêtes de fin d'année a télécharger en cliquant ici";
-const line2 = "Pour visualiser nos bûches, desserts de fêtes et autres gourmandises cliquez ici ";
+// const line1 = "Voici notre carte des fêtes de fin d'année a télécharger en cliquant ici";
+const line1 = "Pensez à réserver vos desserts pour la St Valentin. Cliquez-ici ici pour voir nos deux desserts !";
 // const auteurs = "Marcelline et Julien";
 
 function typeWriter(element, text, speed = 25, cb = null) {
@@ -247,16 +251,16 @@ function typeWriter(element, text, speed = 25, cb = null) {
 
 document.addEventListener("DOMContentLoaded", () => {
   const el1 = document.getElementById("actuLine1");
-  const el2 = document.getElementById("actuLine2");
+//   const el2 = document.getElementById("actuLine2");
   const elAuteurs = document.getElementById("auteursLine");
 
   typeWriter(el1, line1, 60, () => {
     setTimeout(() => {
-      typeWriter(el2, line2, 20, () => {
-        setTimeout(() => {
-          typeWriter(elAuteurs, auteurs, 30);
-        }, 700);
-      });
+    //   typeWriter(el2, line2, 20, () => {
+    //     setTimeout(() => {
+    //       typeWriter(elAuteurs, auteurs, 30);
+    //     }, 700);
+    //   });
     }, 1500);
   });
 });
