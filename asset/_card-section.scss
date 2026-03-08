@@ -1,0 +1,93 @@
+.fou-patisserie {
+  padding: 80px 20px;
+
+  &__container {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+  }
+
+  /* BADGES */
+
+  &__badges {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    img {
+      width: 140px;
+      height: auto;
+    }
+  }
+
+  /* CONTENT */
+
+  &__title {
+    font-size: 48px;
+    letter-spacing: 10px;
+    color: #243a5a;
+    margin-bottom: 30px;
+  }
+
+  &__subtitle {
+    font-size: 30px;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    color: #243a5a;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #243a5a;
+    margin-bottom: 15px;
+    padding: 0 20px;
+  }
+}
+
+/* =====================
+   MOBILE
+   ===================== */
+
+@media (max-width: 768px) {
+
+  .fou-patisserie {
+
+    &__container {
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 40px;
+      margin-bottom: 30px;
+      
+    }
+
+    &__badges {
+      flex-direction: row;
+      justify-content: center;
+      gap: 50px;
+
+      img {
+        width: 110px;
+      }
+    }
+
+    &__title {
+      font-size: 32px;
+      letter-spacing: 6px;
+    }
+
+    &__subtitle {
+      font-size: 22px;
+    }
+
+    &__text {
+      font-size: 16px;
+    }
+
+  }
+
+}

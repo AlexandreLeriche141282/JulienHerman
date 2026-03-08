@@ -538,14 +538,14 @@ main .sectionPhotos3 .viennoiserie:hover .hover-viennoiserie {
   /* Lors du hover, on remet l'opacité à 1 */
 }
 
-footer {
-  height: 350px;
-  margin-top: 150px;
-}
 footer .lineFooter {
   border: 1px solid rgba(234, 227, 219, 0.456);
   width: 80%;
   margin: 0 auto;
+}
+footer {
+  height: 350px;
+  margin-top: 150px;
 }
 footer .info {
   display: grid;
@@ -795,12 +795,6 @@ footer .elementFooter li {
   background-color: rgb(222, 223, 235);
 }
 
-section {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  display: grid;
-  grid-template-columns: 50% 50%;
-}
 section h2 {
   margin-top: 10px;
   font-size: calc(20px + 0.2vw);
@@ -809,6 +803,12 @@ section h2 {
 section p {
   font-size: calc(7px + 0.4vw);
   color: rgb(189, 171, 138);
+}
+section {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 50% 50%;
 }
 section .containerService {
   flex-direction: column;
@@ -940,15 +940,15 @@ section .containerPayement .logo .logoIcon img {
   background: rgb(250, 247, 247);
   margin-top: 50px;
 }
-.mainAbout .section2 .containerAbout2 {
-  display: grid;
-  grid-template-columns: 33% 33% 33%;
-  padding: 20px;
-}
 @media screen and (max-width: 900px) {
   .mainAbout .section2 .containerAbout2 {
     display: block;
   }
+}
+.mainAbout .section2 .containerAbout2 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  padding: 20px;
 }
 .mainAbout .section2 .containerAbout2 .img1 {
   background: url(./img/JulienHermanWork.webp) center/cover;
@@ -1289,14 +1289,14 @@ section .containerPayement .logo .logoIcon img {
   color: rgb(187, 168, 135);
 }
 
+.gourmandises a {
+  color: rgb(46, 104, 128);
+}
 .gourmandises {
   top: 150px;
   position: relative;
   width: 85%;
   margin: 0 auto;
-}
-.gourmandises a {
-  color: rgb(46, 104, 128);
 }
 @media screen and (max-width: 800px) {
   .gourmandises {
@@ -1428,14 +1428,14 @@ section .containerPayement .logo .logoIcon img {
   /* Lors du hover, on remet l'opacité à 1 */
 }
 
+.viennoiseries a {
+  color: rgb(46, 104, 128);
+}
 .viennoiseries {
   top: 150px;
   position: relative;
   width: 80%;
   margin: 0 auto;
-}
-.viennoiseries a {
-  color: rgb(46, 104, 128);
 }
 @media screen and (max-width: 800px) {
   .viennoiseries {
@@ -1564,14 +1564,14 @@ section .containerPayement .logo .logoIcon img {
   /* Lors du hover, on remet l'opacité à 1 */
 }
 
+.dejSdt a {
+  color: rgb(46, 104, 128);
+}
 .dejSdt {
   top: 150px;
   position: relative;
   width: 80%;
   margin: 0 auto;
-}
-.dejSdt a {
-  color: rgb(46, 104, 128);
 }
 @media screen and (max-width: 775px) {
   .dejSdt {
@@ -1726,14 +1726,14 @@ section .containerPayement .logo .logoIcon img {
   font-style: italic;
 }
 
+.actuality a {
+  color: rgb(46, 104, 128);
+}
 .actuality {
   top: 150px;
   width: 80%;
   margin: 30px auto 0;
   display: flex;
-}
-.actuality a {
-  color: rgb(46, 104, 128);
 }
 @media screen and (max-width: 800px) {
   .actuality {
@@ -1981,14 +1981,14 @@ input[type=submit]:hover {
   resize: none;
 }
 
+.shareDesserts a {
+  color: rgb(46, 104, 128);
+}
 .shareDesserts {
   top: 150px;
   position: relative;
   width: 85%;
   margin: 0 auto;
-}
-.shareDesserts a {
-  color: rgb(46, 104, 128);
 }
 @media screen and (max-width: 800px) {
   .shareDesserts {
@@ -2125,14 +2125,14 @@ input[type=submit]:hover {
   /* Lors du hover, on remet l'opacité à 1 */
 }
 
+.presta a {
+  color: rgb(46, 104, 128);
+}
 .presta {
   top: 150px;
   position: relative;
   width: 100%;
   margin: 0 auto;
-}
-.presta a {
-  color: rgb(46, 104, 128);
 }
 @media screen and (max-width: 800px) {
   .presta {
@@ -2251,14 +2251,14 @@ input[type=submit]:hover {
   /* Lors du hover, on remet l'opacité à 1 */
 }
 
+.prestaAnnexe a {
+  color: rgb(46, 104, 128);
+}
 .prestaAnnexe {
   top: 150px;
   position: relative;
   width: 90%;
   margin: 0 auto;
-}
-.prestaAnnexe a {
-  color: rgb(46, 104, 128);
 }
 @media screen and (max-width: 800px) {
   .prestaAnnexe {
@@ -2544,4 +2544,81 @@ form#unsubscribeForm button {
 
 .headerUnsubscribe {
   height: 150px;
+}
+
+.fou-patisserie {
+  padding: 80px 20px;
+}
+.fou-patisserie__container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.fou-patisserie {
+  /* BADGES */
+}
+.fou-patisserie__badges {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.fou-patisserie__badges img {
+  width: 140px;
+  height: auto;
+}
+.fou-patisserie {
+  /* CONTENT */
+}
+.fou-patisserie__title {
+  font-size: 48px;
+  letter-spacing: 10px;
+  color: #243a5a;
+  margin-bottom: 30px;
+}
+.fou-patisserie__subtitle {
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 40px;
+  color: #243a5a;
+}
+.fou-patisserie__text {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #243a5a;
+  margin-bottom: 15px;
+  padding: 0 20px;
+}
+
+/* =====================
+   MOBILE
+   ===================== */
+@media (max-width: 768px) {
+  .fou-patisserie__container {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 40px;
+    margin-bottom: 30px;
+  }
+  .fou-patisserie__badges {
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+  }
+  .fou-patisserie__badges img {
+    width: 110px;
+  }
+  .fou-patisserie__title {
+    font-size: 32px;
+    letter-spacing: 6px;
+  }
+  .fou-patisserie__subtitle {
+    font-size: 22px;
+  }
+  .fou-patisserie__text {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=index.css.map */
