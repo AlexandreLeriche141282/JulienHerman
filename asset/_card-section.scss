@@ -21,23 +21,26 @@
     img {
       width: 140px;
       height: auto;
+      display: block;
     }
   }
 
-  /* CONTENT */
+  /* LOGO */
 
-  &__title {
-    font-size: 48px;
-    letter-spacing: 10px;
-    color: #243a5a;
-    margin-bottom: 30px;
+  &__logo {
+    width: clamp(200px, 25vw, 320px);
+    height: auto;
+    display: block;
+    margin-bottom: 25px;
   }
+
+  /* CONTENT */
 
   &__subtitle {
     font-size: 30px;
     letter-spacing: 3px;
     margin-bottom: 40px;
-    color: #243a5a;
+    color: #8B6F4E;
   }
 
   &__text {
@@ -45,24 +48,25 @@
     line-height: 1.7;
     color: #243a5a;
     margin-bottom: 15px;
-    padding: 0 20px;
   }
 }
 
-/* =====================
-   MOBILE
-   ===================== */
+/* MOBILE */
 
 @media (max-width: 768px) {
 
   .fou-patisserie {
+
+     &__logo {
+      margin-left: auto;
+      margin-right: auto;
+    }
 
     &__container {
       grid-template-columns: 1fr;
       text-align: center;
       gap: 40px;
       margin-bottom: 30px;
-      
     }
 
     &__badges {
@@ -75,17 +79,13 @@
       }
     }
 
-    &__title {
-      font-size: 32px;
-      letter-spacing: 6px;
-    }
-
     &__subtitle {
-      font-size: 22px;
+      font-size: 15px;
     }
 
     &__text {
-      font-size: 16px;
+      font-size: 13px;
+      padding: 0;
     }
 
   }

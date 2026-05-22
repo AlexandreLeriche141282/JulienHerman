@@ -265,3 +265,24 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+// // Pop-up -------------------------------------------------------
+window.addEventListener("load", () => {
+  setTimeout(() => {
+
+    document
+      .getElementById("popup-fete-meres")
+      .classList.add("active");
+
+    document.body.classList.add("popup-open");
+
+  }, 1000);
+});
+
+function closePopup() {
+
+  document
+    .getElementById("popup-fete-meres")
+    .classList.remove("active");
+
+  document.body.classList.remove("popup-open");
+}

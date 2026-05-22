@@ -33,7 +33,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=3.4">
+  <link rel="stylesheet" href="./asset/index.css?v=3.5">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -164,24 +164,20 @@
       </video>
 
     </div>
-    <div class="actualityH">
+    <!-- <div class="actualityH">
   <a href="./actuality.html">
     <p>
       <span id="actuLine1"></span><br>
       <strong class="auteurs" id="auteursLine"></strong>
     </p>
   </a>
-</div>
+</div> -->
 
 
 
   
   </header>
-  
-<main>
-    
-
-    <div class="fou-patisserie__container">
+  <div class="fou-patisserie__container">
 
     <div class="fou-patisserie__badges">
       <img src="./asset/img/patisserie_2025.webp" alt="Sélectionné Fou de Pâtisserie 2025">
@@ -190,28 +186,40 @@
 
     <div class="fou-patisserie__content">
 
-      <h2 class="fou-patisserie__title">
-        FOU DE PÂTISSERIE
-      </h2>
+  <img 
+    src="./asset/img/logo/FDP-LOGO-MAG.webp"
+    alt="Logo du guide Fou de Pâtisserie"
+    class="fou-patisserie__logo"
+    loading="lazy"
+    decoding="async"
+    width="220"
+    height="120"
+  >
 
-      <h3 class="fou-patisserie__subtitle">
-        UN REPÈRE ET UN GAGE DE QUALITÉ POUR <br>
-        VOUS SATISFAIRE
-      </h3>
+  <h2 class="fou-patisserie__subtitle">
+    Un repère et un gage de qualité <br>
+    pour les plus gourmands
+  </h2>
 
-      <p class="fou-patisserie__text">
-        L’équipe de Julien Herman est heureuse de compter parmi les 45 coups de cœur en France, distingués par le guide Fou de Pâtisserie.
-      </p>
+  <p class="fou-patisserie__text">
+    Julien Herman, Marcelline et leur équipe sont heureux de compter parmi les quelques 500 meilleures pâtisseries françaises distinguées par le guide et magazine "Fou de Pâtisserie".
+  </p>
 
-      <p class="fou-patisserie__text">
-        Présentes sur notre porte d’entrée, ces madeleines symbolisent le savoir-faire, l’exigence et l’engagement du chef au quotidien.
-      </p>
+  <p class="fou-patisserie__text">
+    Présentes sur notre porte d'entrée, ces madeleines symbolisent le savoir-faire, l'exigence et l'engagement du chef pour vous régaler au quotidien depuis l'ouverture de notre pâtisserie en 2023.
+  </p>
 
-    </div>
+</div>
 
   </div>
-<span class="vertical-line"></span>
+<main>
+    
+
+    
+    <span class="vertical-line"></span>
     <span class="vertical-line2"></span>
+
+    
     <div class="sectionPhotos1">
 
       <div class="choux">
@@ -439,6 +447,34 @@
 
     </div>
   </footer>
+  <!-- POPUP FÊTE DES MÈRES -->
+<div id="popup-fete-meres" class="popup-overlay">
+  <div class="popup-box">
+    
+    <button class="popup-close" onclick="closePopup()">×</button>
+
+    <img 
+      src="./asset/img/actualité/fetes_des_meres_2026.png"
+      alt="Dessert fête des mères"
+      class="popup-image"
+    >
+
+    <div class="popup-content1">
+      <span class="popup-badge">Édition limitée</span>
+
+      <h2>Dessert Spécial Fête des Mères </h2>
+
+      <p>
+        Découvrez notre création exclusive pour célébrer les mamans :
+        un dessert raffiné aux saveurs délicates et gourmandes.
+      </p>
+
+      <a href="/commande" class="popup-btn">
+        Description détaillée
+      </a>
+    </div>
+  </div>
+</div>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./index.js?v=1.5"></script>
 </body>
