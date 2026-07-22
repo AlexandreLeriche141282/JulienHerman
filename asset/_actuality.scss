@@ -95,6 +95,44 @@ width: 60%;
             }
         }
     }
+    .btn-reservation {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: rgb(46, 104, 128);
+  color: #fff;
+
+  font-weight: 600;
+  font-size: 15px;
+  letter-spacing: 0.3px;
+
+  cursor: pointer;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+  
+  box-shadow: 0 6px 18px rgba(46, 104, 128, 0.25);
+}
+
+.btn-reservation:hover {
+  background: rgb(38, 88, 108);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(46, 104, 128, 0.3);
+}
+
+.btn-reservation:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 12px rgba(46, 104, 128, 0.2);
+}
     
 }
     }

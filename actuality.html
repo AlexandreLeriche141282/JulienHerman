@@ -31,7 +31,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=3.5">
+  <link rel="stylesheet" href="./asset/index.css?v=3.7">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -86,33 +86,37 @@
   <div id="popup-overlay">
     <div class="popup-content">
       <h1>contactez-nous</h1>
-      <form id="validation" method="post" onsubmit="return false">
+
+      <form id="validation" method="post" action="#">
         <label for="name">Nom & prénom <small>*</small></label>
         <input type="text" id="name" name="firstname" placeholder="Votre nom et prénom" required>
-
+    
         <label for="sujet">Sujet <small>*</small></label>
         <input type="text" id="sujet" name="sujet" placeholder="L'objet de votre message" required>
-
-        <label for="emailAddress">Email <small>*</small></label>
+    
+        <label for="email">Email <small>*</small></label>
         <input id="email" type="email" name="email" placeholder="Votre email" required>
-
-        <label for="tel">Téléphone <small>*</small></label>
+    
+        <label for="telephone">Téléphone <small>*</small></label>
         <input type="tel" id="telephone" name="telephone" placeholder="Téléphone" required>
-
-
+    
+        <label for="date">Date de retrait de la commande<small>*</small></label>
+        <input type="date" id="date" name="date" required>
+    
         <label for="message">Message <small>*</small></label>
-        <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider ?" style="height:200px"
-          required></textarea>
-
+        <textarea id="message" name="message" placeholder="Comment pouvons-nous vous aider?" style="height:200px" required></textarea>
+    
         <input type="submit" value="Envoyer">
-
-        <input type="checkbox" name="o107_Consentement"
-          value="J accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations."
-          required> <small>J'ai lu et j'accepte la Politique de confidentialité.</small>
-
-
+    
+        <div>
+            <input type="checkbox" id="consentement" name="o107_Consentement" required>
+            <label for="consentement">
+                <small>J'accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations. J'ai lu et j'accepte la Politique de confidentialité.</small>
+            </label>
+        </div>
+    
         <a href="javascript:void(0)" onclick="togglePopup()" class="popup-exit">X</a>
-      </form>
+    </form>
     </div>
   </div>
   <header>
@@ -165,6 +169,41 @@
   <div class="actualityScroll">
 
     <div class="actualityContainer">
+      <h2>Fermeture pour congé d'été</h2>
+      <div class="actualityContent">
+          <img src="./asset/img/actualité/conge-ete-2026.avif" alt="Congés d'été 2026 - Desserts par Julien Herman, pâtisserie au Mans" loading="lazy">
+          <p>
+            Notre établissement prend des vacances du samedi 25 juillet au 25 août.<br><br>
+            Nous vous retrouverons avec plaisir dès notre réouverture !
+          </p>
+      </div>
+      <span>le 22 juillet 2026</span>
+      <div class="lineActuality"></div>
+  </div>
+
+    <div class="actualityContainer">
+      <h2>Notre dessert spécial fête des mères " LE BISOU " est désormais disponible en pré commande</h2>
+      <div class="actualityContent">
+          <img src="./asset/img/actualité/fdm_2026.png" alt="Entremet fêtes des mères 2026, julien herman, pâtisserie au Mans" loading="lazy">
+          <p>
+            <br><br>
+            <span>Format individuel uniquement</span><br><br>
+            Nous serons fermés le dimanche 31 Mai. <br>
+Les commandes seront donc à retirer le samedi 30 Mai aux horaires habituels. <br>
+
+Rien de mieux qu'un "bisou" gourmand pour fêter vos mamans !<br>
+Il sera disponible également en vitrine dès mardi 26 Mai.</p><br>
+         
+      </div>
+      <button class="btn-reservation" onclick="togglePopup('reservation')">
+  Réserver
+</button><br><br>
+      <span>le 23 Mai 2026</span>
+      <div class="lineActuality"></div>
+  </div>
+
+
+    <div class="actualityContainer">
       <h2>Nous sommes ravis de vous présenter nos deux desserts pour la St Valentin !</h2>
       <div class="actualityContent">
           <img src="./asset/img/actualité/saint-valentin-ind-2026.webp" alt="Dessert saint-valentin 2026, julien herman, pâtisserie au Mans" loading="lazy">
@@ -203,6 +242,9 @@ Une galette et une fève que nous avons voulu relooker à notre effigie cette an
 Disponible dès vendredi 2 janvier en boutique.</p><br>
          
       </div>
+      <div class="reservation" onclick="togglePopup('reservation')">
+    <p>RÉSERVER</p>
+</div>
       <span>le 29 Décembre 2025</span>
       <div class="lineActuality"></div>
   </div>
@@ -659,10 +701,10 @@ tarif de 6€ </h4>
       </div>
     </div>
   </footer>
-  <script src="./gourmandises.js?v=1.3"></script>
+  <script src="./gourmandises.js?v=1.7"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="./aPropos.js?v=1.3"></script>
-  <script src="./index.js?v=1.5"></script>
+  <script src="./aPropos.js?v=1.7"></script>
+  <script src="./index.js?v=1.7"></script>
 </body>
 
 </html>

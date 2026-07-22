@@ -223,47 +223,47 @@ croix.addEventListener("click", () => {
     
 });
 
-// --------- Apparition machine à écrire ---------- //
-// const line1 = "Voici notre carte des fêtes de fin d'année a télécharger en cliquant ici";
-const line1 = "Pensez à réserver vos desserts pour la St Valentin. Cliquez-ici ici pour voir nos deux desserts !";
-// const auteurs = "Marcelline et Julien";
+// // --------- Apparition machine à écrire ---------- //
+// // const line1 = "Voici notre carte des fêtes de fin d'année a télécharger en cliquant ici";
+// const line1 = "Pensez à réserver vos desserts pour la St Valentin. Cliquez-ici ici pour voir nos deux desserts !";
+// // const auteurs = "Marcelline et Julien";
 
-function typeWriter(element, text, speed = 25, cb = null) {
-  element.innerHTML = '';
-  let i = 0;
-  function typing() {
-    if (i < text.length) {
-      if (text[i] === "<") {
-        let close = text.indexOf(">", i);
-        element.innerHTML += text.substring(i, close + 1);
-        i = close + 1;
-      } else {
-        element.innerHTML += text[i];
-        i++;
-      }
-      setTimeout(typing, speed);
-    } else if (cb) {
-      cb();
-    }
-  }
-  typing();
-}
+// function typeWriter(element, text, speed = 25, cb = null) {
+//   element.innerHTML = '';
+//   let i = 0;
+//   function typing() {
+//     if (i < text.length) {
+//       if (text[i] === "<") {
+//         let close = text.indexOf(">", i);
+//         element.innerHTML += text.substring(i, close + 1);
+//         i = close + 1;
+//       } else {
+//         element.innerHTML += text[i];
+//         i++;
+//       }
+//       setTimeout(typing, speed);
+//     } else if (cb) {
+//       cb();
+//     }
+//   }
+//   typing();
+// }
 
-document.addEventListener("DOMContentLoaded", () => {
-  const el1 = document.getElementById("actuLine1");
-//   const el2 = document.getElementById("actuLine2");
-  const elAuteurs = document.getElementById("auteursLine");
+// document.addEventListener("DOMContentLoaded", () => {
+//   const el1 = document.getElementById("actuLine1");
+// //   const el2 = document.getElementById("actuLine2");
+//   const elAuteurs = document.getElementById("auteursLine");
 
-  typeWriter(el1, line1, 60, () => {
-    setTimeout(() => {
-    //   typeWriter(el2, line2, 20, () => {
-    //     setTimeout(() => {
-    //       typeWriter(elAuteurs, auteurs, 30);
-    //     }, 700);
-    //   });
-    }, 1500);
-  });
-});
+//   typeWriter(el1, line1, 60, () => {
+//     setTimeout(() => {
+//     //   typeWriter(el2, line2, 20, () => {
+//     //     setTimeout(() => {
+//     //       typeWriter(elAuteurs, auteurs, 30);
+//     //     }, 700);
+//     //   });
+//     }, 1500);
+//   });
+// });
 
 // // Pop-up -------------------------------------------------------
 window.addEventListener("load", () => {
@@ -275,7 +275,7 @@ window.addEventListener("load", () => {
 
     document.body.classList.add("popup-open");
 
-  }, 1000);
+  }, 400);
 });
 
 function closePopup() {

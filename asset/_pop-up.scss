@@ -1,27 +1,36 @@
 // ===========================
 // POPUP FÊTE DES MÈRES
-// Version bas droite premium
+// Version centrée
 // ===========================
 
 .popup-overlay {
   position: fixed;
   inset: 0;
   z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+
+  // 🔥 IMPORTANT : état fermé = totalement inactif
+  opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 
-  .popup-box {
-    position: absolute;
-    bottom: 24px;
-    right: 24px;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
 
+  .popup-box {
+    position: relative;
     width: 380px;
+    max-width: 100%;
     background: #fff;
     border-radius: 22px;
     overflow: hidden;
 
     box-shadow: 0 18px 50px rgba(0, 0, 0, 0.18);
 
-    transform: translateY(40px);
+    transform: scale(0.95);
     opacity: 0;
 
     transition: all 0.4s ease;
@@ -29,13 +38,24 @@
     pointer-events: auto;
   }
 
+  // ===========================
+  // ÉTAT ACTIF
+  // ===========================
   &.active {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+
     .popup-box {
-      transform: translateY(0);
+      transform: scale(1);
       opacity: 1;
     }
   }
 }
+
+// ===========================
+// CONTENU
+// ===========================
 
 .popup-image {
   width: 100%;
@@ -49,12 +69,10 @@
 
   .popup-badge {
     display: inline-block;
-
     padding: 7px 14px;
     margin-bottom: 16px;
 
     border-radius: 50px;
-
     background: #f8d9e1;
     color: #b24c6b;
 
@@ -66,7 +84,6 @@
 
   h2 {
     margin-bottom: 14px;
-
     font-size: 28px;
     line-height: 1.2;
     color: #2d2d2d;
@@ -74,7 +91,6 @@
 
   p {
     margin-bottom: 22px;
-
     font-size: 15px;
     line-height: 1.7;
     color: #666;
@@ -89,7 +105,7 @@
 
     border-radius: 12px;
 
-    background: rgb(46,104,128);
+    background: rgb(46, 104, 128);
     color: #fff;
 
     font-weight: 600;
@@ -98,12 +114,16 @@
     transition: background 0.25s ease;
 
     &:hover {
-      background: rgb(46,104,128);
+      background: rgb(46, 104, 128);
     }
   }
 }
 
-.popup-close {
+// ===========================
+// CLOSE BUTTON
+// ===========================
+
+.popup-close1 {
   position: absolute;
   top: 14px;
   right: 14px;
@@ -127,10 +147,7 @@
 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
 
-  transition:
-    background 0.25s ease,
-    transform 0.25s ease,
-    opacity 0.25s ease;
+  transition: background 0.25s ease, transform 0.25s ease;
 
   &:hover {
     background: white;
@@ -139,17 +156,15 @@
 }
 
 // ===========================
-// Responsive
+// RESPONSIVE
 // ===========================
 
 @media (max-width: 540px) {
   .popup-overlay {
-    .popup-box {
-      right: 16px;
-      left: 16px;
-      bottom: 16px;
+    padding: 16px;
 
-      width: auto;
+    .popup-box {
+      width: 100%;
     }
   }
 
