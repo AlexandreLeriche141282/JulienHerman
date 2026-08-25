@@ -265,24 +265,19 @@ croix.addEventListener("click", () => {
 //   });
 // });
 
-// // Pop-up -------------------------------------------------------
-window.addEventListener("load", () => {
-  setTimeout(() => {
-
-    document
-      .getElementById("popup-fete-meres")
-      .classList.add("active");
-
-    document.body.classList.add("popup-open");
-
-  }, 400);
-});
-
-function closePopup() {
-
-  document
-    .getElementById("popup-fete-meres")
-    .classList.remove("active");
-
-  document.body.classList.remove("popup-open");
-}
+// // Pop-up congés d'été (désactivé)
+// window.addEventListener("load", () => {
+//   setTimeout(() => {
+//     document
+//       .getElementById("popup-fete-meres")
+//       .classList.add("active");
+//     document.body.classList.add("popup-open");
+//   }, 400);
+// });
+//
+// function closePopup() {
+//   document
+//     .getElementById("popup-fete-meres")
+//     .classList.remove("active");
+//   document.body.classList.remove("popup-open");
+// }
