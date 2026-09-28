@@ -128,6 +128,7 @@ function sendMail() {
         name: document.getElementById("name").value,
         sujet: document.getElementById("sujet").value,
         email: document.getElementById("email").value,
+        reply_to: document.getElementById("email").value,
         telephone: document.getElementById("telephone").value,
         message: document.getElementById("message").value,
         date: document.getElementById("date").value // Ajout du champ date
@@ -149,6 +150,7 @@ function sendMail3() {
         name: document.getElementById("name").value,
         sujet: document.getElementById("sujet").value,
         email: document.getElementById("email").value,
+        reply_to: document.getElementById("email").value,
         telephone: document.getElementById("telephone").value,
         message: document.getElementById("message").value
     };
