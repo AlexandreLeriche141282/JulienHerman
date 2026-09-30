@@ -2702,6 +2702,15 @@ form#unsubscribeForm button {
   object-fit: cover;
   display: block;
 }
+.popup-image--affiche {
+  height: auto;
+  max-height: min(85vh, 720px);
+  object-fit: contain;
+}
+
+.popup-box--affiche {
+  width: min(520px, 100%);
+}
 
 .popup-content1 {
   padding: 18px;

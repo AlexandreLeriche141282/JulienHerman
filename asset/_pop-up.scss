@@ -62,6 +62,16 @@
   height: 350px;
   object-fit: cover;
   display: block;
+
+  &--affiche {
+    height: auto;
+    max-height: min(85vh, 720px);
+    object-fit: contain;
+  }
+}
+
+.popup-box--affiche {
+  width: min(520px, 100%);
 }
 
 .popup-content1 {
