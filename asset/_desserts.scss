@@ -25,6 +25,31 @@
         .message{
             font-style: italic;
         }
+
+        .desserts-pricing {
+            max-width: 520px;
+            margin: 0 auto 10px;
+            padding: 18px 22px;
+            border-radius: 12px;
+            background: rgba(249, 250, 252, 0.9);
+            border: 1px solid rgba(149, 137, 10, 0.12);
+            text-align: left;
+
+            h2 {
+                font-size: calc(14px + 0.4vw);
+                color: rgb(46, 104, 128);
+                margin-bottom: 10px;
+                font-weight: 500;
+                letter-spacing: 1px;
+            }
+
+            p {
+                padding: 4px 0;
+                letter-spacing: 0.5px;
+                line-height: 1.6;
+                font-size: calc(12px + 0.25vw);
+            }
+        }
     }
 }
 
@@ -54,6 +79,14 @@
         padding-bottom: 10px;
         p{
             font-size: calc(10px + 0.5vw);
+        }
+
+        .dessert-price {
+            margin-top: 6px;
+            font-size: calc(12px + 0.35vw);
+            font-weight: 500;
+            color: rgb(46, 104, 128);
+            letter-spacing: 0.5px;
         }
 
         .hoverDesserts {

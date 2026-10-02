@@ -270,9 +270,10 @@ croix.addEventListener("click", () => {
 // Pop-up Octobre Rose
 window.addEventListener("load", () => {
   setTimeout(() => {
-    document
-      .getElementById("popup-fete-meres")
-      .classList.add("active");
+    const popup = document.getElementById("popup-fete-meres");
+    if (!popup) return;
+
+    popup.classList.add("active");
     document.body.classList.add("popup-open");
   }, 400);
 });
