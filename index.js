@@ -214,16 +214,36 @@ function sendMail2(event) {
 
 const burgerMenu = document.querySelector(".menuBurger");
 const ulMenu = document.querySelector(".ulMenu");
-const croix = document.querySelector(".croix")
+const croix = document.querySelector(".croix");
 
-burgerMenu.addEventListener("click", () => {
-    ulMenu.classList.toggle('mobileMenu')
-    
-});
-croix.addEventListener("click", () => {
-    ulMenu.classList.toggle('mobileMenu')
-    
-});
+function closeMobileMenu() {
+    ulMenu?.classList.remove("mobileMenu");
+}
+
+if (burgerMenu && ulMenu) {
+    burgerMenu.addEventListener("click", () => {
+        ulMenu.classList.toggle("mobileMenu");
+    });
+}
+
+if (croix && ulMenu) {
+    croix.addEventListener("click", () => {
+        closeMobileMenu();
+    });
+}
+
+if (ulMenu) {
+    ulMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+            closeMobileMenu();
+        });
+    });
+
+    // Retour arrière mobile : le navigateur peut restaurer le menu ouvert (bfcache)
+    window.addEventListener("pageshow", () => {
+        closeMobileMenu();
+    });
+}
 
 // // --------- Apparition machine à écrire ---------- //
 // // const line1 = "Voici notre carte des fêtes de fin d'année a télécharger en cliquant ici";
