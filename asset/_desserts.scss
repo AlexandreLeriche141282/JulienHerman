@@ -2,6 +2,9 @@
     top: 150px;
     position: relative;
     padding-bottom: 90px;
+    overflow-x: clip;
+    max-width: 100%;
+
     @media screen and (max-width:800px) {
         top: 100px;
     } 
@@ -54,31 +57,74 @@
 }
 
 .containerPhotos {
-    width: 80%;
+    width: min(88%, 1200px);
+    max-width: 100%;
     display: grid;
-    grid-template-columns: 33% 33% 33%;
-    gap: 20px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px 24px;
     margin: 0 auto;
+    box-sizing: border-box;
 
     @media screen and (max-width:950px) {
-        grid-template-columns: 50% 50%;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         width: 100%;
-        padding: 20px;
-    }
-
-    img {
-        width: 80%;
-
-
+        padding: 12px 10px 32px;
+        gap: 56px 10px;
     }
 
     .containerPhotosTitle {
         text-align: center;
         font-weight: 300;
         position: relative;
-        padding-bottom: 10px;
+        padding-bottom: 16px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        min-width: 0;
+
+        &:hover {
+            z-index: 20;
+        }
+
+        > p:not(.dessert-price) {
+            font-size: calc(10px + 0.5vw);
+            min-height: 2.85em;
+            line-height: 1.35;
+            margin: 0;
+            padding: 0 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
         p{
             font-size: calc(10px + 0.5vw);
+        }
+
+        .dessert-media {
+            position: relative;
+            width: 100%;
+            max-width: 320px;
+            margin: 0 auto 8px;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1;
+                object-fit: cover;
+            }
+
+            @media screen and (max-width:950px) {
+                overflow: visible;
+
+                &:hover,
+                &:focus-within {
+                    z-index: 25;
+                }
+            }
         }
 
         .dessert-price {
@@ -89,28 +135,45 @@
             letter-spacing: 0.5px;
         }
 
+        .dessert-order {
+            margin-top: auto;
+            padding-top: 10px;
+
+            .cart-add-row {
+                margin-top: 0;
+                justify-content: center;
+            }
+
+            .btn-add-cart {
+                max-width: 100%;
+                font-size: 11px;
+                padding: 9px 10px;
+            }
+        }
+
         .hoverDesserts {
-            /* Positionnement du contenu hover */
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
+            inset: 0;
             border-radius: 10px;
             border: 1px solid rgba(149, 137, 10, 0.107);
             opacity: 0;
+            pointer-events: none;
             transition: opacity 0.85s ease-in-out;
-            background-color: rgba(249, 250, 252, 0.755);
+            background-color: rgba(249, 250, 252, 0.78);
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
-            flex-direction: column;
+            justify-content: center;
+            padding: 14px;
+            box-sizing: border-box;
+            overflow: hidden;
 
             p {
                 color: rgb(0, 0, 0);
                 font-weight: 100;
-                padding: 0 10px;
-                font-size: calc(10px + 0.3vw);
+                padding: 0 8px;
+                margin: 0;
+                font-size: calc(11px + 0.32vw);
+                line-height: 1.55;
             }
 
             .reservation p {
@@ -139,9 +202,36 @@
     }
 }
 
-.containerPhotosTitle:hover .hoverDesserts {
+.dessert-media:hover .hoverDesserts,
+.dessert-media:focus-within .hoverDesserts {
     opacity: 1;
-    /* Lors du hover, on remet l'opacité à 1 */
+    pointer-events: auto;
+}
+
+@media screen and (max-width:950px) {
+    .containerPhotos .containerPhotosTitle .hoverDesserts {
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 10px 8px 12px;
+    }
+
+    .dessert-media:hover .hoverDesserts,
+    .dessert-media:focus-within .hoverDesserts {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        height: auto;
+        min-height: 100%;
+        overflow: visible;
+        background-color: rgba(249, 250, 252, 0.78);
+    }
+
+    .containerPhotos .containerPhotosTitle .hoverDesserts p {
+        font-size: 11px;
+        line-height: 1.45;
+        text-align: center;
+    }
 }
 
 .desserts h3{

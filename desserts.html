@@ -33,7 +33,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=3.9">
+  <link rel="stylesheet" href="./asset/index.css?v=5.8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -111,7 +111,7 @@
         <div>
             <input type="checkbox" id="consentement" name="o107_Consentement" required>
             <label for="consentement">
-                <small>J'accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations. J'ai lu et j'accepte la Politique de confidentialité.</small>
+                <small>J'accepte que mes données soient utilisées pour traiter ma demande. J'ai lu et j'accepte la <a href="./politique.html">Politique de confidentialité</a>.</small>
             </label>
         </div>
     
@@ -177,69 +177,105 @@
       <div class="containerPhotos">
 
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/octobre_rose.webp" alt="Octobre rose, mousse thé vert Sancha, pamplemousse, streusel amande">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/octobre_rose.webp" alt="Octobre rose, mousse thé vert Sancha, pamplemousse, streusel amande">
+            <div class="hoverDesserts">
+              <p>Mousse légère thé vert Sancha, gel et caviar de pamplemousse, streusel amande.</p>
+            </div>
+          </div>
           <p>Octobre rose</p>
           <p class="dessert-price">5,90 €</p>
-          <div class="hoverDesserts">
-            <p>Mousse légère thé vert Sancha, gel et caviar de pamplemousse, streusel amande.</p>
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/macaron-poire-verveine.webp" alt="Macaron poire verveine, Desserts par Julien Herman">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/macaron-poire-verveine.webp" alt="Macaron poire verveine, Desserts par Julien Herman">
+            <div class="hoverDesserts">
+              <p>Biscuit macaron, billes de poires Conférences pochées à la verveine, gel poire au vinaigre de xérès.<br>(Sans gluten, sans lactose, sans gélatine)</p>
+            </div>
+          </div>
           <p>Le macaron poire / verveine</p>
           <p class="dessert-price">6,10 €</p>
-          <div class="hoverDesserts">
-            <p>Biscuit macaron, billes de poires Conférences pochées à la verveine, gel poire au vinaigre de xérès.<br>(Sans gluten, sans lactose, sans gélatine)</p>
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/caramel-chocolat-ind.webp" alt="Caramel chocolat individuel, Desserts par Julien Herman">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/caramel-chocolat-ind.webp" alt="Caramel chocolat individuel, Desserts par Julien Herman">
+            <div class="hoverDesserts">
+              <p>Mousse légère au caramel beurre salé, caramel beurre salé coulant, crémeux chocolat 64%, biscuit moelleux cacao, croustillant chocolat Dulcey fleur de sel.</p>
+            </div>
+          </div>
           <p>Le caramel / chocolat</p>
           <p class="dessert-price">5,90 €</p>
-          <div class="hoverDesserts">
-            <p>Mousse légère au caramel beurre salé, caramel beurre salé coulant, crémeux chocolat 64%, biscuit moelleux cacao, croustillant chocolat Dulcey fleur de sel.</p>
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
 
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/sarrazin-pollen-Sarthois agrumes.webp" alt="Dessert au sarrasin, pollen sarthois et agrumes, mousse et sablé breton">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/sarrazin-pollen-Sarthois agrumes.webp" alt="Dessert au sarrasin, pollen sarthois et agrumes, mousse et sablé breton">
+            <div class="hoverDesserts">
+              <p>Mousse au sarrasin, confit calamansi, sablé bretons au sarrasin, gel pollen agrumes. (Desserts fou de pâtisserie 2024)</p>
+            </div>
+          </div>
           <p>Le sarrazin/ pollen Sarthois/ agrumes</p>
           <p class="dessert-price">5,90 €</p>
-          <div class="hoverDesserts">
-            <p>Mousse au sarrasin, confit calamansi, sablé bretons au sarrasin, gel pollen agrumes. (Desserts fou de pâtisserie 2024)</p>
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/Mojito.webp" alt=" mousse légère yaourt de la ferme et citron vert, crémeux menthe, gel mojito, croustillant feuilletine yuz">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/Mojito.webp" alt=" mousse légère yaourt de la ferme et citron vert, crémeux menthe, gel mojito, croustillant feuilletine yuz">
+            <div class="hoverDesserts">
+              <p>Mousse légère yaourt de la ferme et citron vert, crémeux menthe, gel mojito, croustillant feuilletine yuz</p>
+            </div>
+          </div>
           <p>Mojito</p>
           <p class="dessert-price">5,90 €</p>
-          <div class="hoverDesserts">
-            <p>Mousse légère yaourt de la ferme et citron vert, crémeux menthe, gel mojito, croustillant feuilletine yuz</p>
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/cacahuete.webp" alt="mousse légère cacahuètes grillées/ vanille, crémeux cacahuètes grillées, caramel beurre salé cacahuètes et croustillant Dulcey cacahuètes ">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/cacahuete.webp" alt="mousse légère cacahuètes grillées/ vanille, crémeux cacahuètes grillées, caramel beurre salé cacahuètes et croustillant Dulcey cacahuètes ">
+            <div class="hoverDesserts">
+              <p>Mousse légère cacahuètes grillées/ vanille, crémeux cacahuètes grillées, caramel beurre salé cacahuètes et croustillant Dulcey cacahuètes </p>
+            </div>
+          </div>
           <p>La cacahuète</p>
-          <p class="dessert-price">6,10 €</p>
-          <div class="hoverDesserts">
-            <p>Mousse légère cacahuètes grillées/ vanille, crémeux cacahuètes grillées, caramel beurre salé cacahuètes et croustillant Dulcey cacahuètes </p>
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <p class="dessert-price">6,30 €</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
@@ -250,13 +286,19 @@
         
 
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/Le Gour'Mans.webp"alt="Crémeux chocolat Satilia 62%, mousse légère à la noisette, praliné noisette coulant, sablé noisette cacao, enrobage croquant chocolat.">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/Le Gour'Mans.webp" alt="Crémeux chocolat Satilia 62%, mousse légère à la noisette, praliné noisette coulant, sablé noisette cacao, enrobage croquant chocolat.">
+            <div class="hoverDesserts">
+              <p>Crémeux chocolat Satilia 62%, mousse légère à la noisette, praliné noisette coulant, sablé noisette cacao, enrobage croquant chocolat.</p>
+            </div>
+          </div>
           <p>Le Gour'Mans</p>
           <p class="dessert-price">5,90 €</p>
-          <div class="hoverDesserts">
-            <p>Crémeux chocolat Satilia 62%, mousse légère à la noisette, praliné noisette coulant, sablé noisette cacao, enrobage croquant chocolat.</p>
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
@@ -266,40 +308,55 @@
         
        
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/0lh0y85f.png" alt="Dessert citron, olive noire et aneth, mousse légère et confit citron">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/0lh0y85f.png" alt="Dessert citron, olive noire et aneth, mousse légère et confit citron">
+            <div class="hoverDesserts">
+              <p>Mousse légère au citron et à l'huile d'olive noir, croustillant et biscuit moelleux yuzu,  confit de citron à l'aneth</p>
+            </div>
+          </div>
           <p>Citron/Olive/Aneth</p>
           <p class="dessert-price">5,90 €</p>
-          <div class="hoverDesserts">
-            <p>Mousse légère au citron et à l'huile d'olive noir, croustillant et biscuit moelleux yuzu,  confit de citron à l'aneth</p>
-            
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/vanille.webp" alt="Dessert vanille de Madagascar, praliné coulant et sésame noir">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/vanille.webp" alt="Dessert vanille de Madagascar, praliné coulant et sésame noir">
+            <div class="hoverDesserts">
+              <p>Mousse légère vanille de Madagascar, crémeux sésame noir, praliné coulant, croustillant vanille.</p>
+            </div>
+          </div>
           <p>Le grain de vanille</p>
           <p class="dessert-price">5,90 €</p>
-          <div class="hoverDesserts">
-            <p>Mousse légère vanille de Madagascar, crémeux sésame noir, praliné coulant, croustillant vanille.</p>
-            
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
       
         
         <div class="containerPhotosTitle">
-          <img src="./asset/img/dessert ind/flan.webp" alt="Flan à la vanille de Madagascar, pâte feuilletée croustillante">
+          <div class="dessert-media" tabindex="0" aria-label="Voir la composition">
+            <img src="./asset/img/dessert ind/flan.webp" alt="Flan à la vanille de Madagascar, pâte feuilletée croustillante">
+            <div class="hoverDesserts">
+              <p>Pâte feuilletée croustillante, crémeux à la vanille de Madagascar.</p>
+            </div>
+          </div>
           <p>Flan</p>
-          <p class="dessert-price">5,80 €</p>
-          <div class="hoverDesserts">
-            <p>Pâte feuilletée croustillante, crémeux à la vanille de Madagascar.</p>
-            
-            <div class="reservation" onclick="togglePopup()">
-              <p>RÉSERVER</p>
+          <p class="dessert-price">5,90 €</p>
+          <div class="dessert-order">
+            <div class="cart-add-row">
+              <label class="cart-qty-label">Quantité</label>
+              <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+              <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
             </div>
           </div>
         </div>
@@ -394,7 +451,8 @@
   </footer>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./aPropos.js?v=1.7"></script>
-  <script src="./index.js?v=1.9"></script>
+  <script src="./index.js?v=2.1"></script>
+  <script src="./cart.js?v=12"></script>
 </body>
 
 </html>

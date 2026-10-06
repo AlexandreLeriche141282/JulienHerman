@@ -146,12 +146,14 @@ function sendMail() {
 
 // Formulaire de contact ------------------------------------------------------------------------------
 function sendMail3() {
+    const dateField = document.getElementById("date");
     let params = {
         name: document.getElementById("name").value,
         sujet: document.getElementById("sujet").value,
         email: document.getElementById("email").value,
         reply_to: document.getElementById("email").value,
         telephone: document.getElementById("telephone").value,
+        date: dateField && dateField.value ? dateField.value : "— (contact)",
         message: document.getElementById("message").value
     };
 
@@ -177,10 +179,13 @@ function sendMail3() {
 }
 
 // Soumission propre du formulaire -------------------------------------------
-document.getElementById('validation').addEventListener('submit', function(e) {
-    e.preventDefault();
-    sendMail3();
-});
+const validationForm = document.getElementById('validation');
+if (validationForm) {
+    validationForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        sendMail3();
+    });
+}
 
 
 // ----------- Souscription newsletter------------//

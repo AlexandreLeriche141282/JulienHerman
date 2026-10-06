@@ -33,7 +33,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=3.9">
+  <link rel="stylesheet" href="./asset/index.css?v=5.8">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -112,7 +112,7 @@
         <div>
             <input type="checkbox" id="consentement" name="o107_Consentement" required>
             <label for="consentement">
-                <small>J'accepte que mes données personnelles soient utilisées pour me recontacter dans le cadre de ma demande indiquée dans ce formulaire. Aucun autre traitement ne sera effectué avec mes informations. J'ai lu et j'accepte la Politique de confidentialité.</small>
+                <small>J'accepte que mes données soient utilisées pour traiter ma demande. J'ai lu et j'accepte la <a href="./politique.html">Politique de confidentialité</a>.</small>
             </label>
         </div>
     
@@ -178,31 +178,54 @@
       Si vous souhaitez un entremet pour un plus grand nombre de personnes, n'hésitez pas à nous contacter 15 jours à l'avance afin que nous puissions prendre en compte votre demande. <br>
       Nous pouvons également réaliser des entremets sur mesures  en fonction de vos goûts à partir de 10 personnes minimum.
       </p>
-      <p><strong>Nos entremets sont au prix de :</strong><br>
-      4 parts : 23,20 €<br>
-      6 parts : 34,80 €<br>
-      8 parts : 46,40 €</p>
+      <p class="message">Cliquez sur l'image pour voir la composition</p>
       <div class="lineShareDesserts"></div>
     </div>
     
     </div>
     <div class="containerPhotosShareDesserts">
       <div class="containerPhotosShareDessertsTitle">
-        <img src="./asset/img/dessert à partager/Caramel_chocolat.avif" alt="Entremet Caramel Chocolat, Desserts par Julien Herman au Mans">
+        <div class="share-dessert-media" tabindex="0" aria-label="Voir la composition">
+          <img src="./asset/img/dessert à partager/Caramel_chocolat.avif" alt="Entremet Caramel Chocolat, Desserts par Julien Herman au Mans">
+          <div class="hoverShareDesserts">
+            <p>Mousse légère au caramel beurre salé, caramel beurre salé coulant, biscuit moelleux cacao, crémeux chocolat 64%, croustillant chocolat Dulcey fleur de sel.</p>
+          </div>
+        </div>
         <h2>Caramel / Chocolat</h2>
-        <div class="hoverShareDesserts">
-          <p>Mousse légère au caramel beurre salé, caramel beurre salé coulant, biscuit moelleux cacao, crémeux chocolat 64%, croustillant chocolat Dulcey fleur de sel.</p>
-          <div class="reservation" onclick="togglePopup()">
-            <p>Réserver</p></div>
+        <p class="share-dessert-prices">4 parts : 23,20 € · 6 parts : 34,80 € · 8 parts : 46,40 €</p>
+        <div class="share-dessert-order">
+          <select class="cart-format-select" aria-label="Format">
+            <option value="4">4 parts</option>
+            <option value="6">6 parts</option>
+            <option value="8">8 parts</option>
+          </select>
+          <div class="cart-add-row">
+            <label class="cart-qty-label">Quantité</label>
+            <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+            <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
+          </div>
         </div>
       </div>
       <div class="containerPhotosShareDessertsTitle">
-        <img src="./asset/img/dessert à partager/citron-noisettes.webp" alt="Entremet Citron Noisettes, Desserts par Julien Herman au Mans">
+        <div class="share-dessert-media" tabindex="0" aria-label="Voir la composition">
+          <img src="./asset/img/dessert à partager/citron-noisettes.webp" alt="Entremet Citron Noisettes, Desserts par Julien Herman au Mans">
+          <div class="hoverShareDesserts">
+            <p>Mousse légère au yaourt Sarthois et zestes de citron, crémeux citron, crémeux noisette, biscuit moelleux à la noisette, croustillant feuilletine au praliné noisette et fleur de sel.</p>
+          </div>
+        </div>
         <h2>Citron / noisettes</h2>
-        <div class="hoverShareDesserts">
-          <p>Mousse légère au yaourt Sarthois et zestes de citron, crémeux citron, crémeux noisette, biscuit moelleux à la noisette, croustillant feuilletine au praliné noisette et fleur de sel.</p>
-          <div class="reservation" onclick="togglePopup()">
-            <p>Réserver</p></div>
+        <p class="share-dessert-prices">4 parts : 23,20 € · 6 parts : 34,80 € · 8 parts : 46,40 €</p>
+        <div class="share-dessert-order">
+          <select class="cart-format-select" aria-label="Format">
+            <option value="4">4 parts</option>
+            <option value="6">6 parts</option>
+            <option value="8">8 parts</option>
+          </select>
+          <div class="cart-add-row">
+            <label class="cart-qty-label">Quantité</label>
+            <input type="number" class="cart-qty-input" min="1" max="99" value="1" aria-label="Quantité">
+            <button type="button" class="btn-add-cart">Ajouter à mon panier</button>
+          </div>
         </div>
       </div>
   </div>
@@ -293,7 +316,8 @@
   <script src="./gourmandises.js?v=1.7"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./aPropos.js?v=1.7"></script>
-  <script src="./index.js?v=1.9"></script>
+  <script src="./index.js?v=2.1"></script>
+  <script src="./cart.js?v=12"></script>
 </body>
 
 </html>

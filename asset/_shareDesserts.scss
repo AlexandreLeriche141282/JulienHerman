@@ -46,6 +46,15 @@ background-color: rgb(250,247,247);
     width: 30%;
    margin-top: 10px;   
 }
+
+        .message {
+            font-style: italic;
+            font-weight: 700;
+            margin-top: 14px;
+            padding-top: 0;
+            letter-spacing: 1px;
+            color: rgb(46, 104, 128);
+        }
     }
     @media screen and (max-width:1350px) {
         display: block;
@@ -53,74 +62,114 @@ background-color: rgb(250,247,247);
 }
 .containerPhotosShareDesserts{
     width: 100%;
+    max-width: 980px;
     display: grid;
-    grid-template-columns:33% 33% 33%;
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(280px, 1fr));
+    gap: 36px;
     margin: 0 auto;
-   padding-bottom: 100px;
+    padding-bottom: 100px;
+    justify-items: center;
+
    @media screen and (max-width:950px) {
-    grid-template-columns: 50% 50%;
-    width: 100%;
-    padding: 0 50px;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    padding: 0 24px 80px;
+    gap: 20px;
 }
-    
-img{
-    width: 372px;
-    height: 372px;
-    @media screen and (max-width:1500px) {
-        width: 135px;
-        height: 135px;
-    }
-    
-    
-}
+
     .containerPhotosShareDessertsTitle{
         text-align: center;
         font-weight: 300;
         position: relative;
         padding-bottom: 20px;
+        width: 100%;
+        max-width: 420px;
+
+        .share-dessert-media {
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            border-radius: 10px;
+            overflow: hidden;
+
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+                aspect-ratio: 1;
+                object-fit: cover;
+            }
+        }
 
         h2{
             font-size: calc(18px + 0.5vw);
-            color: rgb(46,104,128);
-            margin-bottom: 10px;
-            font-weight: 200;
+            color: rgb(46, 104, 128);
+            margin: 12px 0 6px;
+            font-weight: 500;
             @media screen and (max-width:700px) {
-                font-size: calc(11px + 0.5vw);
+                font-size: calc(14px + 0.5vw);
             }
         }
-        @media screen and (max-width:700px) {
-            font-size:calc(6px + 0.4vw) ;
-            padding-bottom: 0;
+
+        .share-dessert-prices {
+            font-size: calc(12px + 0.35vw);
+            color: rgb(187, 168, 135);
+            font-weight: 600;
+            margin: 0 0 12px;
+            line-height: 1.55;
+            letter-spacing: 0.5px;
         }
-        
+
+        .share-dessert-order {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            margin-top: 4px;
+
+            .cart-format-select {
+                margin-bottom: 0;
+                width: min(100%, 220px);
+            }
+
+            .cart-add-row {
+                margin-top: 0;
+            }
+        }
+
+        @media screen and (max-width:950px) {
+            padding: 24px 16px 28px;
+            border: 1px solid rgba(46, 104, 128, 0.18);
+            background-color: rgb(250, 247, 247);
+            border-radius: 12px;
+            box-sizing: border-box;
+        }
+
         .hoverShareDesserts{
-            /* Positionnement du contenu hover */
             position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            border-radius:10px;
+            inset: 0;
+            border-radius: 10px;
             border: 1px solid rgb(215, 203, 203);
             opacity: 0;
             transition: opacity 0.85s ease-in-out;
-            background-color: rgba(249, 250, 252, 0.755);
+            background-color: rgba(249, 250, 252, 0.92);
             display: flex;
             align-items: center;
-            justify-content: space-evenly;
-            flex-direction: column;
+            justify-content: center;
+            padding: 16px;
+            box-sizing: border-box;
+            overflow-y: auto;
+
             p{
                 color: rgb(0, 0, 0);
                 font-weight: 300;
-                padding: 0 10px;
-                    
-                
-
+                padding: 0 8px;
+                margin: 0;
+                font-size: calc(12px + 0.35vw);
+                line-height: 1.55;
             }
          
-               .reservation p {
+            .reservation p {
                 cursor: pointer;
                 letter-spacing: 3px;
                 font-size: calc(15px + 0.5vw);
@@ -129,9 +178,9 @@ img{
             }
         }
     }
-    .containerPhotosShareDessertsTitle:hover .hoverShareDesserts {
+    .share-dessert-media:hover .hoverShareDesserts,
+    .share-dessert-media:focus-within .hoverShareDesserts {
         opacity: 1;
-        /* Lors du hover, on remet l'opacité à 1 */
     }
 
 }
