@@ -1,5 +1,35 @@
 const CART_STORAGE_KEY = "jh_reservation_cart";
 
+/** Jour 0=dim … 6=sam ; plages [début, fin] en HH:MM (24 h). */
+const PICKUP_HOURS_BY_DAY = {
+  0: null,
+  1: null,
+  2: [
+    { start: "08:30", end: "14:00" },
+    { start: "15:00", end: "18:00" },
+  ],
+  3: [
+    { start: "08:30", end: "14:00" },
+    { start: "15:00", end: "18:00" },
+  ],
+  4: [
+    { start: "08:30", end: "14:00" },
+    { start: "15:00", end: "18:00" },
+  ],
+  5: [
+    { start: "08:30", end: "14:00" },
+    { start: "15:00", end: "18:00" },
+  ],
+  6: [
+    { start: "10:00", end: "14:00" },
+    { start: "15:00", end: "17:30" },
+  ],
+};
+
+const PICKUP_SLOT_MINUTES = 30;
+/** À partir de 17 h, retrait le lendemain impossible (commande pâtisserie). */
+const NEXT_DAY_ORDER_CUTOFF_HOUR = 17;
+
 const ENTREMET_PRICES = {
   4: 23.2,
   6: 34.8,
@@ -166,6 +196,191 @@ function formatPickupDate(iso) {
   return `${parts[2]}/${parts[1]}/${parts[0]}`;
 }
 
+function parseTimeToMinutes(hhmm) {
+  const [h, m] = hhmm.split(":").map(Number);
+  return h * 60 + m;
+}
+
+function formatMinutesAsTime(totalMinutes) {
+  const h = Math.floor(totalMinutes / 60);
+  const m = totalMinutes % 60;
+  return `${String(h).padStart(2, "0")}:${String(m).padStart(2, "0")}`;
+}
+
+function getWeekdayFromIsoDate(iso) {
+  if (!iso) return null;
+  const parts = iso.split("-").map(Number);
+  if (parts.length !== 3) return null;
+  return new Date(parts[0], parts[1] - 1, parts[2]).getDay();
+}
+
+function isPickupOpenDay(dayOfWeek) {
+  return dayOfWeek >= 2 && dayOfWeek <= 6;
+}
+
+function toIsoDateLocal(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
+
+function startOfTodayLocal() {
+  const now = new Date();
+  return new Date(now.getFullYear(), now.getMonth(), now.getDate());
+}
+
+function isAfterNextDayOrderCutoff() {
+  return new Date().getHours() >= NEXT_DAY_ORDER_CUTOFF_HOUR;
+}
+
+function isTodayIso(iso) {
+  return iso === toIsoDateLocal(startOfTodayLocal());
+}
+
+function isTomorrowIso(iso) {
+  const tomorrow = startOfTodayLocal();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  return iso === toIsoDateLocal(tomorrow);
+}
+
+function getMinimumPickupDateIso() {
+  let min = startOfTodayLocal();
+  const dayOffset = isAfterNextDayOrderCutoff() ? 2 : 1;
+  min.setDate(min.getDate() + dayOffset);
+  while (!isPickupOpenDay(min.getDay())) {
+    min.setDate(min.getDate() + 1);
+  }
+  return toIsoDateLocal(min);
+}
+
+function isValidPickupDateIso(iso) {
+  if (!iso) return false;
+  if (isTodayIso(iso)) return false;
+  const day = getWeekdayFromIsoDate(iso);
+  if (!isPickupOpenDay(day)) return false;
+  if (iso < getMinimumPickupDateIso()) return false;
+  if (isAfterNextDayOrderCutoff() && isTomorrowIso(iso)) return false;
+  return true;
+}
+
+const MSG_NO_SAME_DAY =
+  "Les retraits le jour même ne sont pas possibles. Merci de choisir une date ultérieure.";
+
+const MSG_AFTER_17H =
+  "Après 17 h, les commandes pour un retrait le lendemain ne sont plus acceptées. Merci de choisir une date ultérieure.";
+
+function showCartFormFeedback(message) {
+  const el = document.getElementById("cart-form-feedback");
+  if (!el) return;
+  el.textContent = message;
+  el.hidden = !message;
+}
+
+function hideCartFormFeedback() {
+  showCartFormFeedback("");
+}
+
+function updateCartOrderNotice() {
+  const cutoff = document.getElementById("cart-order-notice-cutoff");
+  if (!cutoff) return;
+  cutoff.hidden = !isAfterNextDayOrderCutoff();
+}
+
+function refreshCheckoutDateConstraints() {
+  const dateInput = document.getElementById("cart-date");
+  if (!dateInput) return;
+  dateInput.setAttribute("min", getMinimumPickupDateIso());
+  if (dateInput.value && !isValidPickupDateIso(dateInput.value)) {
+    dateInput.value = "";
+  }
+  updateCartOrderNotice();
+  updateCartPickupTimeField();
+}
+
+function buildPickupTimeSlotsForDay(dayOfWeek) {
+  const ranges = PICKUP_HOURS_BY_DAY[dayOfWeek];
+  if (!ranges) return [];
+  const slots = [];
+  ranges.forEach(({ start, end }) => {
+    let cursor = parseTimeToMinutes(start);
+    const last = parseTimeToMinutes(end);
+    while (cursor <= last) {
+      slots.push(formatMinutesAsTime(cursor));
+      cursor += PICKUP_SLOT_MINUTES;
+    }
+  });
+  return slots;
+}
+
+function getPickupTimeSlotsForDate(isoDate) {
+  const day = getWeekdayFromIsoDate(isoDate);
+  if (day == null) return [];
+  let slots = buildPickupTimeSlotsForDay(day);
+  if (!isoDate) return slots;
+
+  const todayIso = toIsoDateLocal(startOfTodayLocal());
+  if (isoDate !== todayIso) return slots;
+
+  const now = new Date();
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+  slots = slots.filter((slot) => parseTimeToMinutes(slot) > nowMinutes);
+  return slots;
+}
+
+function updateCartPickupTimeField() {
+  const dateInput = document.getElementById("cart-date");
+  const timeSelect = document.getElementById("cart-time");
+  if (!dateInput || !timeSelect) return;
+
+  const previous = timeSelect.value;
+  const isoDate = dateInput.value;
+  timeSelect.innerHTML = "";
+
+  if (!isoDate) {
+    timeSelect.disabled = true;
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "Choisissez d'abord une date";
+    timeSelect.appendChild(opt);
+    return;
+  }
+
+  const day = getWeekdayFromIsoDate(isoDate);
+  if (day === 0 || day === 1) {
+    timeSelect.disabled = true;
+    const opt = document.createElement("option");
+    opt.value = "";
+    opt.textContent = "Jour fermé — choisissez du mardi au samedi";
+    timeSelect.appendChild(opt);
+    return;
+  }
+
+  const slots = getPickupTimeSlotsForDate(isoDate);
+  timeSelect.disabled = false;
+
+  const placeholder = document.createElement("option");
+  placeholder.value = "";
+  placeholder.textContent =
+    slots.length > 0
+      ? "Sélectionnez une heure de retrait"
+      : "Aucun créneau disponible ce jour — choisissez une autre date";
+  placeholder.disabled = true;
+  placeholder.selected = true;
+  timeSelect.appendChild(placeholder);
+
+  slots.forEach((slot) => {
+    const opt = document.createElement("option");
+    opt.value = slot;
+    opt.textContent = slot.replace(":", " h ");
+    timeSelect.appendChild(opt);
+  });
+
+  if (previous && slots.includes(previous)) {
+    timeSelect.value = previous;
+  }
+}
+
 function buildOrderMessage(notes) {
   const cart = getCart();
   const lines = cart.map(formatCartLine).join("\n");
@@ -328,6 +543,7 @@ function toggleCartPanel(forceOpen) {
   if (shouldOpen) {
     hideCartOrderSuccess();
     renderCartItems();
+    refreshCheckoutDateConstraints();
   }
 }
 
@@ -335,17 +551,47 @@ function initCheckoutDateField() {
   const dateInput = document.getElementById("cart-date");
   if (!dateInput) return;
 
-  const today = new Date().toISOString().split("T")[0];
-  dateInput.setAttribute("min", today);
+  refreshCheckoutDateConstraints();
 
-  dateInput.addEventListener("input", function () {
-    const selectedDate = new Date(this.value);
-    const day = selectedDate.getUTCDay();
+  const onDateChange = function () {
+    if (!this.value) {
+      hideCartFormFeedback();
+      updateCartPickupTimeField();
+      return;
+    }
+    if (isTodayIso(this.value)) {
+      this.value = "";
+      showCartFormFeedback(MSG_NO_SAME_DAY);
+      updateCartPickupTimeField();
+      return;
+    }
+    if (isAfterNextDayOrderCutoff() && isTomorrowIso(this.value)) {
+      this.value = "";
+      showCartFormFeedback(MSG_AFTER_17H);
+      updateCartPickupTimeField();
+      return;
+    }
+    const day = getWeekdayFromIsoDate(this.value);
     if (day === 0 || day === 1) {
       this.value = "";
-      alert("Veuillez choisir un jour du mardi au samedi.");
+      showCartFormFeedback("Veuillez choisir un jour du mardi au samedi.");
+      updateCartPickupTimeField();
+      return;
     }
-  });
+    if (!isValidPickupDateIso(this.value)) {
+      this.value = "";
+      showCartFormFeedback(
+        "Cette date de retrait n'est pas disponible. Merci d'en choisir une autre."
+      );
+      updateCartPickupTimeField();
+      return;
+    }
+    hideCartFormFeedback();
+    updateCartPickupTimeField();
+  };
+
+  dateInput.addEventListener("input", onDateChange);
+  dateInput.addEventListener("change", onDateChange);
 }
 
 function sendCartOrder(event) {
@@ -360,7 +606,26 @@ function sendCartOrder(event) {
   const email = document.getElementById("cart-email").value;
   const telephone = document.getElementById("cart-telephone").value;
   const date = document.getElementById("cart-date").value;
+  const pickupTime = document.getElementById("cart-time").value;
   const notes = document.getElementById("cart-notes").value;
+
+  if (!isValidPickupDateIso(date)) {
+    let feedback = "Veuillez choisir une date de retrait valide (mardi au samedi, selon les délais de commande).";
+    if (isTodayIso(date)) feedback = MSG_NO_SAME_DAY;
+    else if (isAfterNextDayOrderCutoff() && isTomorrowIso(date)) feedback = MSG_AFTER_17H;
+    showCartFormFeedback(feedback);
+    document.getElementById("cart-date")?.focus();
+    refreshCheckoutDateConstraints();
+    return;
+  }
+
+  if (!pickupTime) {
+    showCartFormFeedback("Veuillez sélectionner une heure de retrait.");
+    document.getElementById("cart-time")?.focus();
+    return;
+  }
+
+  hideCartFormFeedback();
 
   const params = {
     name,
@@ -368,7 +633,8 @@ function sendCartOrder(event) {
     email,
     reply_to: email,
     telephone,
-    date: formatPickupDate(date),
+    date: `${formatPickupDate(date)} à ${pickupTime.replace(":", " h ")}`,
+    heure: pickupTime,
     message: buildOrderMessage(notes),
   };
 
@@ -428,10 +694,19 @@ function injectCartUi() {
             <input type="email" id="cart-email" name="email" required placeholder="Votre email">
             <label for="cart-telephone">Téléphone <small>*</small></label>
             <input type="tel" id="cart-telephone" name="telephone" required placeholder="Téléphone">
+            <p id="cart-order-notice" class="cart-order-notice">
+              <strong>Information :</strong> les retraits le jour même ne sont pas possibles.
+              <span id="cart-order-notice-cutoff" class="cart-order-notice-cutoff" hidden> Après 17&nbsp;h, les commandes pour un retrait le lendemain ne sont plus acceptées.</span>
+            </p>
+            <p id="cart-form-feedback" class="cart-form-feedback" role="alert" hidden></p>
             <label for="cart-date">Date de retrait de la commande<small>*</small></label>
             <input type="date" id="cart-date" name="date" required>
+            <label for="cart-time">Heure de retrait<small>*</small></label>
+            <select id="cart-time" name="heure" required disabled>
+              <option value="">Choisissez d'abord une date</option>
+            </select>
             <label for="cart-notes">Message</label>
-            <textarea id="cart-notes" name="message" rows="4" placeholder="Demande particulière : anniversaire, message sur le dessert, etc. (optionnel)"></textarea>
+            <textarea id="cart-notes" name="message" rows="4" placeholder="Pour toutes demandes supplémentaires, veuillez nous adresser un message ici"></textarea>
             <div>
               <input type="checkbox" id="cart-consent" name="o107_Consentement" required>
               <label for="cart-consent">

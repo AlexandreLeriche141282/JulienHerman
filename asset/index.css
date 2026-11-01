@@ -3270,6 +3270,7 @@ form#unsubscribeForm button {
   font-size: 10px;
 }
 .cart-panel--checkout input:not([type=checkbox]),
+.cart-panel--checkout select,
 .cart-panel--checkout textarea {
   width: 100%;
   margin-bottom: 10px;
@@ -3328,6 +3329,37 @@ form#unsubscribeForm button {
   margin-top: 18px;
   padding-top: 16px;
   border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.cart-order-notice {
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 10px 12px;
+  margin: 0 0 12px;
+  border-radius: 8px;
+  background: rgba(46, 104, 128, 0.1);
+  border-left: 3px solid rgb(46, 104, 128);
+  color: #1a1a1a;
+}
+
+.cart-order-notice strong {
+  font-weight: 600;
+  color: rgb(46, 104, 128);
+}
+
+.cart-order-notice .cart-order-notice-cutoff {
+  display: inline;
+}
+
+.cart-form-feedback {
+  font-size: 13px;
+  line-height: 1.45;
+  padding: 10px 12px;
+  margin: 0 0 12px;
+  border-radius: 8px;
+  background: rgba(180, 50, 50, 0.08);
+  border-left: 3px solid #b43232;
+  color: #5c2020;
 }
 
 .cart-submit-btn {
