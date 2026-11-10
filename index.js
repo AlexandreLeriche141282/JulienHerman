@@ -292,7 +292,7 @@ if (ulMenu) {
 //   });
 // });
 
-// Pop-up Octobre Rose
+// Pop-up à l'ouverture du site (campagne en cours)
 window.addEventListener("load", () => {
   setTimeout(() => {
     const popup = document.getElementById("popup-fete-meres");

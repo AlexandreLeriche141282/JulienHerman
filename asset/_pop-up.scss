@@ -74,6 +74,12 @@
   width: min(520px, 100%);
 }
 
+.popup-box--text {
+  width: min(560px, 100%);
+  max-height: min(85vh, 720px);
+  overflow-y: auto;
+}
+
 .popup-content1 {
   padding: 18px;
 
@@ -106,6 +112,17 @@
     color: #666;
   }
 
+  .popup-note {
+    font-size: 14px;
+    margin-bottom: 18px;
+  }
+
+  .popup-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
   .popup-btn {
     display: inline-flex;
     align-items: center;
@@ -125,6 +142,12 @@
 
     &:hover {
       background: rgb(46, 104, 128);
+    }
+
+    &--secondary {
+      background: #fff;
+      color: rgb(46, 104, 128);
+      border: 2px solid rgb(46, 104, 128);
     }
   }
 }

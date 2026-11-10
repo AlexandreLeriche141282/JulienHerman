@@ -33,7 +33,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=6.1">
+  <link rel="stylesheet" href="./asset/index.css?v=6.3">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
   </script>
@@ -448,17 +448,27 @@
     </div>
   </footer>
   <div id="popup-fete-meres" class="popup-overlay">
-    <div class="popup-box popup-box--affiche">
-      <button class="popup-close1" onclick="closePopup()">×</button>
-      <img
-        src="./asset/img/actualité/octobre-rose-2026.avif"
-        alt="Octobre Rose 2026 - Desserts par Julien Herman"
-        class="popup-image popup-image--affiche"
-      >
+    <div class="popup-box popup-box--text">
+      <button class="popup-close1" onclick="closePopup()" type="button" aria-label="Fermer">×</button>
+      <div class="popup-content1">
+        <span class="popup-badge">Fêtes de fin d'année 2026</span>
+        <h2>Carte de gourmandises</h2>
+        <p>
+          Nous sommes heureux de vous présenter notre carte de gourmandises pour vos fêtes de fin d'année 2026 !
+          Les commandes sont ouvertes — retrouvez toute notre gamme en vitrine dès <strong>mardi 1<sup>er</sup> décembre</strong>.
+        </p>
+        <p class="popup-note">
+          Une bûche en édition limitée « vanille d'Équateur / calamansi » (hors flyer) est disponible en quantités limitées, sur commande par mail ou en boutique.
+        </p>
+        <div class="popup-actions">
+          <a href="./asset/img/flyer-noel-2026.pdf" download class="popup-btn">Télécharger la carte et le bon de commande</a>
+          <a href="./actuality.html" class="popup-btn popup-btn--secondary">Lire l'actualité</a>
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://unpkg.com/scrollreveal"></script>
-  <script src="./index.js?v=2.1"></script>
+  <script src="./index.js?v=2.2"></script>
   <script src="./cart.js?v=17"></script>
 </body>
 

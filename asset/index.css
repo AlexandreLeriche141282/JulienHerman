@@ -2896,6 +2896,12 @@ form#unsubscribeForm button {
   width: min(520px, 100%);
 }
 
+.popup-box--text {
+  width: min(560px, 100%);
+  max-height: min(85vh, 720px);
+  overflow-y: auto;
+}
+
 .popup-content1 {
   padding: 18px;
 }
@@ -2923,6 +2929,15 @@ form#unsubscribeForm button {
   line-height: 1.7;
   color: #666;
 }
+.popup-content1 .popup-note {
+  font-size: 14px;
+  margin-bottom: 18px;
+}
+.popup-content1 .popup-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 .popup-content1 .popup-btn {
   display: inline-flex;
   align-items: center;
@@ -2937,6 +2952,11 @@ form#unsubscribeForm button {
 }
 .popup-content1 .popup-btn:hover {
   background: rgb(46, 104, 128);
+}
+.popup-content1 .popup-btn--secondary {
+  background: #fff;
+  color: rgb(46, 104, 128);
+  border: 2px solid rgb(46, 104, 128);
 }
 
 .popup-close1 {
