@@ -292,20 +292,44 @@ if (ulMenu) {
 //   });
 // });
 
-// Pop-up à l'ouverture du site (campagne en cours)
-window.addEventListener("load", () => {
-  setTimeout(() => {
-    const popup = document.getElementById("popup-fete-meres");
-    if (!popup) return;
-
-    popup.classList.add("active");
-    document.body.classList.add("popup-open");
-  }, 400);
-});
+/** Évite la pop-up uniquement au retour arrière après « Lire l'actualité » (pas au F5). */
+const POPUP_SKIP_ON_BF_CACHE_KEY = "jh_popup_skip_on_back";
 
 function closePopup() {
-  document
-    .getElementById("popup-fete-meres")
-    .classList.remove("active");
+  const popup = document.getElementById("popup-fete-meres");
+  if (!popup) return;
+  popup.classList.remove("active");
   document.body.classList.remove("popup-open");
 }
+
+function rememberPopupClosedBeforeActualityNav() {
+  sessionStorage.setItem(POPUP_SKIP_ON_BF_CACHE_KEY, "1");
+  closePopup();
+}
+
+function openHomePopup() {
+  const popup = document.getElementById("popup-fete-meres");
+  if (!popup) return;
+  popup.classList.add("active");
+  document.body.classList.add("popup-open");
+}
+
+// Pop-up à l'ouverture du site (campagne en cours)
+window.addEventListener("load", () => {
+  sessionStorage.removeItem(POPUP_SKIP_ON_BF_CACHE_KEY);
+  setTimeout(openHomePopup, 400);
+});
+
+// Retour arrière : page restaurée depuis le cache, pop-up parfois encore ouverte
+window.addEventListener("pageshow", (event) => {
+  if (!event.persisted) return;
+  if (sessionStorage.getItem(POPUP_SKIP_ON_BF_CACHE_KEY) === "1") {
+    closePopup();
+  }
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll("[data-dismiss-home-popup]").forEach((el) => {
+    el.addEventListener("click", rememberPopupClosedBeforeActualityNav);
+  });
+});
