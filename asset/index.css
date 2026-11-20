@@ -2940,6 +2940,10 @@ form#unsubscribeForm button {
   width: min(520px, 100%);
 }
 
+.popup-box--affiche-actions .popup-image--affiche {
+  padding-top: 14px;
+  box-sizing: border-box;
+}
 .popup-box--affiche-actions .popup-content1--under-image {
   padding: 14px 18px 18px;
   text-align: center;
