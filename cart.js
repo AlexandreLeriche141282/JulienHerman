@@ -39,7 +39,6 @@ const ENTREMET_PRICES = {
 const DESSERT_IMAGES = {
   individuel: {
     "octobre rose": "./asset/img/dessert ind/octobre_rose.webp",
-    "le macaron poire / verveine": "./asset/img/dessert ind/macaron-poire-verveine.webp",
     "le caramel / chocolat": "./asset/img/dessert ind/caramel-chocolat-ind.webp",
     "le sarrazin/ pollen sarthois/ agrumes":
       "./asset/img/dessert ind/sarrazin-pollen-Sarthois agrumes.webp",
@@ -58,7 +57,6 @@ const DESSERT_IMAGES = {
 
 const INDIVIDUAL_PRICES = {
   "octobre rose": 5.9,
-  "le macaron poire / verveine": 6.1,
   "le caramel / chocolat": 5.9,
   "le sarrazin/ pollen sarthois/ agrumes": 5.9,
   mojito: 5.9,

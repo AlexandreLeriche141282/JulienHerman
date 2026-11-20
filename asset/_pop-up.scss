@@ -65,7 +65,7 @@
 
   &--affiche {
     height: auto;
-    max-height: min(85vh, 720px);
+    max-height: min(76vh, 660px);
     object-fit: contain;
   }
 }
@@ -203,12 +203,33 @@
 // RESPONSIVE
 // ===========================
 
-@media (max-width: 540px) {
+@media (max-width: 768px) {
   .popup-overlay {
-    padding: 16px;
+    padding: 14px;
+    align-items: center;
 
     .popup-box {
       width: 100%;
+      max-height: 92vh;
+    }
+  }
+
+  .popup-overlay .popup-image--affiche {
+    max-height: min(70vh, 560px);
+  }
+
+  .popup-box--affiche-actions {
+    max-height: 92vh;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    .popup-content1--under-image {
+      padding: 12px 14px 16px;
+
+      .popup-btn {
+        padding: 12px 16px;
+        font-size: 14px;
+      }
     }
   }
 
@@ -218,5 +239,11 @@
     h2 {
       font-size: 22px;
     }
+  }
+}
+
+@media (max-width: 540px) {
+  .popup-overlay .popup-image--affiche {
+    max-height: min(66vh, 500px);
   }
 }
