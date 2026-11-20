@@ -74,6 +74,17 @@
   width: min(520px, 100%);
 }
 
+.popup-box--affiche-actions {
+  .popup-content1--under-image {
+    padding: 14px 18px 18px;
+    text-align: center;
+
+    .popup-actions {
+      justify-content: center;
+    }
+  }
+}
+
 .popup-box--text {
   width: min(560px, 100%);
   max-height: min(85vh, 720px);

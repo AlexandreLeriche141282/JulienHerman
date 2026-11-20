@@ -1909,6 +1909,10 @@ section .containerPayement .logo .logoIcon img {
   font-style: italic;
   color: rgb(187, 168, 135);
 }
+.actuality .actualityScroll .actualityContainer .actuality-date {
+  display: block;
+  margin-top: 2rem;
+}
 .actuality .actualityScroll .actualityContainer .lineActuality {
   border: 1px solid rgba(234, 227, 219, 0.353);
   width: 90%;
@@ -1922,6 +1926,16 @@ section .containerPayement .logo .logoIcon img {
 .actuality .actualityScroll .actualityContainer h3 {
   color: rgb(46, 104, 128);
   font-size: clamp(1rem, 2vw, 1.5rem);
+  margin-top: 2rem;
+}
+.actuality .actualityScroll .actualityContainer .actuality-section-label {
+  margin-top: 1.25rem;
+  margin-bottom: 0;
+}
+.actuality .actualityScroll .actualityContainer .actualityContent--product + .actuality-section-label {
+  margin-top: 12px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(234, 227, 219, 0.85);
 }
 .actuality .actualityScroll .actualityContainer h4 {
   color: rgb(46, 104, 128);
@@ -1943,6 +1957,13 @@ section .containerPayement .logo .logoIcon img {
   flex-direction: column;
   align-items: center;
 }
+.actuality .actualityScroll .actualityContainer .actualityContent .picturePaques .actuality-media-caption {
+  width: 100%;
+  margin: 10px 0 0;
+  padding: 0;
+  text-align: center;
+  font-size: calc(14px + 0.4vw);
+}
 .actuality .actualityScroll .actualityContainer .actualityContent .picturePaques img {
   width: 250px;
 }
@@ -1954,8 +1975,31 @@ section .containerPayement .logo .logoIcon img {
     width: 80%;
   }
 }
+.actuality .actualityScroll .actualityContainer .actualityContent.actualityContent--hero {
+  display: block;
+  padding-top: 12px;
+}
+.actuality .actualityScroll .actualityContainer .actualityContent.actualityContent--hero img {
+  width: 100%;
+  max-width: 720px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.actuality .actualityScroll .actualityContainer .actualityContent.actualityContent--solo-text {
+  display: block;
+}
+.actuality .actualityScroll .actualityContainer .actualityContent.actualityContent--solo-text p {
+  padding-left: 0;
+}
+.actuality .actualityScroll .actualityContainer .actualityContent.actualityContent--product + .actualityContent.actualityContent--product {
+  margin-top: 12px;
+  padding-top: 28px;
+  border-top: 1px solid rgba(234, 227, 219, 0.85);
+}
 .actuality .actualityScroll .actualityContainer .actualityContent p {
-  padding-left: 50px;
+  padding-left: 20px;
   font-size: calc(8px + 0.4vw);
 }
 @keyframes colorChange {
@@ -1976,7 +2020,7 @@ section .containerPayement .logo .logoIcon img {
   } /* Boucle complète */
 }
 .actuality .actualityScroll .actualityContainer .actualityContent p strong {
-  font-size: calc(18px + 0.6vw);
+  font-size: calc(15px + 0.5vw);
   animation: colorChange 3s linear infinite; /* Durée de l'animation */
 }
 @media screen and (max-width: 1200px) {
@@ -2894,6 +2938,14 @@ form#unsubscribeForm button {
 
 .popup-box--affiche {
   width: min(520px, 100%);
+}
+
+.popup-box--affiche-actions .popup-content1--under-image {
+  padding: 14px 18px 18px;
+  text-align: center;
+}
+.popup-box--affiche-actions .popup-content1--under-image .popup-actions {
+  justify-content: center;
 }
 
 .popup-box--text {
