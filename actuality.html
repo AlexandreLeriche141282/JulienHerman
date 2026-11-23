@@ -31,7 +31,7 @@
   <meta property="place:location:latitude" content="48.0044956" />
   <meta property="place:location:longitude" content="0.1944354" />
   <link rel="shortcut icon" href="./asset/img/logo/logoJu.jpg">
-  <link rel="stylesheet" href="./asset/index.css?v=6.22">
+  <link rel="stylesheet" href="./asset/index.css?v=6.28">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
@@ -168,7 +168,7 @@
 <main class="actuality">
   <div class="actualityScroll">
 
-    <div class="actualityContainer">
+    <div class="actualityContainer actualityContainer--fetes-2026">
       <h2>
         Nous sommes heureux de vous présenter notre carte de gourmandises pour vos fêtes de fin d'année 2026 ! <br><br>
         Vous pourrez retrouver notre carte ainsi que le bon de commande <br>
@@ -279,6 +279,50 @@
           Crémeux au café Moka d'Éthiopie (Café BOC), biscuit moelleux noisette, croustillant noisette, mousse légère café / noisette.<br><br>
           Dessert individuel — 6,50&nbsp;€ l'unité
         </p>
+      </div>
+
+      <p class="actuality-section-label"><span>Plateaux de mignardises</span></p>
+
+      <div class="actualityContent actualityContent--product">
+        <div class="picturePaques">
+          <a
+            href="./asset/img/noel/2026/plateaux-mignardises.webp"
+            class="actuality-img-enlarge"
+            title="Agrandir la photo"
+          >
+            <img
+              src="./asset/img/noel/2026/plateaux-mignardises.webp"
+              alt="Plateaux de mignardises salées et sucrées pour les fêtes — Desserts par Julien Herman"
+              loading="lazy"
+            >
+          </a>
+        </div>
+        <div class="actuality-product-text">
+          <p>Nous sommes ravis de vous présenter nos plateaux de mignardises pour vos fêtes de fin d'année.</p>
+
+          <p><strong>Plateau salé — 25,60&nbsp;€</strong></p>
+          <ul class="actuality-list">
+            <li>Croque monsieur — houmous de poivrons, pastrami de bœuf épicé, tomme de brebis au piment d'Espelette et œufs de caille</li>
+            <li>Macaron crémeux — tapenade d'olive</li>
+            <li>Verrine — purée de courges, noisette, magret fumé et pickles d'oignons rouges</li>
+            <li>Tartelette — houmous de patates douces au curry, saumon fumé et mozzarella</li>
+          </ul>
+
+          <p><strong>Plateau sucré — 25,60&nbsp;€</strong></p>
+          <ul class="actuality-list">
+            <li>Sphère yaourt exotique — streusel coco</li>
+            <li>Mousse légère sarrasin — gel calamansi, streusel sarrasin</li>
+            <li>Tartelette cacao — crémeux chocolat, praliné noisette coulant</li>
+            <li>Macaron du moment</li>
+          </ul>
+
+          <p>
+            Vous pouvez déjà les réserver pour vos fêtes en remplissant notre
+            <a href="./asset/img/flyer-noel-2027.pdf" download>bon de commande</a>
+            sur notre site internet ou bien en boutique.<br><br>
+            Vous pouvez aussi les réserver dès maintenant par mail ou en boutique pour une dégustation hors fêtes : commande la veille pour un retrait le lendemain.
+          </p>
+        </div>
       </div>
 
       <p class="actuality-section-label"><span>Nouvel An</span></p>
@@ -856,6 +900,11 @@ tarif de 6€ </h4>
       </div>
     </div>
   </footer>
+  <div id="actuality-lightbox" class="actuality-lightbox" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image agrandie">
+    <button type="button" class="actuality-lightbox__close" aria-label="Fermer">×</button>
+    <img class="actuality-lightbox__img" src="" alt="">
+  </div>
+  <script src="./actuality.js?v=1.0"></script>
   <script src="./gourmandises.js?v=1.7"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="./aPropos.js?v=1.7"></script>
